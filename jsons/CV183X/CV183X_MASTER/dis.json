@@ -1,0 +1,86 @@
+{
+    "page_name": "DIS",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "DIS Attr",
+            "section": "DIS Attr",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "DIS_Enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "MovingSubjectLevel",
+                    "key": "DIS_MovingSubjectLevel",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 6
+                    }
+                },
+                {
+                    "title": "HorizontalLimit",
+                    "key": "DIS_HorizontalLimit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1000
+                    }
+                },
+                {
+                    "title": "VerticalLimit",
+                    "key": "DIS_VerticalLimit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1000
+                    }
+                },
+                {
+                    "title": "StillCrop",
+                    "key": "DIS_StillCrop",
+                    "type": "binary"
+                }
+            ]
+        },
+        {
+            "group_name": "DIS Config",
+            "section": "DIS Config",
+            "content": [
+                {
+                    "title": "Mode",
+                    "type": "combobox",
+                    "key": "DIS_Mode",
+                    "param": [
+                        {
+                            "label": "DIS_MODE_2_DOF_GME",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "title": "MotionLevel",
+                    "type": "combobox",
+                    "key": "DIS_MotionLevel",
+                    "param": [
+                        {
+                            "label": "DIS_MOTION_LEVEL_NORMAL",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "title": "CropRatio",
+                    "key": "DIS_CropRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 50,
+                        "max": 98
+                    }
+                }
+            ]
+        }
+    ]
+}

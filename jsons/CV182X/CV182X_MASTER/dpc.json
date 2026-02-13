@@ -1,0 +1,286 @@
+{
+    "page_name": "DPC",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Dynamic Attribute",
+            "section": "isp_dpc0",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_dpc_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "key": "enOptype",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "dpc_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "DynamicDPCEnable",
+                    "key": "dpc_DynamicDPCEnable",
+                    "type": "binary"
+                },
+                {
+                    "title": "ClusterSize",
+                    "key": "reg_dpc_cluster_size",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "BrightDefectToNormalPixRatio",
+                    "key": "dpc_BrightDefectToNormalPixRatio_iso",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DarkDefectToNormalPixRatio",
+                    "key": "dpc_DarkDefectToNormalPixRatio_iso",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "IrBrightDefectToNormalPixRatio",
+                    "key": "dpc_IrBrightDefectToNormalPixRatio",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "IrDarkDefectToNormalPixRatio",
+                    "key": "dpc_IrDarkDefectToNormalPixRatio",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FlatThreR",
+                    "key": "reg_dpc_flat_thre_r",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FlatThreG",
+                    "key": "reg_dpc_flat_thre_g",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FlatThreB",
+                    "key": "reg_dpc_flat_thre_b",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FlatThreIR",
+                    "key": "dpc_FlatThreIR",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FlatThreMinG",
+                    "key": "reg_dpc_flat_thre_min_g",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FlatThreMinRB",
+                    "key": "reg_dpc_flat_thre_min_rb",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FlatThreMinIR",
+                    "key": "dpc_FlatThreMinIR",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "ClusterSize",
+                    "key": "reg_dpc_cluster_size",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BrightDefectToNormalPixRatio",
+                    "key": "dpc_BrightDefectToNormalPixRatio_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DarkDefectToNormalPixRatio",
+                    "key": "dpc_DarkDefectToNormalPixRatio_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "IrBrightDefectToNormalPixRatio",
+                    "key": "dpc_IrBrightDefectToNormalPixRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "IrDarkDefectToNormalPixRatio",
+                    "key": "dpc_IrDarkDefectToNormalPixRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FlatThreR",
+                    "key": "reg_dpc_flat_thre_r",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FlatThreG",
+                    "key": "reg_dpc_flat_thre_g",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FlatThreB",
+                    "key": "reg_dpc_flat_thre_b",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FlatThreIR",
+                    "key": "dpc_FlatThreIR",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FlatThreMinG",
+                    "key": "reg_dpc_flat_thre_min_g",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FlatThreMinRB",
+                    "key": "reg_dpc_flat_thre_min_rb",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FlatThreMinIR",
+                    "key": "dpc_FlatThreMinIR",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "Static Attribute",
+                    "type": "header"
+                },
+                {
+                    "title": "Static Enable",
+                    "key": "reg_dpc_staticbpc_enable",
+                    "type": "binary"
+                }
+            ]
+        }
+    ]
+}

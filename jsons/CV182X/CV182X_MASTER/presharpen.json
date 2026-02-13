@@ -1,0 +1,647 @@
+{
+    "page_name": "PreSharpen",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "PreSharpen",
+            "section": "PreSharpen",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_ee_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "key": "enOptype",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "presharpen_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "TuningMode",
+                    "key": "reg_ee_dbg_mode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 11
+                    }
+                },
+                {
+                    "title": "TuningModeLevelShift",
+                    "key": "reg_ee_dbg_mode_level_shift",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 7
+                    }
+                },
+                {
+                    "title": "EdgeGain",
+                    "key": "reg_ee_dircal_dgr4_dir_adjgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "EdgeGain",
+                    "key": "reg_ee_dircal_dgr4_dir_adjgain",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "EdgeFreq",
+                    "key": "reg_ee_edge_freq",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "EdgeFreq",
+                    "key": "reg_ee_edge_freq",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "TextureGain",
+                    "key": "reg_ee_texture_gain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "TextureGain",
+                    "key": "reg_ee_texture_gain",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "TextureFreq",
+                    "key": "reg_ee_texture_freq",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "TextureFreq",
+                    "key": "reg_ee_texture_freq",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "PreSharpen",
+            "section": "PreSharpen",
+            "content": [
+                {
+                    "title": "LumaAdpCoringEn",
+                    "key": "reg_ee_luma_coring_en",
+                    "type": "binary"
+                },
+                {
+                    "title": "LumaAdpCoring",
+                    "type": "spinner",
+                    "key": "PreSharpen_adp_coring_manual",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaAdpCoring",
+                    "type": "iso_matrix",
+                    "key": "PreSharpen_adp_coring_auto",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaAdpGainEn",
+                    "key": "reg_ee_luma_adptctrl_en",
+                    "type": "binary"
+                },
+                {
+                    "title": "LumaAdpGain",
+                    "key": ["reg_ee_luma_adptctrl_lut_00", "reg_ee_luma_adptctrl_lut_01", "reg_ee_luma_adptctrl_lut_02", "reg_ee_luma_adptctrl_lut_03", "reg_ee_luma_adptctrl_lut_04", "reg_ee_luma_adptctrl_lut_05", "reg_ee_luma_adptctrl_lut_06", "reg_ee_luma_adptctrl_lut_07",
+                            "reg_ee_luma_adptctrl_lut_08", "reg_ee_luma_adptctrl_lut_09", "reg_ee_luma_adptctrl_lut_10", "reg_ee_luma_adptctrl_lut_11", "reg_ee_luma_adptctrl_lut_12", "reg_ee_luma_adptctrl_lut_13", "reg_ee_luma_adptctrl_lut_14", "reg_ee_luma_adptctrl_lut_15",
+                            "reg_ee_luma_adptctrl_lut_16", "reg_ee_luma_adptctrl_lut_17", "reg_ee_luma_adptctrl_lut_18", "reg_ee_luma_adptctrl_lut_19", "reg_ee_luma_adptctrl_lut_20", "reg_ee_luma_adptctrl_lut_21", "reg_ee_luma_adptctrl_lut_22", "reg_ee_luma_adptctrl_lut_23",
+                            "reg_ee_luma_adptctrl_lut_24", "reg_ee_luma_adptctrl_lut_25", "reg_ee_luma_adptctrl_lut_26", "reg_ee_luma_adptctrl_lut_27", "reg_ee_luma_adptctrl_lut_28", "reg_ee_luma_adptctrl_lut_29", "reg_ee_luma_adptctrl_lut_30", "reg_ee_luma_adptctrl_lut_31",
+                            "reg_ee_luma_adptctrl_lut_32"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaAdpGain",
+                    "key": ["reg_ee_luma_adptctrl_lut_00", "reg_ee_luma_adptctrl_lut_01", "reg_ee_luma_adptctrl_lut_02", "reg_ee_luma_adptctrl_lut_03", "reg_ee_luma_adptctrl_lut_04", "reg_ee_luma_adptctrl_lut_05", "reg_ee_luma_adptctrl_lut_06", "reg_ee_luma_adptctrl_lut_07",
+                            "reg_ee_luma_adptctrl_lut_08", "reg_ee_luma_adptctrl_lut_09", "reg_ee_luma_adptctrl_lut_10", "reg_ee_luma_adptctrl_lut_11", "reg_ee_luma_adptctrl_lut_12", "reg_ee_luma_adptctrl_lut_13", "reg_ee_luma_adptctrl_lut_14", "reg_ee_luma_adptctrl_lut_15",
+                            "reg_ee_luma_adptctrl_lut_16", "reg_ee_luma_adptctrl_lut_17", "reg_ee_luma_adptctrl_lut_18", "reg_ee_luma_adptctrl_lut_19", "reg_ee_luma_adptctrl_lut_20", "reg_ee_luma_adptctrl_lut_21", "reg_ee_luma_adptctrl_lut_22", "reg_ee_luma_adptctrl_lut_23",
+                            "reg_ee_luma_adptctrl_lut_24", "reg_ee_luma_adptctrl_lut_25", "reg_ee_luma_adptctrl_lut_26", "reg_ee_luma_adptctrl_lut_27", "reg_ee_luma_adptctrl_lut_28", "reg_ee_luma_adptctrl_lut_29", "reg_ee_luma_adptctrl_lut_30", "reg_ee_luma_adptctrl_lut_31",
+                                            "reg_ee_luma_adptctrl_lut_32"],
+                                    "type": "iso_matrix",
+                                    "param": {
+                                        "min": 0,
+                                        "max": 63
+                                    },
+                                    "optype": "Auto"
+                },
+                {
+                    "title": "DeltaAdpGainEn",
+                    "key": "reg_ee_delta_adptctrl_en",
+                    "type": "binary",
+                    "level": 1
+                },
+                {
+                    "title": "DeltaAdpGain",
+                    "key": ["reg_ee_delta_adptctrl_lut_00", "reg_ee_delta_adptctrl_lut_01", "reg_ee_delta_adptctrl_lut_02", "reg_ee_delta_adptctrl_lut_03", "reg_ee_delta_adptctrl_lut_04", "reg_ee_delta_adptctrl_lut_05", "reg_ee_delta_adptctrl_lut_06", "reg_ee_delta_adptctrl_lut_07",
+                            "reg_ee_delta_adptctrl_lut_08", "reg_ee_delta_adptctrl_lut_09", "reg_ee_delta_adptctrl_lut_10", "reg_ee_delta_adptctrl_lut_11", "reg_ee_delta_adptctrl_lut_12", "reg_ee_delta_adptctrl_lut_13", "reg_ee_delta_adptctrl_lut_14", "reg_ee_delta_adptctrl_lut_15",
+                            "reg_ee_delta_adptctrl_lut_16", "reg_ee_delta_adptctrl_lut_17", "reg_ee_delta_adptctrl_lut_18", "reg_ee_delta_adptctrl_lut_19", "reg_ee_delta_adptctrl_lut_20", "reg_ee_delta_adptctrl_lut_21", "reg_ee_delta_adptctrl_lut_22", "reg_ee_delta_adptctrl_lut_23",
+                            "reg_ee_delta_adptctrl_lut_24", "reg_ee_delta_adptctrl_lut_25", "reg_ee_delta_adptctrl_lut_26", "reg_ee_delta_adptctrl_lut_27", "reg_ee_delta_adptctrl_lut_28", "reg_ee_delta_adptctrl_lut_29", "reg_ee_delta_adptctrl_lut_30", "reg_ee_delta_adptctrl_lut_31",
+                            "reg_ee_delta_adptctrl_lut_32"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "WdrCoringCompensationEn",
+                    "key": "PreSharpen_WdrCoringCompensationEn",
+                    "type": "binary",
+                    "level": 2
+                },
+                {
+                    "title": "WdrCoringCompensationMode",
+                    "type": "spinner",
+                    "key": "PreSharpen_WdrCoringCompensationMode",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "level": 2
+                },
+                {
+                    "title": "WdrCoringToleranceLevel",
+                    "type": "spinner",
+                    "key": "PreSharpen_WdrCoringToleranceLevel",
+                    "param": {
+                        "min": 0,
+                        "max": 511
+                    },
+                    "level": 2
+                },
+                {
+                    "title": "WdrCoringHighThr",
+                    "type": "spinner",
+                    "key": "PreSharpen_WdrCoringHighThr",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "level": 2
+                },
+                {
+                    "title": "WdrCoringLowThr",
+                    "type": "spinner",
+                    "key": "PreSharpen_WdrCoringLowThr",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "group_name": "PreSharpen",
+            "section": "PreSharpen",
+            "content": [
+                {
+                    "title": "GlobalGain",
+                    "key": "reg_ee_total_gain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "GlobalGain",
+                    "key": "reg_ee_total_gain",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "EdgeGlobalGain",
+                    "key": "presharpen_EdgeGlobalGain_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "EdgeGlobalGain",
+                    "key": "presharpen_EdgeGlobalGain_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "OverShootThr",
+                    "key": "reg_ee_total_oshtthrd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "OverShootThr",
+                    "key": "reg_ee_total_oshtthrd",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "UnderShootThr",
+                    "key": "reg_ee_total_ushtthrd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "UnderShootThr",
+                    "key": "reg_ee_total_ushtthrd",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "YNoiseLevel",
+                    "key": "PreSharpen_ynoiselevel_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "YNoiseLevel",
+                    "key": "PreSharpen_ynoiselevel_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "PreSharpen",
+                    "type": "header",
+                    "level": 1
+                },
+                {
+                    "title": "NoiseSuppressEnable",
+                    "key": "PreSharpen_NoiseSuppressEnable",
+                    "type": "binary",
+                    "level": 1
+                },
+                {
+                    "title": "NoiseSuppressMode",
+                    "key": "PreSharpen_NoiseSuppressMode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "OverShootThrMax",
+                    "key": "PreSharpen_OverShootThrMax",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "UnderShootThrMin",
+                    "key": "PreSharpen_UnderShootThrMin",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "NoiseSuppressMode",
+                    "key": "PreSharpen_NoiseSuppressMode",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "OverShootThrMax",
+                    "key": "PreSharpen_OverShootThrMax",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "UnderShootThrMin",
+                    "key": "PreSharpen_UnderShootThrMin",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "DeltaShtCtrlEn",
+                    "key": "PreSharpen_DeltaShtCtrlEn",
+                    "type": "binary",
+                    "level": 1
+                },
+                {
+                    "title": "DeltaShtCtrlUnit",
+                    "key": "PreSharpen_DeltaShtCtrlUnit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "DeltaShtCtrlUnit",
+                    "key": "PreSharpen_DeltaShtCtrlUnit",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "DeltaShtCtrl",
+                    "key": ["reg_ee_delta_shtctrl_lut_00", "reg_ee_delta_shtctrl_lut_01", "reg_ee_delta_shtctrl_lut_02", "reg_ee_delta_shtctrl_lut_03", "reg_ee_delta_shtctrl_lut_04", "reg_ee_delta_shtctrl_lut_05", "reg_ee_delta_shtctrl_lut_06", "reg_ee_delta_shtctrl_lut_07",
+                            "reg_ee_delta_shtctrl_lut_08", "reg_ee_delta_shtctrl_lut_09", "reg_ee_delta_shtctrl_lut_10", "reg_ee_delta_shtctrl_lut_11", "reg_ee_delta_shtctrl_lut_12", "reg_ee_delta_shtctrl_lut_13", "reg_ee_delta_shtctrl_lut_14", "reg_ee_delta_shtctrl_lut_15",
+                            "reg_ee_delta_shtctrl_lut_16", "reg_ee_delta_shtctrl_lut_17", "reg_ee_delta_shtctrl_lut_18", "reg_ee_delta_shtctrl_lut_19", "reg_ee_delta_shtctrl_lut_20", "reg_ee_delta_shtctrl_lut_21", "reg_ee_delta_shtctrl_lut_22", "reg_ee_delta_shtctrl_lut_23",
+                            "reg_ee_delta_shtctrl_lut_24", "reg_ee_delta_shtctrl_lut_25", "reg_ee_delta_shtctrl_lut_26", "reg_ee_delta_shtctrl_lut_27", "reg_ee_delta_shtctrl_lut_28", "reg_ee_delta_shtctrl_lut_29", "reg_ee_delta_shtctrl_lut_30", "reg_ee_delta_shtctrl_lut_31",
+                            "reg_ee_delta_shtctrl_lut_32"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "DeltaShtCtrl",
+                    "key": ["reg_ee_delta_shtctrl_lut_00", "reg_ee_delta_shtctrl_lut_01", "reg_ee_delta_shtctrl_lut_02", "reg_ee_delta_shtctrl_lut_03", "reg_ee_delta_shtctrl_lut_04", "reg_ee_delta_shtctrl_lut_05", "reg_ee_delta_shtctrl_lut_06", "reg_ee_delta_shtctrl_lut_07",
+                            "reg_ee_delta_shtctrl_lut_08", "reg_ee_delta_shtctrl_lut_09", "reg_ee_delta_shtctrl_lut_10", "reg_ee_delta_shtctrl_lut_11", "reg_ee_delta_shtctrl_lut_12", "reg_ee_delta_shtctrl_lut_13", "reg_ee_delta_shtctrl_lut_14", "reg_ee_delta_shtctrl_lut_15",
+                            "reg_ee_delta_shtctrl_lut_16", "reg_ee_delta_shtctrl_lut_17", "reg_ee_delta_shtctrl_lut_18", "reg_ee_delta_shtctrl_lut_19", "reg_ee_delta_shtctrl_lut_20", "reg_ee_delta_shtctrl_lut_21", "reg_ee_delta_shtctrl_lut_22", "reg_ee_delta_shtctrl_lut_23",
+                            "reg_ee_delta_shtctrl_lut_24", "reg_ee_delta_shtctrl_lut_25", "reg_ee_delta_shtctrl_lut_26", "reg_ee_delta_shtctrl_lut_27", "reg_ee_delta_shtctrl_lut_28", "reg_ee_delta_shtctrl_lut_29", "reg_ee_delta_shtctrl_lut_30", "reg_ee_delta_shtctrl_lut_31",
+                            "reg_ee_delta_shtctrl_lut_32"],
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "FilterCoefByISOFuncEn",
+                    "key": "PreSharpen_FilterCoefByISOFuncEn",
+                    "type": "binary",
+                    "level": 1
+                },
+                {
+                    "title": "FilterCoefByISOLowThd",
+                    "key": "PreSharpen_FilterCoefByISOLowThd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2147483647
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "FilterCoefByISOHighThd",
+                    "key": "PreSharpen_FilterCoefByISOHighThd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2147483647
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "FilterCoefNonDirType",
+                    "key": "PreSharpen_FilterCoefNonDirType",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "group_name": "PreSharpen",
+            "section": "PreSharpen",
+            "content": [
+                {
+                    "title": "MotionShtGainIn0",
+                    "key": "PreSharpen_MotionShtGainIn0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionShtGainIn1",
+                    "key": "PreSharpen_MotionShtGainIn1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionShtGainIn2",
+                    "key": "PreSharpen_MotionShtGainIn2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionShtGainIn3",
+                    "key": "PreSharpen_MotionShtGainIn3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionShtGainOut0",
+                    "key": "PreSharpen_MotionShtGainOut0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionShtGainOut1",
+                    "key": "PreSharpen_MotionShtGainOut1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionShtGainOut2",
+                    "key": "PreSharpen_MotionShtGainOut2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionShtGainOut3",
+                    "key": "PreSharpen_MotionShtGainOut3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionShtGainCurve",
+                    "key": ["PreSharpen_MotionShtGainIn0", "PreSharpen_MotionShtGainIn1", "PreSharpen_MotionShtGainIn2", "PreSharpen_MotionShtGainIn3", "PreSharpen_MotionShtGainOut0", "PreSharpen_MotionShtGainOut1", "PreSharpen_MotionShtGainOut2", "PreSharpen_MotionShtGainOut3"],
+                    "type": "iso_curve",
+                    "param": {
+                        "min": [0, 0, 0, 0, 0, 0, 0, 0],
+                        "max": [255, 255, 255, 255, 255, 255, 255, 255],
+                        "interop_num": 4,
+                        "label": [["MotionShtGainIn: [0]", " [1]", " [2]", " [3]"], ["MotionShtGainOut: [0]", " [1]", " [2]", " [3]"]]
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

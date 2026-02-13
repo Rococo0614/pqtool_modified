@@ -1,0 +1,22 @@
+{
+    "page_name": "Pub Attr",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Pub Attr",
+            "section": "Pub Attr",
+            "content": [
+                {
+                    "title": "FrameRate",
+                    "key": "pub_FrameRate",
+                    "type": "spinner",
+                    "desp": "FrameRate = FPS x 100",
+                    "param": {
+                        "min": 0,
+                        "max": 6553500
+                    }
+                }
+            ]
+        }
+    ]
+}

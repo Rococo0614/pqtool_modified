@@ -1,0 +1,166 @@
+{
+    "page_name": "RC Param",
+    "ready" : false,
+    "groups": [
+        {
+            "group_name": "RC Param",
+            "section": "RC Param",
+            "content": [
+                {
+                    "title": "RowQpDelta",
+                    "key": "RC_Param_RowQpDelta",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "ThrdLv",
+                    "key": "RC_Param_ThrdLv",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    }
+                },
+                {
+                    "title": "FirstFrameStartQp",
+                    "key": "RC_Param_FirstFrameStartQp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 51
+                    }
+                },
+                {
+                    "title": "InitialDelay",
+                    "key": "RC_Param_InitialDelay",
+                    "type": "spinner",
+                    "param": {
+                        "min": 10,
+                        "max": 3000
+                    }
+                },
+                {
+                    "title": "MaxIprop",
+                    "key": "RC_Param_MaxIprop",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "MaxQp",
+                    "key": "RC_Param_MaxQp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 51
+                    }
+                },
+                {
+                    "title": "MinQp",
+                    "key": "RC_Param_MinQp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 51
+                    }
+                },
+                {
+                    "title": "MaxIQp",
+                    "key": "RC_Param_MaxIQp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 51
+                    }
+                },
+                {
+                    "title": "MinIQp",
+                    "key": "RC_Param_MinIQp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 51
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "VBR",
+            "section": "RC Param",
+            "content": [
+                {
+                    "title": "ChangePos",
+                    "key": "RC_Param_VBR_ChangePos",
+                    "type": "spinner",
+                    "param": {
+                        "min": 50,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "AVBR",
+                    "type": "header"
+                },
+                {
+                    "title": "MinStillPercent",
+                    "key": "AVBR_MinStillPercent",
+                    "type": "spinner",
+                    "param": {
+                        "min": 5,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "MaxStillQP",
+                    "key": "AVBR_MaxStillQP",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 51
+                    }
+                },
+                {
+                    "title": "MotionSensitivity",
+                    "key": "AVBR_MotionSensitivity",
+                    "type": "spinner",
+                    "param": {
+                        "min": 5,
+                        "max": 200
+                    }
+                },
+                {
+                    "title": "PureStillThr",
+                    "key": "AVBR_PureStillThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "AvbrFrmLostOpen",
+                    "key": "AVBR_AvbrFrmLostOpen",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "AvbrFrmGap",
+                    "key": "AVBR_AvbrFrmGap",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                }
+            ]
+        }
+    ]
+}

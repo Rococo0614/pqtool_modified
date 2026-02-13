@@ -1,0 +1,215 @@
+{
+    "page_name": "CNR",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "CNR",
+            "section": "isp_cnr",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_cnr_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "cnr_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "DetailSmoothMode",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_flag_neighbor_max_weight",
+                    "desp": "Detail smooth mode",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "CnrStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_strength_mode",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NoiseSuppressStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_diff_shift_val",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NoiseSuppressGain",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_diff_gain",
+                    "param": {
+                        "min": 1,
+                        "max": 8
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "FilterType",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_weight_lut_inter_block",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaWgt",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_fusion_intensity_weight",
+                    "param": {
+                        "min": 0,
+                        "max": 8
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "MotionNrStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_ratio",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DetailSmoothMode",
+                    "type": "binary",
+                    "key": "reg_cnr_flag_neighbor_max_weight",
+                    "desp": "Detail smooth mode",
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "CnrStr",
+                    "type": "spinner",
+                    "key": "reg_cnr_strength_mode",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NoiseSuppressStr",
+                    "type": "spinner",
+                    "key": "reg_cnr_diff_shift_val",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NoiseSuppressGain",
+                    "type": "spinner",
+                    "key": "reg_cnr_diff_gain",
+                    "param": {
+                        "min": 1,
+                        "max": 8
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "FilterType",
+                    "type": "spinner",
+                    "key": "reg_cnr_weight_lut_inter_block",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaWgt",
+                    "type": "spinner",
+                    "key": "reg_cnr_fusion_intensity_weight",
+                    "param": {
+                        "min": 0,
+                        "max": 8
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "MotionNrStr",
+                    "type": "spinner",
+                    "key": "reg_cnr_ratio",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                }
+            ]
+        },
+        {
+            "group_name": "Motion NR",
+            "section": "CNR Motion NR",
+            "content": [
+                {
+                    "title": "MotionCnrEnable",
+                    "key": "CNR_MotionCnrEnable",
+                    "type": "binary"
+                },
+                {
+                    "title": "MotionCnrStrLut",
+                    "key": "CNR_MotionCnrStrLut_manual",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+						"row": ["1"],
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionCnrStrLut",
+                    "key": ["CNR_MotionCnrStrLut1_auto", "CNR_MotionCnrStrLut2_auto", "CNR_MotionCnrStrLut3_auto", "CNR_MotionCnrStrLut4_auto",
+                    		"CNR_MotionCnrStrLut5_auto", "CNR_MotionCnrStrLut6_auto", "CNR_MotionCnrStrLut7_auto", "CNR_MotionCnrStrLut8_auto",
+                    		"CNR_MotionCnrStrLut9_auto", "CNR_MotionCnrStrLut10_auto", "CNR_MotionCnrStrLut11_auto", "CNR_MotionCnrStrLut12_auto",
+                    		"CNR_MotionCnrStrLut13_auto", "CNR_MotionCnrStrLut14_auto", "CNR_MotionCnrStrLut15_auto", "CNR_MotionCnrStrLut16_auto"],
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255,
+                        "row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"]
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

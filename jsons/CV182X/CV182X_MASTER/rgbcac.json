@@ -1,0 +1,151 @@
+{
+    "page_name": "RGBCAC",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "RGBCAC",
+            "section": "RGBCAC",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "rgbcac_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "rgbcac_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "VarThr",
+                    "type": "spinner",
+                    "key": "rgbcac_VarThr",
+                    "param": {
+                        "min": 0,
+                        "max": 511
+                    }
+                },
+                {
+                    "title": "PurpleDetRange",
+                    "key": "rgbcac_PurpleDetRange",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 128
+                    }
+                },
+                {
+                    "title": "DePurpleStr",
+                    "type": "iso_matrix",
+                    "key": "rgbcac_DePurpleStr_auto",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DePurpleStr",
+                    "key": "rgbcac_DePurpleStr_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PurpleCb",
+                    "key": "rgbcac_PurpleCb",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "PurpleCr",
+                    "key": "rgbcac_PurpleCr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "PurpleCb2",
+                    "key": "rgbcac_PurpleCb2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "PurpleCr2",
+                    "key": "rgbcac_PurpleCr2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "PurpleCb3",
+                    "key": "rgbcac_PurpleCb3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "PurpleCr3",
+                    "key": "rgbcac_PurpleCr3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "GreenCb",
+                    "key": "rgbcac_GreenCb",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "GreenCr",
+                    "key": "rgbcac_GreenCr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "TuningMode",
+                    "key": "rgbcac_TuningMode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2
+                    }
+                }
+            ]
+        }
+    ]
+}

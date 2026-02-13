@@ -1,0 +1,226 @@
+{
+    "page_name": "EE",
+    "ready" : false,
+    "groups": [
+        {
+            "group_name": "EE",
+            "content": [
+                {
+                    "title": "reg_ee_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "reg_ee_total_gain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "reg_ee_total_coring",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                },
+                {
+                    "title": "reg_ee_dirdet_lpf_bldwgt",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    }
+                },
+                {
+                    "title": "reg_ee_luma_coring_en",
+                    "type": "binary"
+                },
+                {
+                    "title": "reg_ee_luma_coring_lut",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                },
+                {
+                    "title": "reg_ee_luma_adptctrl_en",
+                    "type": "binary"
+                },
+                {
+                    "title": "reg_ee_luma_adptctrl_lut",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                },
+                {
+                    "title": "reg_ee_delta_adptctrl_en",
+                    "type": "binary"
+                },
+                {
+                    "title": "reg_ee_delta_adptctrl_shift",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    }
+                },
+                {
+                    "title": "reg_ee_delta_adptctrl_lut",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                },
+                {
+                    "title": "reg_ee_shtctrl_oshtgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    }
+                },
+                {
+                    "title": "reg_ee_shtctrl_ushtgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    }
+                },
+                {
+                    "title": "reg_ee_std_shtctrl_en",
+                    "type": "binary"
+                },
+                {
+                    "title": "reg_ee_std_shtctrl_max3x3_en",
+                    "type": "binary",
+                    "level": 2
+                },
+                {
+                    "title": "reg_ee_std_shtctrl_min3x3_en",
+                    "type": "binary",
+                    "level": 2
+                },
+                {
+                    "title": "reg_ee_std_shtctrl_min_gain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 127
+                    }
+                },
+                {
+                    "title": "reg_ee_std_shtctrl_diff_gain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    }
+                },
+                {
+                    "title": "reg_ee_std_shtctrl_diff_thrd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "reg_ee_luma_shtctrl_en",
+                    "type": "binary"
+                },
+                {
+                    "title": "reg_ee_luma_shtctrl_lut[33]",
+                    "type": "spinner"
+                },
+                {
+                    "title": "reg_ee_delta_shtctrl_en",
+                    "type": "binary"
+                },
+                {
+                    "title": "reg_ee_delta_shtctrl_shift",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    }
+                },
+                {
+                    "title": "reg_ee_delta_shtctrl_lut[33]",
+                    "type": "spinner"
+                },
+                {
+                    "title": "reg_ee_total_oshtthrd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "reg_ee_total_ushtthrd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "RGB",
+            "content": [
+                {
+                    "title": "reg_rgbee_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "reg_rgbee_osgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                },
+                {
+                    "title": "reg_rgbee_usgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                },
+                {
+                    "title": "reg_rgbee_ac_lut",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                },
+                {
+                    "title": "reg_rgbee_edge_lut",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                },
+                {
+                    "title": "reg_rgbee_np_lut",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "page_name": "Smart Exposure Attr",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "SmartExposureAttr",
+            "section": "SmartExposureAttr",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "smart_Enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "IRMode",
+                    "key": "smart_IRMode",
+                    "type": "binary"
+                },
+                {
+                    "title": "SmartExpType",
+                    "key": "smart_SmartExpType",
+                    "key": "enOptype",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "LumaTarget",
+                    "key": "smart_LumaTarget",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "ExpCoef",
+                    "key": "smart_ExpCoef",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "ExpCoefMax",
+                    "key": "smart_ExpCoefMax",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "ExpCoefMin",
+                    "key": "smart_ExpCoefMin",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "SmartInterval",
+                    "key": "smart_SmartInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "SmartSpeed",
+                    "key": "smart_SmartSpeed",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "SmartDelayNum",
+                    "key": "smart_SmartDelayNum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "Weight",
+                    "key": "smart_Weight",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "NarrowRatio",
+                    "key": "smart_NarrowRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                }
+            ]
+        }
+    ]
+}

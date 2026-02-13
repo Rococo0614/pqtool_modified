@@ -1,0 +1,95 @@
+{
+    "page_name": "Y Contrast",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "YContrast Attr",
+            "section": "YContrast Attr",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "Contrast_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "ycontrast_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "ContrastLow",
+                    "key": "ContrastLow_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "ContrastLow",
+                    "key": "ContrastLow_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 100,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "ContrastHigh",
+                    "key": "ContrastHigh_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "ContrastHigh",
+                    "key": "ContrastHigh_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 100,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CenterLuma",
+                    "key": "CenterLuma_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 64
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "CenterLuma",
+                    "key": "CenterLuma_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 64,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

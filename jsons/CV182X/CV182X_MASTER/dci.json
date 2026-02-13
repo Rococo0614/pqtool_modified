@@ -1,0 +1,226 @@
+{
+    "page_name": "DCI",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "DCI",
+            "section": "isp_dci",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "dci_Enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "dci_OpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "dci_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "ContrastGain",
+                    "key": "dci_ContrastGain_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "BlcThr",
+                    "key": "dci_BlcThr_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "WhtThr",
+                    "key": "dci_WhtThr_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "BlcCtrl",
+                    "key": "dci_BlcCtrl_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 512
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "WhtCtrl",
+                    "key": "dci_WhtCtrl_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 512
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "ContrastGain",
+                    "key": "dci_ContrastGain_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BlcThr",
+                    "key": "dci_BlcThr_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WhtThr",
+                    "key": "dci_WhtThr_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BlcCtrl",
+                    "key": "dci_BlcCtrl_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 512
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WhtCtrl",
+                    "key": "dci_WhtCtrl_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 512
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "TuningMode",
+                    "key": "dci_TuningMode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "Method",
+                    "key": "dci_Method",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "Speed",
+                    "key": "dci_Speed",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 500
+                    }
+                },
+                {
+                    "title": "DciStrength",
+                    "key": "dci_DciStrength",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    }
+                },
+                {
+                    "title": "DciGainMax",
+                    "key": "dci_DciGainMax_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DciGainMax",
+                    "key": "dci_DciGainMax_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DciGamma x 100",
+                    "key": "dci_DciGamma",
+                    "type": "spinner",
+                    "param": {
+                        "min": 100,
+                        "max": 800
+                    }
+                },
+                {
+                    "title": "DciOffset",
+                    "key": "dci_DciOffset",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "ToleranceY",
+                    "key": "dci_ToleranceY",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "Sensitivity",
+                    "key": "dci_Sensitivity",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "level": 1
+                }
+            ]
+        }
+    ]
+}

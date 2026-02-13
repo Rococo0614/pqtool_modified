@@ -1,0 +1,100 @@
+{
+    "page_name": "Noise Profile",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "NoiseProfile",
+            "section": "NoiseProfile",
+            "content": [
+                {
+                    "title": "Slope B",
+                    "key": "noie_profile_Slope_B",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 9999,
+                        "value_type": "double"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Slope Gb",
+                    "key": "noie_profile_Slope_Gb",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 9999,
+                        "value_type": "double"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Slope Gr",
+                    "key": "noie_profile_Slope_Gr",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 9999,
+                        "value_type": "double"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Slope R",
+                    "key": "noie_profile_Slope_R",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 9999,
+                        "value_type": "double"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Intercept B",
+                    "key": "noie_profile_Intercept_B",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 9999,
+                        "value_type": "double"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Intercept Gb",
+                    "key": "noie_profile_Intercept_Gb",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 9999,
+                        "value_type": "double"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Intercept Gr",
+                    "key": "noie_profile_Intercept_Gr",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 9999,
+                        "value_type": "double"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Intercept R",
+                    "key": "noie_profile_Intercept_R",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 9999,
+                        "value_type": "double"
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

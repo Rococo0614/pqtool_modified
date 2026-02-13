@@ -1,0 +1,99 @@
+{
+    "page_name": "CSC",
+    "ready": true,
+    "groups": [
+        {
+            "group_name": "CSC",
+            "section": "CSC",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "csc_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "ColorGamut",
+                    "key": "csc_ColorGamut",
+                    "type": "combobox",
+                    "param": [
+                        {
+                            "label": "COLORGAMUT_BT601",
+                            "value": "0"
+                        },
+                        {
+                            "label": "COLORGAMUT_BT709",
+                            "value": "1"
+                        },
+                        {
+                            "label": "COLORGAMUT_BT2020",
+                            "value": "2"
+                        },
+                        {
+                            "label": "COLORGAMUT_USER",
+                            "value": "3"
+                        }
+                    ]
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "csc_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "Hue",
+                    "key": "csc_Hue",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "Luma",
+                    "key": "csc_Luma",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "Contrast",
+                    "key": "csc_Contrast",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "Saturation",
+                    "key": "csc_Saturation",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "CscMagtrx",
+                    "key": ["csc_CscMagtrx0", "csc_CscMagtrx1", "csc_CscMagtrx2"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+                    "param": {
+                        "col": ["coeff00", "coeff01", "coeff02", "out"],
+                        "row": ["00", "10", "20"],
+                        "min": [-8192, -8192, -8192, -256],
+                        "max": [8191, 8191, 8191, 255]
+                    }
+                }
+            ]
+        }
+    ]
+}

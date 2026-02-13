@@ -1,0 +1,522 @@
+{
+    "page_name": "Y Sharpen",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Y Sharpen",
+            "section": "Y Sharpen",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_ee_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "key": "enOptype",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "ysharpen_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "TuningMode",
+                    "key": "reg_ee_dbg_mode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 11
+                    }
+                },
+                {
+                    "title": "TuningModeLevelShift",
+                    "key": "reg_ee_dbg_mode_level_shift",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 8
+                    }
+                },
+                {
+                    "title": "EdgeGain",
+                    "key": "reg_ee_dircal_dgr4_dir_adjgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 8191
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "EdgeGain",
+                    "key": "reg_ee_dircal_dgr4_dir_adjgain",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 8191
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "EdgeThr",
+                    "key": "reg_ee_edge_thr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "EdgeFreq",
+                    "key": "reg_ee_edge_freq",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "EdgeFreq",
+                    "key": "reg_ee_edge_freq",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "TextureGain",
+                    "key": "reg_ee_texture_gain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 8191
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "TextureGain",
+                    "key": "reg_ee_texture_gain",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 8191
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "TextureThr",
+                    "key": "reg_ee_dircal_dgr4_nod_coringth",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "TextureFreq",
+                    "key": "reg_ee_texture_freq",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "TextureFreq",
+                    "key": "reg_ee_texture_freq",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "Y Sharpen",
+            "section": "Y Sharpen",
+            "content": [
+                {
+                    "title": "LumaAdpCoringEn",
+                    "key": "reg_ee_luma_coring_en",
+                    "type": "binary"
+                },
+                {
+                    "title": "LumaAdpCoring",
+                    "type": "spinner",
+                    "key": "y_sharpen_adp_coring_manual",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaAdpCoring",
+                    "type": "iso_matrix",
+                    "key": "y_sharpen_adp_coring_auto",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaAdpGainEn",
+                    "key": "reg_ee_luma_adptctrl_en",
+                    "type": "binary",
+                    "level": 1
+                },
+                {
+                    "title": "LumaAdpGain",
+                    "key": ["reg_ee_luma_adptctrl_lut_00", "reg_ee_luma_adptctrl_lut_01", "reg_ee_luma_adptctrl_lut_02", "reg_ee_luma_adptctrl_lut_03", "reg_ee_luma_adptctrl_lut_04", "reg_ee_luma_adptctrl_lut_05", "reg_ee_luma_adptctrl_lut_06", "reg_ee_luma_adptctrl_lut_07",
+                            "reg_ee_luma_adptctrl_lut_08", "reg_ee_luma_adptctrl_lut_09", "reg_ee_luma_adptctrl_lut_10", "reg_ee_luma_adptctrl_lut_11", "reg_ee_luma_adptctrl_lut_12", "reg_ee_luma_adptctrl_lut_13", "reg_ee_luma_adptctrl_lut_14", "reg_ee_luma_adptctrl_lut_15",
+                            "reg_ee_luma_adptctrl_lut_16", "reg_ee_luma_adptctrl_lut_17", "reg_ee_luma_adptctrl_lut_18", "reg_ee_luma_adptctrl_lut_19", "reg_ee_luma_adptctrl_lut_20", "reg_ee_luma_adptctrl_lut_21", "reg_ee_luma_adptctrl_lut_22", "reg_ee_luma_adptctrl_lut_23",
+                            "reg_ee_luma_adptctrl_lut_24", "reg_ee_luma_adptctrl_lut_25", "reg_ee_luma_adptctrl_lut_26", "reg_ee_luma_adptctrl_lut_27", "reg_ee_luma_adptctrl_lut_28", "reg_ee_luma_adptctrl_lut_29", "reg_ee_luma_adptctrl_lut_30", "reg_ee_luma_adptctrl_lut_31",
+                            "reg_ee_luma_adptctrl_lut_32"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaAdpGain",
+                    "key": ["reg_ee_luma_adptctrl_lut_00", "reg_ee_luma_adptctrl_lut_01", "reg_ee_luma_adptctrl_lut_02", "reg_ee_luma_adptctrl_lut_03", "reg_ee_luma_adptctrl_lut_04", "reg_ee_luma_adptctrl_lut_05", "reg_ee_luma_adptctrl_lut_06", "reg_ee_luma_adptctrl_lut_07",
+                            "reg_ee_luma_adptctrl_lut_08", "reg_ee_luma_adptctrl_lut_09", "reg_ee_luma_adptctrl_lut_10", "reg_ee_luma_adptctrl_lut_11", "reg_ee_luma_adptctrl_lut_12", "reg_ee_luma_adptctrl_lut_13", "reg_ee_luma_adptctrl_lut_14", "reg_ee_luma_adptctrl_lut_15",
+                            "reg_ee_luma_adptctrl_lut_16", "reg_ee_luma_adptctrl_lut_17", "reg_ee_luma_adptctrl_lut_18", "reg_ee_luma_adptctrl_lut_19", "reg_ee_luma_adptctrl_lut_20", "reg_ee_luma_adptctrl_lut_21", "reg_ee_luma_adptctrl_lut_22", "reg_ee_luma_adptctrl_lut_23",
+                            "reg_ee_luma_adptctrl_lut_24", "reg_ee_luma_adptctrl_lut_25", "reg_ee_luma_adptctrl_lut_26", "reg_ee_luma_adptctrl_lut_27", "reg_ee_luma_adptctrl_lut_28", "reg_ee_luma_adptctrl_lut_29", "reg_ee_luma_adptctrl_lut_30", "reg_ee_luma_adptctrl_lut_31",
+                                            "reg_ee_luma_adptctrl_lut_32"],
+                                    "type": "iso_matrix",
+                                    "param": {
+                                        "min": 0,
+                                        "max": 63
+                                    },
+                                    "optype": "Auto"
+                },
+                {
+                    "title": "DeltaAdpGainEn",
+                    "key": "reg_ee_delta_adptctrl_en",
+                    "type": "binary",
+                    "level": 1
+                },
+                {
+                    "title": "DeltaAdpGain",
+                    "key": ["reg_ee_delta_adptctrl_lut_00", "reg_ee_delta_adptctrl_lut_01", "reg_ee_delta_adptctrl_lut_02", "reg_ee_delta_adptctrl_lut_03", "reg_ee_delta_adptctrl_lut_04", "reg_ee_delta_adptctrl_lut_05", "reg_ee_delta_adptctrl_lut_06", "reg_ee_delta_adptctrl_lut_07",
+                            "reg_ee_delta_adptctrl_lut_08", "reg_ee_delta_adptctrl_lut_09", "reg_ee_delta_adptctrl_lut_10", "reg_ee_delta_adptctrl_lut_11", "reg_ee_delta_adptctrl_lut_12", "reg_ee_delta_adptctrl_lut_13", "reg_ee_delta_adptctrl_lut_14", "reg_ee_delta_adptctrl_lut_15",
+                            "reg_ee_delta_adptctrl_lut_16", "reg_ee_delta_adptctrl_lut_17", "reg_ee_delta_adptctrl_lut_18", "reg_ee_delta_adptctrl_lut_19", "reg_ee_delta_adptctrl_lut_20", "reg_ee_delta_adptctrl_lut_21", "reg_ee_delta_adptctrl_lut_22", "reg_ee_delta_adptctrl_lut_23",
+                            "reg_ee_delta_adptctrl_lut_24", "reg_ee_delta_adptctrl_lut_25", "reg_ee_delta_adptctrl_lut_26", "reg_ee_delta_adptctrl_lut_27", "reg_ee_delta_adptctrl_lut_28", "reg_ee_delta_adptctrl_lut_29", "reg_ee_delta_adptctrl_lut_30", "reg_ee_delta_adptctrl_lut_31",
+                            "reg_ee_delta_adptctrl_lut_32"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    }
+                },
+                {
+                    "title": "WdrCoringCompensationEn",
+                    "key": "y_sharpen_WdrCoringCompensationEn",
+                    "type": "binary"
+                },
+                {
+                    "title": "WdrCoringCompensationMode",
+                    "type": "spinner",
+                    "key": "y_sharpen_WdrCoringCompensationMode",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "WdrCoringToleranceLevel",
+                    "type": "spinner",
+                    "key": "y_sharpen_WdrCoringToleranceLevel",
+                    "param": {
+                        "min": 0,
+                        "max": 511
+                    }
+                },
+                {
+                    "title": "WdrCoringHighThr",
+                    "type": "spinner",
+                    "key": "y_sharpen_WdrCoringHighThr",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "WdrCoringLowThr",
+                    "type": "spinner",
+                    "key": "y_sharpen_WdrCoringLowThr",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "Y Sharpen",
+            "section": "Y Sharpen",
+            "content": [
+                {
+                    "title": "GlobalGain",
+                    "key": "reg_ee_total_gain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "GlobalGain",
+                    "key": "reg_ee_total_gain",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "EdgeGlobalGain",
+                    "key": "y_sharpen_EdgeGlobalGain_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "EdgeGlobalGain",
+                    "key": "y_sharpen_EdgeGlobalGain_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "OverShootThrMax",
+                    "key": "reg_ee_total_oshtthrd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "OverShootThrMax",
+                    "key": "reg_ee_total_oshtthrd",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "UnderShootThrMin",
+                    "key": "reg_ee_total_ushtthrd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "UnderShootThrMin",
+                    "key": "reg_ee_total_ushtthrd",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "OverShootGain",
+                    "key": "y_sharpen_OverShootGain_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "OverShootGain",
+                    "key": "y_sharpen_OverShootGain_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "UnderShootGain",
+                    "key": "y_sharpen_UnderShootGain_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "UnderShootGain",
+                    "key": "y_sharpen_UnderShootGain_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "YNoiseLevel",
+                    "key": "y_sharpen_ynoiselevel_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "YNoiseLevel",
+                    "key": "y_sharpen_ynoiselevel_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "group_name": "Y Sharpen",
+            "section": "Y Sharpen",
+            "content": [
+                {
+                    "title": "DeltaShtCtrlEn",
+                    "key": "y_sharpen_DeltaShtCtrlEn",
+                    "type": "binary"
+                },
+                {
+                    "title": "DeltaShtCtrlUnit",
+                    "key": "y_sharpen_DeltaShtCtrlUnit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DeltaShtCtrlUnit",
+                    "key": "y_sharpen_DeltaShtCtrlUnit",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DeltaShtCtrl",
+                    "key": ["reg_ee_delta_shtctrl_lut_00", "reg_ee_delta_shtctrl_lut_01", "reg_ee_delta_shtctrl_lut_02", "reg_ee_delta_shtctrl_lut_03", "reg_ee_delta_shtctrl_lut_04", "reg_ee_delta_shtctrl_lut_05", "reg_ee_delta_shtctrl_lut_06", "reg_ee_delta_shtctrl_lut_07",
+                            "reg_ee_delta_shtctrl_lut_08", "reg_ee_delta_shtctrl_lut_09", "reg_ee_delta_shtctrl_lut_10", "reg_ee_delta_shtctrl_lut_11", "reg_ee_delta_shtctrl_lut_12", "reg_ee_delta_shtctrl_lut_13", "reg_ee_delta_shtctrl_lut_14", "reg_ee_delta_shtctrl_lut_15",
+                            "reg_ee_delta_shtctrl_lut_16", "reg_ee_delta_shtctrl_lut_17", "reg_ee_delta_shtctrl_lut_18", "reg_ee_delta_shtctrl_lut_19", "reg_ee_delta_shtctrl_lut_20", "reg_ee_delta_shtctrl_lut_21", "reg_ee_delta_shtctrl_lut_22", "reg_ee_delta_shtctrl_lut_23",
+                            "reg_ee_delta_shtctrl_lut_24", "reg_ee_delta_shtctrl_lut_25", "reg_ee_delta_shtctrl_lut_26", "reg_ee_delta_shtctrl_lut_27", "reg_ee_delta_shtctrl_lut_28", "reg_ee_delta_shtctrl_lut_29", "reg_ee_delta_shtctrl_lut_30", "reg_ee_delta_shtctrl_lut_31",
+                            "reg_ee_delta_shtctrl_lut_32"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DeltaShtCtrl",
+                    "key": ["reg_ee_delta_shtctrl_lut_00", "reg_ee_delta_shtctrl_lut_01", "reg_ee_delta_shtctrl_lut_02", "reg_ee_delta_shtctrl_lut_03", "reg_ee_delta_shtctrl_lut_04", "reg_ee_delta_shtctrl_lut_05", "reg_ee_delta_shtctrl_lut_06", "reg_ee_delta_shtctrl_lut_07",
+                            "reg_ee_delta_shtctrl_lut_08", "reg_ee_delta_shtctrl_lut_09", "reg_ee_delta_shtctrl_lut_10", "reg_ee_delta_shtctrl_lut_11", "reg_ee_delta_shtctrl_lut_12", "reg_ee_delta_shtctrl_lut_13", "reg_ee_delta_shtctrl_lut_14", "reg_ee_delta_shtctrl_lut_15",
+                            "reg_ee_delta_shtctrl_lut_16", "reg_ee_delta_shtctrl_lut_17", "reg_ee_delta_shtctrl_lut_18", "reg_ee_delta_shtctrl_lut_19", "reg_ee_delta_shtctrl_lut_20", "reg_ee_delta_shtctrl_lut_21", "reg_ee_delta_shtctrl_lut_22", "reg_ee_delta_shtctrl_lut_23",
+                            "reg_ee_delta_shtctrl_lut_24", "reg_ee_delta_shtctrl_lut_25", "reg_ee_delta_shtctrl_lut_26", "reg_ee_delta_shtctrl_lut_27", "reg_ee_delta_shtctrl_lut_28", "reg_ee_delta_shtctrl_lut_29", "reg_ee_delta_shtctrl_lut_30", "reg_ee_delta_shtctrl_lut_31",
+                            "reg_ee_delta_shtctrl_lut_32"],
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FilterCoefByISOFuncEn",
+                    "key": "y_sharpen_FilterCoefByISOFuncEn",
+                    "type": "binary",
+                    "level": 1
+                },
+                {
+                    "title": "FilterCoefByISOLowThd",
+                    "key": "y_sharpen_FilterCoefByISOLowThd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2147483647
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "FilterCoefByISOHighThd",
+                    "key": "y_sharpen_FilterCoefByISOHighThd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2147483647
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "FilterCoefNonDirType",
+                    "key": "y_sharpen_FilterCoefNonDirType",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "level": 1
+                }
+            ]
+        }
+    ]
+}

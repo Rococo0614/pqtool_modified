@@ -1,0 +1,265 @@
+{
+    "page_name": "WDR Exposure Attr",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "WDRExposureAttr",
+            "section": "WDRExposureAttr",
+            "content": [
+                {
+                    "title": "ExpRatioType",
+                    "key": "enExpRatioType",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "ExpRatio",
+                    "key": "ExpRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 64,
+                        "max": 16384
+                    }
+                },
+                {
+                    "title": "ExpRatioMax",
+                    "key": "ExpRatioMax",
+                    "type": "spinner",
+                    "param": {
+                        "min": 64,
+                        "max": 16384
+                    }
+                },
+                {
+                    "title": "ExpRatioMin",
+                    "key": "ExpRatioMin",
+                    "type": "spinner",
+                    "param": {
+                        "min": 64,
+                        "max": 16384
+                    }
+                },
+                {
+                    "title": "Tolerance",
+                    "key": "Tolerance",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "Speed",
+                    "key": "Speed",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "RatioBias",
+                    "key": "RatioBias",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "SECompensation",
+                    "key": "SECompensation",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "SEHisThr",
+                    "key": "SEHisThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "SEHis255CntThr1",
+                    "key": "SEHis255CntThr1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2147483647
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "SEHis255CntThr2",
+                    "key": "SEHis255CntThr2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2147483647
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "SEHisCntRatio1",
+                    "key": "SEHisCntRatio1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "SEHisCntRatio2",
+                    "key": "SEHisCntRatio2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    },
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "group_name": "WDRExposureAttr",
+            "section": "WDRExposureAttr",
+            "content": [
+                {
+                    "title": "LEAdjustTargetMin",
+                    "key": "u8LEAdjustTargetMin",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["LV-5", "LV-4", "LV-3", "LV-2", "LV-1", "LV0", "LV1", "LV2", "LV3", "LV4", "LV5", "LV6", "LV7", "LV8", "LV9", "LV10", "LV11", "LV12", "LV13", "LV14", "LV15"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "LEAdjustTargetMax",
+                    "key": "u8LEAdjustTargetMax",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["LV-5", "LV-4", "LV-3", "LV-2", "LV-1", "LV0", "LV1", "LV2", "LV3", "LV4", "LV5", "LV6", "LV7", "LV8", "LV9", "LV10", "LV11", "LV12", "LV13", "LV14", "LV15"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "SEAdjustTargetMin",
+                    "key": "u8SEAdjustTargetMin",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["LV-5", "LV-4", "LV-3", "LV-2", "LV-1", "LV0", "LV1", "LV2", "LV3", "LV4", "LV5", "LV6", "LV7", "LV8", "LV9", "LV10", "LV11", "LV12", "LV13", "LV14", "LV15"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "SEAdjustTargetMax",
+                    "key": "u8SEAdjustTargetMax",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["LV-5", "LV-4", "LV-3", "LV-2", "LV-1", "LV0", "LV1", "LV2", "LV3", "LV4", "LV5", "LV6", "LV7", "LV8", "LV9", "LV10", "LV11", "LV12", "LV13", "LV14", "LV15"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "FrameAvgLumaMin",
+                    "key": "au8FrameAvgLumaMin",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["LV-5", "LV-4", "LV-3", "LV-2", "LV-1", "LV0", "LV1", "LV2", "LV3", "LV4", "LV5", "LV6", "LV7", "LV8", "LV9", "LV10", "LV11", "LV12", "LV13", "LV14", "LV15"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "FrameAvgLumaMax",
+                    "key": "au8FrameAvgLumaMax",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["LV-5", "LV-4", "LV-3", "LV-2", "LV-1", "LV0", "LV1", "LV2", "LV3", "LV4", "LV5", "LV6", "LV7", "LV8", "LV9", "LV10", "LV11", "LV12", "LV13", "LV14", "LV15"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "AdjustTargetDetectFrmNum",
+                    "key": "AdjustTargetDetectFrmNum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "DiffPixelNum",
+                    "key": "DiffPixelNum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2147483647
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "LELowBinThr",
+                    "key": "LELowBinThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    }
+                },
+                {
+                    "title": "LEHighBinThr",
+                    "key": "LEHighBinThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    }
+                },
+                {
+                    "title": "SELowBinThr",
+                    "key": "SELowBinThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    }
+                },
+                {
+                    "title": "SEHighBinThr",
+                    "key": "SEHighBinThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    }
+                }
+            ]
+        }
+    ]
+}

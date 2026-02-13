@@ -1,0 +1,488 @@
+{
+    "page_name": "HSV",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Hue by Hue",
+            "section": "HSV",
+            "content": [
+                {
+                    "title": "HbyH.Enable",
+                    "key": "hsv_HbyH.Enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "HbyH.OpType",
+                    "key": "hsv_HbyH.OpType",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "hsv_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "HbyH.CtrlPointsOffset",
+                    "key": "hsv_HbyH.CtrlPointsOffset",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 64
+					},
+					"optype": "Manual"
+                },
+                {
+                    "title": "HbyH.HLUTTabNum",
+                    "key": "hsv_HbyH.HLUTTabNum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 3,
+                        "max": 7
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "HbyH.ColorTemp[0]",
+                    "key": "hsv_HbyH.ColorTemp[0]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "HbyH.CtrlPointsOffset[0]",
+                    "key": "hsv_HbyH.CtrlPointsOffset[0]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 64
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "HbyH.ColorTemp[1]",
+                    "key": "hsv_HbyH.ColorTemp[1]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "HbyH.CtrlPointsOffset[1]",
+                    "key": "hsv_HbyH.CtrlPointsOffset[1]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 64
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "HbyH.ColorTemp[2]",
+                    "key": "hsv_HbyH.ColorTemp[2]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "HbyH.CtrlPointsOffset[2]",
+                    "key": "hsv_HbyH.CtrlPointsOffset[2]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 64
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "HbyH.ColorTemp[3]",
+                    "key": "hsv_HbyH.ColorTemp[3]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "HbyH.CtrlPointsOffset[3]",
+                    "key": "hsv_HbyH.CtrlPointsOffset[3]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 64
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "HbyH.ColorTemp[4]",
+                    "key": "hsv_HbyH.ColorTemp[4]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "HbyH.CtrlPointsOffset[4]",
+                    "key": "hsv_HbyH.CtrlPointsOffset[4]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 64
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "HbyH.ColorTemp[5]",
+                    "key": "hsv_HbyH.ColorTemp[5]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "HbyH.CtrlPointsOffset[5]",
+                    "key": "hsv_HbyH.CtrlPointsOffset[5]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 64
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "HbyH.ColorTemp[6]",
+                    "key": "hsv_HbyH.ColorTemp[6]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "HbyH.CtrlPointsOffset[6]",
+                    "key": "hsv_HbyH.CtrlPointsOffset[6]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 64
+					},
+					"optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "Saturation by Saturation",
+            "section": "HSV",
+            "content": [
+                {
+                    "title": "SbyS.Enable",
+                    "key": "hsv_SbyS.Enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "SbyS.OpType",
+                    "key": "hsv_SbyS.OpType",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "SbyS.SatCoringLinearTh",
+                    "key": "hsv_SbyS.SatCoringLinearTh_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 512
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SbyS.SatCoringLinearLmt",
+                    "key": "hsv_SbyS.SatCoringLinearLmt_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 12286
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SbyS.SatCoringLinearTh",
+                    "type": "iso_matrix",
+                    "key": "hsv_SbyS.SatCoringLinearTh_auto",
+                    "param": {
+                        "min": 0,
+                        "max": 512
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SbyS.SatCoringLinearLmt",
+                    "type": "iso_matrix",
+                    "key": "hsv_SbyS.SatCoringLinearLmt_auto",
+                    "param": {
+                        "min": 0,
+                        "max": 12286
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "Saturation by Hue",
+            "section": "HSV",
+            "content": [
+                {
+                    "title": "SbyH.Enable",
+                    "key": "hsv_SbyH.Enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "SbyH.OpType",
+                    "key": "hsv_SbyH.OpType",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "SbyH.CtrlPointsOffset",
+                    "key": "hsv_SbyH.CtrlPointsOffset",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 128
+					},
+					"optype": "Manual"
+                },
+                {
+                    "title": "SbyH.HLUTTabNum",
+                    "key": "hsv_SbyH.HLUTTabNum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 3,
+                        "max": 7
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SbyH.ColorTemp[0]",
+                    "key": "hsv_SbyH.ColorTemp[0]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SbyH.CtrlPointsOffset[0]",
+                    "key": "hsv_SbyH.CtrlPointsOffset[0]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 128
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "SbyH.ColorTemp[1]",
+                    "key": "hsv_SbyH.ColorTemp[1]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SbyH.CtrlPointsOffset[1]",
+                    "key": "hsv_SbyH.CtrlPointsOffset[1]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 128
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "SbyH.ColorTemp[2]",
+                    "key": "hsv_SbyH.ColorTemp[2]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SbyH.CtrlPointsOffset[2]",
+                    "key": "hsv_SbyH.CtrlPointsOffset[2]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 128
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "SbyH.ColorTemp[3]",
+                    "key": "hsv_SbyH.ColorTemp[3]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SbyH.CtrlPointsOffset[3]",
+                    "key": "hsv_SbyH.CtrlPointsOffset[3]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 128
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "SbyH.ColorTemp[4]",
+                    "key": "hsv_SbyH.ColorTemp[4]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SbyH.CtrlPointsOffset[4]",
+                    "key": "hsv_SbyH.CtrlPointsOffset[4]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 128
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "SbyH.ColorTemp[5]",
+                    "key": "hsv_SbyH.ColorTemp[5]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SbyH.CtrlPointsOffset[5]",
+                    "key": "hsv_SbyH.CtrlPointsOffset[5]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 128
+					},
+					"optype": "Auto"
+                },
+                {
+                    "title": "SbyH.ColorTemp[6]",
+                    "key": "hsv_SbyH.ColorTemp[6]",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SbyH.CtrlPointsOffset[6]",
+                    "key": "hsv_SbyH.CtrlPointsOffset[6]",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+						"row": ["1"],
+						"min": -64,
+                        "max": 128
+					},
+					"optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

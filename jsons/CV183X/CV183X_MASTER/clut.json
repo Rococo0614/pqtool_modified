@@ -1,0 +1,60 @@
+{
+    "page_name": "CLUT",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "CLUT",
+            "section": "CLUT",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "clut_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "clut_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "Hlut",
+                    "type": "matrix",
+                    "key": "clut_Hlut",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": -4095,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "Slut",
+                    "type": "matrix",
+                    "key": "clut_Slut",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": -2047,
+                        "max": 2047
+                    }
+                },
+                {
+                    "title": "Vlut",
+                    "type": "matrix",
+                    "key": "clut_Vlut",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": -255,
+                        "max": 255
+                    }
+                }
+            ]
+        }
+    ]
+}

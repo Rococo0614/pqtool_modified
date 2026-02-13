@@ -1,0 +1,75 @@
+{
+    "page_name": "BLC",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "BlackLevel",
+            "section": "BlackLevel",
+            "content": [
+                {
+                    "title": "OpType",
+                    "key": "enOptype",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "blc_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "Black Level 1",
+                    "key": ["reg_blc_offset_r", "reg_blc_offset_gr", "reg_blc_offset_gb", "reg_blc_offset_b"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+                    "param": {
+                        "min": 0,
+                        "max": 4095,
+                        "row": ["OffsetR", "OffsetGr", "OffsetGb", "OffsetB"]
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "Black Level 1",
+                    "key": ["reg_blc_offset_r", "reg_blc_offset_gr", "reg_blc_offset_gb", "reg_blc_offset_b"],
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 4095,
+                        "row": ["OffsetR", "OffsetGr", "OffsetGb", "OffsetB"]
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Black Level 2",
+                    "key": ["reg_blc_offset_r2", "reg_blc_offset_gr2", "reg_blc_offset_gb2", "reg_blc_offset_b2"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+                    "param": {
+                        "min": 0,
+                        "max": 4095,
+                        "row": ["OffsetR", "OffsetGr", "OffsetGb", "OffsetB"]
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "Black Level 2",
+                    "key": ["reg_blc_offset_r2", "reg_blc_offset_gr2", "reg_blc_offset_gb2", "reg_blc_offset_b2"],
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 4095,
+                        "row": ["OffsetR", "OffsetGr", "OffsetGb", "OffsetB"]
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

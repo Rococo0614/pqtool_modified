@@ -1,0 +1,203 @@
+{
+    "page_name": "FSWDR",
+    "ready": true,
+    "groups": [
+        {
+            "group_name": "FSWDR",
+            "section": "FSWDR",
+            "title_width": 240,
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_fs_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+					"key": "enOptype",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "fswdr_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "TuningMode",
+                    "key": "reg_fs_out_sel",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    }
+                },
+                {
+                    "title": "MotionCompEnable",
+                    "key": "reg_fs_mc_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "MergeMode",
+                    "key": "reg_mmap_mrg_mode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MergeMode",
+                    "key": "reg_mmap_mrg_mode",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 1,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "MergeModeAlpha",
+                    "key": "reg_mmap_mrg_alph",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                
+                {
+                    "title": "MergeModeAlpha",
+                    "key": "reg_mmap_mrg_alph",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "WDRCombineLongThr",
+                    "key": "reg_fs_luma_thd_l",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRCombineShortThr",
+                    "key": "reg_fs_luma_thd_h",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRCombineMaxWeight",
+                    "key": "reg_fs_wgt_max",
+                    "type": "spinner",
+                    "param": {
+                        "min": 255,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRCombineMinWeight",
+                    "key": "reg_fs_wgt_min",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRCombineCurve",
+                    "type": "iso_curve",
+                    "key": ["reg_fs_luma_thd_l_iso", "reg_fs_luma_thd_h_iso", "reg_fs_wgt_max_iso", "reg_fs_wgt_min_iso"],
+                    "optype": "Auto",
+                    "param": {
+                        "min": [0, 0, 255, 0],
+                        "max": [4095, 4095, 255, 255],
+                        "interop_num": 2,
+                        "label": [["WDRCombineLongThr", "WDRCombineShortThr"], ["WDRCombineMaxWeight", "WDRCombineMinWeight"]],
+                        "header_type": "LV"
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "FSWDR",
+            "section": "FSWDR",
+            "title_width": 320,
+            "content": [
+                {
+                    "title": "WDRCombineSNRAwareEn",
+                    "key": "fswdr_WDRCombineSNRAwareEn",
+                    "type": "binary"
+                },
+                {
+                    "title": "WDRCombineSNRAwareLowThr",
+                    "key": "fswdr_WDRCombineSNRAwareLowThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "WDRCombineSNRAwareHighThr",
+                    "key": "fswdr_WDRCombineSNRAwareHighThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "WDRCombineSNRAwareToleranceLevel",
+                    "key": "fswdr_WDRCombineSNRAwareToleranceLevel_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRCombineSNRAwareToleranceLevel",
+                    "key": "fswdr_WDRCombineSNRAwareToleranceLevel_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "WDRCombineSNRAwareSmoothLevel",
+                    "key": "fswdr_WDRCombineSNRAwareSmoothLevel",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 3000
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "page_name": "HDR",
+    "ready" : false,
+    "groups": [
+        {
+            "group_name": "RadialShading",
+            "reg_session": "isp_lmap0&isp_lmap1",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_lmap_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "LmapWidthBit",
+                    "key": "reg_lmap_w_bit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 7
+                    }
+                },
+                {
+                    "title": "LmapHeightBit",
+                    "key": "reg_lmap_h_bit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 7
+                    }
+                },
+                {
+                    "title": "LmapThresholdLow",
+                    "key": "reg_lmap_thd_l",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LmapThresholdHeight",
+                    "key": "reg_lmap_thd_h",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LmapMode",
+                    "key": "reg_lmap_y_mode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    }
+                },
+                {
+                    "title": "RadialOffCenter",
+                    "type": "matrix"
+                },
+                {
+                    "title": "RadialCenter",
+                    "type": "matrix"
+                },
+                {
+                    "title": "RadialTable[0]",
+                    "type": "matrix"
+                },
+                {
+                    "title": "RadialTable[1]",
+                    "type": "matrix"
+                },
+                {
+                    "title": "RadialTable[2]",
+                    "type": "matrix"
+                },
+                {
+                    "title": "RadialNodeNum",
+                    "type": "spinner"
+                }
+            ]
+        }
+    ]
+}

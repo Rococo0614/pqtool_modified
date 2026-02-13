@@ -1,0 +1,48 @@
+{
+    "page_name": "Top",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Top",
+            "section": "isp_top",
+            "content": [
+                {
+                    "title": "ViPipe",
+                    "key": "reg_vi_pipe",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "ViChn",
+                    "key": "reg_vi_chn",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "VpssGrp",
+                    "key": "reg_vpss_grp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    }
+                },
+                {
+                    "title": "VpssChn",
+                    "key": "reg_vpss_chn",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    }
+                }
+            ]
+        }
+    ]
+}

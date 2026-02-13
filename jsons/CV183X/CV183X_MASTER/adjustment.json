@@ -1,0 +1,66 @@
+{
+    "page_name": "VPSS Adjustment",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "VPSS Adjustment",
+            "section": "isp_vpss_adjustment",
+            "content": [
+                {
+                    "title": "Brightness",
+                    "key": "vpss_Brightness",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["Scene0", "Scene1", "Scene2", "Scene3", "Scene4", "Scene5", "Scene6", "Scene7", "Scene8", "Scene9", "Scene10", "Scene11", "Scene12", "Scene13", "Scene14", "Scene15"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "Contrast",
+                    "key": "vpss_Contrast",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["Scene0", "Scene1", "Scene2", "Scene3", "Scene4", "Scene5", "Scene6", "Scene7", "Scene8", "Scene9", "Scene10", "Scene11", "Scene12", "Scene13", "Scene14", "Scene15"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "Saturation",
+                    "key": "vpss_Saturation",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["Scene0", "Scene1", "Scene2", "Scene3", "Scene4", "Scene5", "Scene6", "Scene7", "Scene8", "Scene9", "Scene10", "Scene11", "Scene12", "Scene13", "Scene14", "Scene15"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "Hue",
+                    "key": "vpss_Hue",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["Scene0", "Scene1", "Scene2", "Scene3", "Scene4", "Scene5", "Scene6", "Scene7", "Scene8", "Scene9", "Scene10", "Scene11", "Scene12", "Scene13", "Scene14", "Scene15"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "LogEnable",
+                    "type": "binary",
+                    "key": "adjustment_log_enable",
+                    "level": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "page_name": "ISPtoVC",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "ISPtoVC",
+            "section": "ISPtoVC",
+            "content": [
+                {
+                    "title": "MotionThreshold",
+                    "key": "isptovc_MotionThreshold",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                }
+            ]
+        }
+    ]
+}

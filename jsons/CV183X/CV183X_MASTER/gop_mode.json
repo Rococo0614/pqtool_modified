@@ -1,0 +1,75 @@
+{
+    "page_name": "Gop Mode",
+    "ready" : false,
+    "groups": [
+        {
+            "group_name": "Gop Mode",
+            "section": "Gop Mode",
+            "content": [
+                {
+                    "title": "GopMode",
+                    "type": "combobox",
+                    "key": "Gop_Mode",
+                    "param": [
+                        {
+                            "label": "VENC_GOPMODE_NORMALP",
+                            "value": 0
+                        },
+                        {
+                            "label": "VENC_GOPMODE_SMARTP",
+                            "value": 2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "group_name": "NORMALP",
+            "section": "Gop Mode",
+            "content": [
+                {
+                    "title": "IPQpDelta",
+                    "key": "NORMALP_IPQpDelta",
+                    "type": "spinner",
+                    "param": {
+                        "min": -8,
+                        "max": 8
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "SMARTP",
+            "section": "Gop Mode",
+            "content": [
+                {
+                    "title": "BgInterval",
+                    "key": "SMARTP_BgInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65536
+                    }
+                },
+                {
+                    "title": "BgQpDelta",
+                    "key": "SMARTP_BgQpDelta",
+                    "type": "spinner",
+                    "param": {
+                        "min": -8,
+                        "max": 8
+                    }
+                },
+                {
+                    "title": "ViQpDelta",
+                    "key": "SMARTP_ViQpDelta",
+                    "type": "spinner",
+                    "param": {
+                        "min": -8,
+                        "max": 8
+                    }
+                }
+            ]
+        }
+    ]
+}

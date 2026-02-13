@@ -1,0 +1,162 @@
+{
+    "page_name": "Dehaze",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Dehaze",
+            "section": "isp_dhz",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_dehaze_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "dehaze_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "Strength",
+                    "type": "iso_matrix",
+                    "key": "reg_dehaze_w",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Strength",
+                    "key": "reg_dehaze_w",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "CumulativeThr",
+                    "key": "reg_dehaze_cum_th",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "title": "MinTransMapValue",
+                    "key": "reg_dehaze_tmap_min",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 8191
+                    }
+                },
+                {
+                    "title": "DehazeLumaEnable",
+                    "key": "dehaze_DehazeLumaEnable",
+                    "type": "binary"
+                },
+                {
+                    "title": "DehazeSkinEnable",
+                    "key": "dehaze_DehazeSkinEnable",
+                    "type": "binary"
+                },
+                {
+                    "title": "SkinCb",
+                    "key": "dehaze_SkinCb",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "SkinCr",
+                    "key": "dehaze_SkinCr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "DehazeLumaLut",
+                    "type": "iso_matrix",
+                    "key": ["dehaze_DehazeLumaLut1", "dehaze_DehazeLumaLut2", "dehaze_DehazeLumaLut3", "dehaze_DehazeLumaLut4", "dehaze_DehazeLumaLut5",
+                    	"dehaze_DehazeLumaLut6", "dehaze_DehazeLumaLut7", "dehaze_DehazeLumaLut8", "dehaze_DehazeLumaLut9", "dehaze_DehazeLumaLut10",
+                    	"dehaze_DehazeLumaLut11", "dehaze_DehazeLumaLut12", "dehaze_DehazeLumaLut13", "dehaze_DehazeLumaLut14", "dehaze_DehazeLumaLut15",
+                    	"dehaze_DehazeLumaLut16", "dehaze_DehazeLumaLut17", "dehaze_DehazeLumaLut18", "dehaze_DehazeLumaLut19", "dehaze_DehazeLumaLut20",
+                    	"dehaze_DehazeLumaLut21", "dehaze_DehazeLumaLut22", "dehaze_DehazeLumaLut23", "dehaze_DehazeLumaLut24", "dehaze_DehazeLumaLut25",
+                    	"dehaze_DehazeLumaLut26", "dehaze_DehazeLumaLut27", "dehaze_DehazeLumaLut28", "dehaze_DehazeLumaLut29", "dehaze_DehazeLumaLut30",
+                    	"dehaze_DehazeLumaLut31", "dehaze_DehazeLumaLut32"],
+                    "param": {
+                    	"row": ["1", "2", "3", "4", "5", "6 ", "7", "8","9", "10", "11", "12", "13", "14 ", "15", "16",
+								"17", "18", "19", "20", "21", "22 ", "23", "24","25", "26", "27", "28", "29", "30 ", "31", "32"],
+                        "min": 0,
+                        "max": 127
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DehazeLumaLut",
+                    "key": "dehaze_DehazeLumaLut",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param": {
+						"col": ["1", "2", "3", "4", "5", "6 ", "7", "8","9", "10", "11", "12", "13", "14 ", "15", "16",
+								"17", "18", "19", "20", "21", "22 ", "23", "24","25", "26", "27", "28", "29", "30 ", "31", "32"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 127
+					},
+					"optype": "Manual"
+                },
+                {
+                    "title": "DehazeSkinLut",
+                    "type": "iso_matrix",
+                    "key": ["dehaze_DehazeSkinLut1", "dehaze_DehazeSkinLut2", "dehaze_DehazeSkinLut3", "dehaze_DehazeSkinLut4", "dehaze_DehazeSkinLut5",
+                    	"dehaze_DehazeSkinLut6", "dehaze_DehazeSkinLut7", "dehaze_DehazeSkinLut8", "dehaze_DehazeSkinLut9", "dehaze_DehazeSkinLut10",
+                    	"dehaze_DehazeSkinLut11", "dehaze_DehazeSkinLut12", "dehaze_DehazeSkinLut13", "dehaze_DehazeSkinLut14", "dehaze_DehazeSkinLut15",
+                    	"dehaze_DehazeSkinLut16", "dehaze_DehazeSkinLut17", "dehaze_DehazeSkinLut18", "dehaze_DehazeSkinLut19", "dehaze_DehazeSkinLut20",
+                    	"dehaze_DehazeSkinLut21", "dehaze_DehazeSkinLut22", "dehaze_DehazeSkinLut23", "dehaze_DehazeSkinLut24", "dehaze_DehazeSkinLut25",
+                    	"dehaze_DehazeSkinLut26", "dehaze_DehazeSkinLut27", "dehaze_DehazeSkinLut28", "dehaze_DehazeSkinLut29", "dehaze_DehazeSkinLut30",
+                    	"dehaze_DehazeSkinLut31", "dehaze_DehazeSkinLut32"],
+                    "param": {
+                    	"row": ["1", "2", "3", "4", "5", "6 ", "7", "8","9", "10", "11", "12", "13", "14 ", "15", "16",
+								"17", "18", "19", "20", "21", "22 ", "23", "24","25", "26", "27", "28", "29", "30 ", "31", "32"],
+                        "min": 0,
+                        "max": 127
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DehazeSkinLut",
+                    "key": "dehaze_DehazeSkinLut",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                    	"col": ["1", "2", "3", "4", "5", "6 ", "7", "8","9", "10", "11", "12", "13", "14 ", "15", "16",
+								"17", "18", "19", "20", "21", "22 ", "23", "24","25", "26", "27", "28", "29", "30 ", "31", "32"],
+						"row": ["1"],
+                        "min": 0,
+                        "max": 127
+                    },
+                    "optype": "Manual"
+                }
+            ]
+        }
+    ]
+}

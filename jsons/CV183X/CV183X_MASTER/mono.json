@@ -1,0 +1,27 @@
+{
+    "page_name": "Mono",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Mono",
+            "section": "isp_mono",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "mono_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "mono_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                }
+            ]
+        }
+    ]
+}

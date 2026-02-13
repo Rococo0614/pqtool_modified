@@ -1,0 +1,434 @@
+{
+    "page_name": "Demosaic",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Demosaic",
+            "section": "isp_demosaic",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_cfa_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "demosaic_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "CoarseEdgeThr",
+                    "key": "reg_cfa_edgee_thd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "CoarseStr",
+                    "key": "reg_cfa_edge_tol",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "CoarseEdgeThr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_edgee_thd",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CoarseStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_edge_tol",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FineEdgeThr",
+                    "key": "reg_cfa_sige_thd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FineStr",
+                    "key": "demosaic_FineStr_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FineEdgeThr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_sige_thd",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FineStr",
+                    "type": "iso_matrix",
+                    "key": "demosaic_FineStr_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "TuningMode",
+                    "key": "reg_cfa_out_sel",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "FilterMode",
+                    "type": "iso_matrix",
+                    "key": "demosic_FilterMode_auto",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FilterMode",
+                    "key": "demosic_FilterMode_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "optype": "Manual"
+                }
+            ]
+        },
+        {
+            "group_name": "Detail Smooth",
+            "section": "isp_demosaic",
+            "content": [
+                {
+                    "title": "DetailSmoothEnable",
+                    "key": "reg_cfa_moire_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "DetailSmoothStr",
+                    "key": "reg_cfa_moire_strth",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailSmoothStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_strth",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "EdgeWgtStr",
+                    "key": "reg_cfa_moire_wght_gain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "EdgeWgtStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_wght_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "DetailWgtThr",
+                    "key": "demosaic_DetailWgtThr_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailWgtSlope",
+                    "key": "demosaic_DetailWgtSlope_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailWgtMin",
+                    "key": "demosaic_DetailWgtMin_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailWgtMax",
+                    "key": "demosaic_DetailWgtMax_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailWgtThr",
+                    "type": "iso_matrix",
+                    "key": "demosaic_DetailWgtThr_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DetailWgtSlope",
+                    "type": "iso_matrix",
+                    "key": "demosaic_DetailWgtSlope_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DetailWgtMin",
+                    "type": "iso_matrix",
+                    "key": "demosaic_DetailWgtMin_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DetailWgtMax",
+                    "type": "iso_matrix",
+                    "key": "demosaic_DetailWgtMax_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "EdgeWgtThr",
+                    "key": "demosaic_EdgeWgtThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "EdgeWgtSlope",
+                    "key": "demosaic_EdgeWgtSlope",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "EdgeWgtMin",
+                    "key": "demosaic_EdgeWgtMin",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "EdgeWgtMax",
+                    "key": "demosaic_EdgeWgtMax",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "EdgeWgtThr",
+                    "type": "iso_matrix",
+                    "key": "demosaic_EdgeWgtThr",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "EdgeWgtSlope",
+                    "type": "iso_matrix",
+                    "key": "demosaic_EdgeWgtSlope",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "EdgeWgtMin",
+                    "type": "iso_matrix",
+                    "key": "demosaic_EdgeWgtMin",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "EdgeWgtMax",
+                    "type": "iso_matrix",
+                    "key": "demosaic_EdgeWgtMax",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaWgtThr",
+                    "key": "reg_cfa_moire_lumathd_min",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaWgtSlope",
+                    "key": "reg_cfa_moire_lumathd_slope",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaWgtMin",
+                    "key": "reg_cfa_moire_lumaw_low",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaWgtMax",
+                    "key": "reg_cfa_moire_lumaw_high",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaWgtThr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_lumathd_min",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaWgtSlope",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_lumathd_slope",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaWgtMin",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_lumaw_low",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaWgtMax",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_lumaw_high",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

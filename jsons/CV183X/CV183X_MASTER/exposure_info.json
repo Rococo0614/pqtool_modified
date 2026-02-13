@@ -1,0 +1,386 @@
+{
+    "page_name": "Exposure Info",
+    "ro_page": true,
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "ExposureInfo",
+            "section": "ExposureInfo",
+            "content": [
+                {
+                    "title": "ExpTime",
+                    "key": "u32ExpTime",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "ShortExpTime",
+                    "key": "u32ShortExpTime",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "LongExpTime",
+                    "key": "u32LongExpTime",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "WDRExpRatio",
+                    "key": "u32WDRExpRatio",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "AGain",
+                    "key": "u32AGain",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "DGain",
+                    "key": "u32DGain",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "ISPDGain",
+                    "key": "u32ISPDGain",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+				{
+                    "title": "AGainSF",
+                    "key": "exposureinfo_AGainSF",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "DGainSF",
+                    "key": "exposureinfo_DGainSF",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+				{
+                    "title": "ISPDGainSF",
+                    "key": "exposureinfo_ISPDGainSF",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "Exposure",
+                    "key": "u32Exposure",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 64,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+				{
+                    "title": "ExposureIsMax",
+                    "key": "bExposureIsMax",
+                    "type": "binary",
+					"chmod": "ReadOnly"
+
+                },
+                {
+                    "title": "HistError",
+                    "key": "HistError",
+                    "type": "spinner",
+                    "param": {
+                        "min": -32768,
+                        "max": 32767
+                    },
+					"chmod": "ReadOnly"
+                },
+                {
+                    "title": "AE_Hist256Value",
+                    "key": "AEHist256Value_array",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "AveLum",
+                    "key": "u8AveLum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "LinesPer500ms",
+                    "key": "u32LinesPer500ms",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "PirisFno",
+                    "key": "PirisFno",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1024
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "Fps",
+                    "key": "u32Fps",
+                    "type": "uint_spinner",
+					"param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "GainSepStatus",
+                    "key": "exposureinfo_GainSepStatus",
+                    "type": "binary",
+                    "chmod": "ReadOnly",
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "group_name": "ExposureInfo",
+            "section": "ExposureInfo",
+            "content": [
+                {
+                    "title": "ISO",
+                    "key": "u32ISO",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 100,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+				{
+                    "title": "ISOSF",
+                    "key": "exposureinfo_ISOSF",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "ISOCalibrate",
+                    "key": "u32ISOCalibrate",
+                    "type": "uint_spinner",
+					"param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "RefExpRatio",
+                    "key": "RefExpRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 64,
+                        "max": 16384
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "FirstStableTime",
+                    "key": "u32FirstStableTime",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+				{
+                    "title": "AERoute.TotalNum",
+                    "key": "u8AERouteTotalNum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16
+                    },
+					"chmod": "ReadOnly"
+                },
+				{
+                    "title": "AERoute.RouteNode",
+                    "key": ["AERouteNode_01", "AERouteNode_02", "AERouteNode_03", "AERouteNode_04", "AERouteNode_05", "AERouteNode_06", "AERouteNode_07", "AERouteNode_08", "AERouteNode_09", "AERouteNode_10", "AERouteNode_11", "AERouteNode_12", "AERouteNode_13", "AERouteNode_14", "AERouteNode_15", "AERouteNode_16"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param": {
+						"col": ["IntTime", "SysGain", "IrisFno", "IrisFnoLin"],
+						"row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+                        "min": [0, 1024, 0, 1],
+                        "max": [2147483647, 2147483647, 10, 1024]
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "AERouteEx.TotalNum",
+                    "key": "u8AERouteExTotalNum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16
+                    },
+					"chmod": "ReadOnly"
+                },
+				{
+                    "title": "AERouteEx.RouteExNode",
+                    "key": ["AERouteExNode_01", "AERouteExNode_02", "AERouteExNode_03", "AERouteExNode_04", "AERouteExNode_05", "AERouteExNode_06", "AERouteExNode_07", "AERouteExNode_08", "AERouteExNode_09", "AERouteExNode_10", "AERouteExNode_11", "AERouteExNode_12", "AERouteExNode_13", "AERouteExNode_14", "AERouteExNode_15", "AERouteExNode_16"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param": {
+						"col": ["IntTime", "AGain", "DGain", "IspDGain","IrisFno", "IrisFnoLin"],
+						"row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+                        "min": [0, 1024, 1024, 1024, 0, 1],
+                        "max": [2147483647, 2147483647, 2147483647, 2147483647, 10, 1024]
+                    },
+                    "chmod": "ReadOnly"
+                },
+				{
+                    "title": "AERouteSF.TotalNum",
+                    "key": "u8AERouteSFTotalNum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16
+                    },
+					"chmod": "ReadOnly"
+                },
+				{
+                    "title": "AERouteSF.RouteNode",
+                    "key": ["AERouteSFNode_01", "AERouteSFNode_02", "AERouteSFNode_03", "AERouteSFNode_04", "AERouteSFNode_05", "AERouteSFNode_06", "AERouteSFNode_07", "AERouteSFNode_08", "AERouteSFNode_09", "AERouteSFNode_10", "AERouteSFNode_11", "AERouteSFNode_12", "AERouteSFNode_13", "AERouteSFNode_14", "AERouteSFNode_15", "AERouteSFNode_16"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param": {
+						"col": ["IntTime", "SysGain", "IrisFno", "IrisFnoLin"],
+						"row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+                        "min": [0, 1024, 0, 1],
+                        "max": [2147483647, 2147483647, 10, 1024]
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "AERouteSFEx.TotalNum",
+                    "key": "u8AERouteSFExTotalNum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16
+                    },
+					"chmod": "ReadOnly"
+                },
+				{
+                    "title": "AERouteSFEx.RouteExNode",
+                    "key": ["AERouteSFExNode_01", "AERouteSFExNode_02", "AERouteSFExNode_03", "AERouteSFExNode_04", "AERouteSFExNode_05", "AERouteSFExNode_06", "AERouteSFExNode_07", "AERouteSFExNode_08", "AERouteSFExNode_09", "AERouteSFExNode_10", "AERouteSFExNode_11", "AERouteSFExNode_12", "AERouteSFExNode_13", "AERouteSFExNode_14", "AERouteSFExNode_15", "AERouteSFExNode_16"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param": {
+						"col": ["IntTime", "AGain", "DGain", "IspDGain","IrisFno", "IrisFnoLin"],
+						"row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+                        "min": [0, 1024, 1024, 1024, 0, 1],
+                        "max": [2147483647, 2147483647, 2147483647, 2147483647, 10, 1024]
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "WDRShortAveLuma",
+                    "key": "WDRShortAveLuma",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "LEFrameAvgLuma",
+                    "key": "LEFrameAvgLuma",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "SEFrameAvgLuma",
+                    "key": "SEFrameAvgLuma",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "LightValue",
+                    "key": "LightValue",
+                    "type": "double_spinner",
+                    "param": {
+                        "min": -32768,
+                        "max": 32767
+                    },
+                    "chmod": "ReadOnly"
+                }
+            ]
+        }
+    ]
+}

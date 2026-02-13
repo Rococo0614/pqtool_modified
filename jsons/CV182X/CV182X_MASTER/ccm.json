@@ -1,0 +1,305 @@
+{
+    "page_name": "CCM",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "CCM",
+            "section": "isp_ccm",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_ccm_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "ccm_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "SatEnable",
+                    "key": "reg_sat_enable",
+                    "type": "binary",
+                    "optype": "Manual"
+                },
+                {
+                    "title": "CCM",
+                    "type": "cc_matrix",
+                    "key": "reg_ccm_manual_array",
+                    "param": {
+                        "col": ["R", "G", "B", "SUM"],
+                        "row": ["R", "G", "B"],
+                        "min": -8192,
+                        "max": 8191
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "ISOActEn",
+                    "key": "reg_iso_act_enable",
+                    "type": "binary",
+                    "optype": "Auto"
+                },
+                {
+                    "title": "TempActEn",
+                    "key": "reg_temp_act_enable",
+                    "type": "binary",
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTabNum",
+                    "key": "reg_ccm_tabnum_w",
+                    "type": "spinner",
+                    "param": {
+                        "min": 3,
+                        "max": 7
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[0].ColorTemp",
+                    "key": "reg_ccmtab0_colortemp_w",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[0].CCM",
+                    "type": "cc_matrix",
+                    "key": "reg_ccm0_array",
+                    "param": {
+                        "col": ["R", "G", "B", "SUM"],
+                        "row": ["R", "G", "B"],
+                        "min": -8192,
+                        "max": 8191
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[1].ColorTemp",
+                    "key": "reg_ccmtab1_colortemp_w",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[1].CCM",
+                    "type": "cc_matrix",
+                    "key": "reg_ccm1_array",
+                    "param": {
+                        "col": ["R", "G", "B", "SUM"],
+                        "row": ["R", "G", "B"],
+                        "min": -8192,
+                        "max": 8191
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[2].ColorTemp",
+                    "key": "reg_ccmtab2_colortemp_w",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[2].CCM",
+                    "type": "cc_matrix",
+                    "key": "reg_ccm2_array",
+                    "param": {
+                        "col": ["R", "G", "B", "SUM"],
+                        "row": ["R", "G", "B"],
+                        "min": -8192,
+                        "max": 8191
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[3].ColorTemp",
+                    "key": "reg_ccmtab3_colortemp_w",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[3].CCM",
+                    "type": "cc_matrix",
+                    "key": "reg_ccm3_array",
+                    "param": {
+                        "col": ["R", "G", "B", "SUM"],
+                        "row": ["R", "G", "B"],
+                        "min": -8192,
+                        "max": 8191
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[4].ColorTemp",
+                    "key": "reg_ccmtab4_colortemp_w",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[4].CCM",
+                    "type": "cc_matrix",
+                    "key": "reg_ccm4_array",
+                    "param": {
+                        "col": ["R", "G", "B", "SUM"],
+                        "row": ["R", "G", "B"],
+                        "min": -8192,
+                        "max": 8191
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[5].ColorTemp",
+                    "key": "reg_ccmtab5_colortemp_w",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[5].CCM",
+                    "type": "cc_matrix",
+                    "key": "reg_ccm5_array",
+                    "param": {
+                        "col": ["R", "G", "B", "SUM"],
+                        "row": ["R", "G", "B"],
+                        "min": -8192,
+                        "max": 8191
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[6].ColorTemp",
+                    "key": "reg_ccmtab6_colortemp_w",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CCMTab[6].CCM",
+                    "type": "cc_matrix",
+                    "key": "reg_ccm6_array",
+                    "param": {
+                        "col": ["R", "G", "B", "SUM"],
+                        "row": ["R", "G", "B"],
+                        "min": -8192,
+                        "max": 8191
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "ColorToneAttr",
+            "section": "isp_ccm",
+            "content": [
+                {
+                    "title": "RedCastGain",
+                    "key": "reg_wbg_rgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "GreenCastGain",
+                    "key": "reg_wbg_ggain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "BlueCastGain",
+                    "key": "reg_wbg_bgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "Saturation",
+            "section": "isp_ccm",
+            "content": [
+                {
+                    "title": "SaturationLE",
+                    "key": "ccm_SaturationLE_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SaturationLE",
+                    "key": "ccm_SaturationLE_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SaturationSE",
+                    "key": "ccm_SaturationSE_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SaturationSE",
+                    "key": "ccm_SaturationSE_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

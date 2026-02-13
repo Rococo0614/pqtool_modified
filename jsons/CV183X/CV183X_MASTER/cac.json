@@ -1,0 +1,125 @@
+{
+    "page_name": "CAC",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "CAC",
+            "section": "isp_cnr",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_cac_enable",
+                    "type": "binary",
+                    "desp": "CAC enable"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "cac_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "VarThr",
+                    "type": "spinner",
+                    "key": "reg_cnr_var_th",
+                    "desp": "Edge detection threshold",
+                    "param": {
+                        "min": 0,
+                        "max": 511
+                    }
+                },
+                {
+                    "title": "PurpleDetRange",
+                    "key": "reg_cnr_purple_th",
+                    "type": "spinner",
+                    "desp": "Purple fring detection scope",
+                    "param": {
+                        "min": 0,
+                        "max": 128
+                    }
+                },
+                {
+                    "title": "DePurpleStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_correct_strength",
+                    "desp": "Strenght of purple fringe correction",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DePurpleStr",
+                    "key": "reg_cnr_correct_strength",
+                    "type": "spinner",
+                    "desp": "Strenght of purple fringe correction",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PurpleCb",
+                    "key": "reg_cnr_purple_cb",
+                    "type": "spinner",
+                    "desp": "Purple in Cb value",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "PurpleCr",
+                    "key": "reg_cnr_purple_cr",
+                    "type": "spinner",
+                    "desp": "Purple in Cr value",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "GreenCb",
+                    "key": "reg_cnr_green_cb",
+                    "type": "spinner",
+                    "desp": "Green in Cb value",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "GreenCr",
+                    "key": "reg_cnr_green_cr",
+                    "type": "spinner",
+                    "desp": "Green in Cr value",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "TuningMode",
+                    "key": "reg_cnr_out_sel",
+                    "type": "spinner",
+                    "desp": "TuningMode",
+                    "param": {
+                        "min": 0,
+                        "max": 2
+                    }
+                }
+            ]
+        }
+    ]
+}

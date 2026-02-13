@@ -1,0 +1,120 @@
+{
+    "page_name": "AE Route",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "AE Route",
+            "section": "AE_Route",
+            "content": [
+                {
+                    "title": "TotalNum",
+                    "key": "u8TotalNum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 16
+                    }
+                },
+                {
+                    "title": "RouteNode",
+                    "key": ["AERouteNode_01", "AERouteNode_02", "AERouteNode_03", "AERouteNode_04", "AERouteNode_05", "AERouteNode_06", "AERouteNode_07", "AERouteNode_08", "AERouteNode_09", "AERouteNode_10", "AERouteNode_11", "AERouteNode_12", "AERouteNode_13", "AERouteNode_14", "AERouteNode_15", "AERouteNode_16"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+					"param": {
+						"col": ["IntTime", "SysGain", "IrisFNO", "IrisFNOLin"],
+						"row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+                        "min": [0, 1024, 0, 1],
+                        "max": [2147483647, 2147483647, 10, 1024]
+                    }
+                },
+                {
+                    "title": "LogEnable",
+                    "type": "binary",
+                    "key": "ae_route_log_enable",
+                    "level": 1
+                },
+                {
+                    "title": "AE RouteSF",
+                    "type": "header"
+                },
+                {
+                    "title": "TotalNumSF",
+                    "key": "u8TotalNumSF",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 16
+                    }
+                },
+                {
+                    "title": "RouteNodeSF",
+                    "key": ["AERouteNodeSF_01", "AERouteNodeSF_02", "AERouteNodeSF_03", "AERouteNodeSF_04", "AERouteNodeSF_05", "AERouteNodeSF_06", "AERouteNodeSF_07", "AERouteNodeSF_08", "AERouteNodeSF_09", "AERouteNodeSF_10", "AERouteNodeSF_11", "AERouteNodeSF_12", "AERouteNodeSF_13", "AERouteNodeSF_14", "AERouteNodeSF_15", "AERouteNodeSF_16"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+					"param": {
+						"col": ["IntTime", "SysGain", "IrisFNO", "IrisFNOLin"],
+						"row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+                        "min": [0, 1024, 0, 1],
+                        "max": [2147483647, 2147483647, 10, 1024]
+                    }
+                }
+            ]
+        },
+		{
+            "group_name": "AE RouteEx",
+            "section": "AE_Route",
+            "content": [
+                {
+                    "title": "TotalExNum",
+                    "key": "u8TotalExNum",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 16
+                    }
+                },
+                {
+                    "title": "RouteExNode",
+                    "key": ["AERouteExNode_01", "AERouteExNode_02", "AERouteExNode_03", "AERouteExNode_04", "AERouteExNode_05", "AERouteExNode_06", "AERouteExNode_07", "AERouteExNode_08", "AERouteExNode_09", "AERouteExNode_10", "AERouteExNode_11", "AERouteExNode_12", "AERouteExNode_13", "AERouteExNode_14", "AERouteExNode_15", "AERouteExNode_16"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+					"param": {
+						"col": ["IntTime", "AGain", "DGain", "IspDGain", "IrisFNO", "IrisFNOLin"],
+						"row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+                        "min": [0, 1024, 1024, 1024, 0, 1],
+                        "max": [2147483647, 2147483647, 2147483647, 2147483647, 10, 1024]
+                    }
+                },
+                {
+                    "title": "AE RouteExSF",
+                    "type": "header"
+                },
+                {
+                    "title": "TotalExNumSF",
+                    "key": "u8TotalExNumSF",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 16
+                    }
+                },
+                {
+                    "title": "RouteExNodeSF",
+                    "key": ["AERouteExNodeSF_01", "AERouteExNodeSF_02", "AERouteExNodeSF_03", "AERouteExNodeSF_04", "AERouteExNodeSF_05", "AERouteExNodeSF_06", "AERouteExNodeSF_07", "AERouteExNodeSF_08", "AERouteExNodeSF_09", "AERouteExNodeSF_10", "AERouteExNodeSF_11", "AERouteExNodeSF_12", "AERouteExNodeSF_13", "AERouteExNodeSF_14", "AERouteExNodeSF_15", "AERouteExNodeSF_16"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+					"param": {
+						"col": ["IntTime", "AGain", "DGain", "IspDGain", "IrisFNO", "IrisFNOLin"],
+						"row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+                        "min": [0, 1024, 1024, 1024, 0, 1],
+                        "max": [2147483647, 2147483647, 2147483647, 2147483647, 10, 1024]
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+{
+    "page_name": "RC Attr",
+    "ready" : false,
+    "groups": [
+        {
+            "group_name": "RC Attr",
+            "section": "RC Attr",
+            "content": [
+            	{
+                    "title": "RcMode",
+                    "type": "combobox",
+                    "key": "RC_Attr_RcMode",
+                    "param": [
+                        {
+                            "label": "CBR",
+                            "value": 0
+                        },
+                        {
+                            "label": "VBR",
+                            "value": 1
+                        },
+                        {
+                            "label": "AVBR",
+                            "value": 2
+                        },
+                        {
+                            "label": "FIXQP",
+                            "value": 4
+                        }
+                    ]
+                },
+                {
+                    "title": "Gop",
+                    "key": "RC_Attr_Gop",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65536
+                    }
+                },
+                {
+                    "title": "VariableFPS",
+                    "key": "RC_Attr_VariableFPS",
+                    "type": "binary"
+                },
+                {
+                    "title": "SrcFrmRate",
+                    "key": "RC_Attr_SrcFrmRate",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 240
+                    }
+                },
+                {
+                    "title": "DstFrmRate",
+                    "key": "RC_Attr_DstFrmRate",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 240
+                    }
+                },
+                {
+                    "title": "StatTime",
+                    "key": "RC_Attr_StatTime",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 60
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "CBR",
+            "section": "RC Attr",
+            "content": [
+                {
+                    "title": "BitRate",
+                    "key": "CBR_BitRate",
+                    "type": "spinner",
+                    "param": {
+                        "min": 128,
+                        "max": 50000
+                    }
+                },
+                {
+                    "title": "VBR",
+                    "type": "header"
+                },
+                {
+                    "title": "MaxBitrate",
+                    "key": "VBR_MaxBitrate",
+                    "type": "spinner",
+                    "param": {
+                        "min": 128,
+                        "max": 50000
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "Fixed Qp",
+            "section": "RC Attr",
+            "content": [
+                {
+                    "title": "IQP",
+                    "key": "Fixed_Qp_IQP",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 51
+                    }
+                },
+                {
+                    "title": "PQP",
+                    "key": "Fixed_Qp_PQP",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 51
+                    }
+                }
+            ]
+        }
+    ]
+}

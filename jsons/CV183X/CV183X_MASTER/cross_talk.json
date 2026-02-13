@@ -1,0 +1,74 @@
+{
+    "page_name": "Crosstalk",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Crosstalk",
+            "section": "Crosstalk",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_ge_en",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "key": "bOpType",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "crosstalk_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "GrGbDiffThreSec",
+                    "key": ["reg_ge_thre1", "reg_ge_thre2", "reg_ge_thre3", "reg_ge_thre4"],
+                    "type": "matrix",
+                    "param": {
+                        "col": ["1", "2", "3", "4"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "FlatThre",
+                    "key": ["reg_ge_thre1_1", "reg_ge_thre2_1", "reg_ge_thre3_1", "reg_ge_thre4_1"],
+                    "type": "matrix",
+                    "param": {
+                        "col": ["1", "2", "3", "4"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "Strength",
+                    "key": "reg_ge_strength",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Strength",
+                    "key": "reg_ge_strength",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,387 @@
+{
+    "page_name": "Statistics Config",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "AE Config",
+            "section": "isp_ae_config",
+            "content": [
+                {
+                    "title": "HisStatisticsEnable",
+                    "type": "binary",
+                    "key": "reg_hist_stat_enable0",
+                    "level": 1
+                },
+                {
+                    "title": "AECropEnable",
+                    "type": "binary",
+                    "key": "reg_crop_enable0",
+                    "level": 1
+                },
+                {
+                    "title": "AEZoneOffsetX",
+                    "type": "spinner",
+                    "key": "reg_zoneoffset_x0",
+                    "param": {
+                        "min": 0,
+                        "max": 8191
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "AEZoneOffsetY",
+                    "type": "spinner",
+                    "key": "reg_zoneoffset_y0",
+                    "param": {
+                        "min": 0,
+                        "max": 8191
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "AEZoneWidth",
+                    "type": "spinner",
+                    "key": "reg_zone_width0",
+                    "param": {
+                        "min": 0,
+                        "max": 8191
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "AEZoneHeight",
+                    "type": "spinner",
+                    "key": "reg_zone_height0",
+                    "param": {
+                        "min": 0,
+                        "max": 8191
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "AEStatisticsShiftBits",
+                    "type": "spinner",
+                    "key": "reg_stat_shift_bits0",
+                    "param": {
+                        "min": 0,
+                        "max": 7
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "RGain",
+                    "type": "spinner",
+                    "key": "reg_rgain0",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "GGain",
+                    "type": "spinner",
+                    "key": "reg_ggain0",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "BGain",
+                    "type": "spinner",
+                    "key": "reg_bgain0",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "Weight",
+                    "key": ["ae_weight1", "ae_weight2", "ae_weight3", "ae_weight4", "ae_weight5", "ae_weight6",
+                            "ae_weight7", "ae_weight8", "ae_weight9", "ae_weight10", "ae_weight11", "ae_weight12",
+                             "ae_weight13", "ae_weight14", "ae_weight15"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+                    "param": {
+                        "col": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17"],
+						"row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"],
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "LogEnable",
+                    "type": "binary",
+                    "key": "statistics_config_log_enable",
+                    "level": 1
+                },
+                {
+                    "title": "AE.Crop.Enable",
+                    "type": "binary",
+                    "key": "ae_config_CropEnable"
+                },
+                {
+                    "title": "AE.Crop.X",
+                    "type": "spinner",
+                    "key": "ae_config_CropX",
+                    "param": {
+                        "min": 0,
+                        "max": 4096
+                    }
+                },
+                {
+                    "title": "AE.Crop.Y",
+                    "type": "spinner",
+                    "key": "ae_config_CropY",
+                    "param": {
+                        "min": 0,
+                        "max": 4096
+                    }
+                },
+                {
+                    "title": "AE.Crop.W",
+                    "type": "spinner",
+                    "key": "ae_config_CropW",
+                    "param": {
+                        "min": 0,
+                        "max": 4096
+                    }
+                },
+                {
+                    "title": "AE.Crop.H",
+                    "type": "spinner",
+                    "key": "ae_config_CropH",
+                    "param": {
+                        "min": 0,
+                        "max": 4096
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "AF Config",
+            "section": "isp_af_config",
+            "content": [
+                {
+                    "title": "Enable",
+                    "type": "binary",
+                    "key": "af_config_Enable"
+                },
+                {
+                    "title": "Hwnd",
+                    "type": "spinner",
+                    "key": "af_config_Hwnd",
+                    "param": {
+                        "min": 2,
+                        "max": 17
+                    }
+                },
+                {
+                    "title": "Vwnd",
+                    "type": "spinner",
+                    "key": "af_config_Vwnd",
+                    "param": {
+                        "min": 2,
+                        "max": 15
+                    }
+                },
+                {
+                    "title": "AF.Crop.Enable",
+                    "type": "binary",
+                    "key": "af_config_Crop_Enable"
+                },
+                {
+                    "title": "AF.Crop.X",
+                    "type": "spinner",
+                    "key": "af_config_Crop_X",
+                    "param": {
+                        "min": 8,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "AF.Crop.Y",
+                    "type": "spinner",
+                    "key": "af_config_Crop_Y",
+                    "param": {
+                        "min": 2,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "AF.Crop.W",
+                    "type": "spinner",
+                    "key": "af_config_Crop_W",
+                    "param": {
+                        "min": 272,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "AF.Crop.H",
+                    "type": "spinner",
+                    "key": "af_config_Crop_H",
+                    "param": {
+                        "min": 240,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "RawCfg.PreGammaEn",
+                    "type": "binary",
+                    "key": "af_config_RawCfg_PreGammaEn",
+                    "level": 1
+                },
+                {
+                    "title": "RawCfg.PreGammaTable",
+                    "key": "af_config_RawCfg_PreGammaTable",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "PreFltCfg.PreFltEn",
+                    "type": "binary",
+                    "key": "af_config_PreFltCfg_PreFltEn"
+                },
+                {
+                    "title": "HFltShift",
+                    "type": "spinner",
+                    "key": "af_config_HFltShift",
+                    "param": {
+                        "min": 0,
+                        "max": 16
+                    }
+                },
+                {
+                    "title": "HighLumaTh",
+                    "type": "spinner",
+                    "key": "af_config_HighLumaTh",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "HVFltLpCoeff",
+                    "key": "af_config_HVFltLpCoeff",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": -32,
+                        "max": 31
+                    }
+                },
+                {
+                    "title": "HParam_FIR0.HFltHpCoeff",
+                    "key": "af_config_HParam_FIR0_HFltHpCoeff",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": -32,
+                        "max": 31
+                    }
+                },
+                {
+                    "title": "HParam_FIR1.HFltHpCoeff",
+                    "key": "af_config_HParam_FIR1_HFltHpCoeff",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": -32,
+                        "max": 31
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "VParam_FIR.VFltHpCoeff",
+                    "key": "af_config_VParam_FIR_VFltHpCoeff",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": -32,
+                        "max": 31
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "AWB Config",
+            "section": "isp_awb_config",
+            "content": [
+                {
+                    "title": "BlackLevel",
+                    "type": "spinner",
+                    "key": "reg_blacklvl1",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "WhiteLevel",
+                    "type": "spinner",
+                    "key": "reg_whitelvl1",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "AWB.Crop.Enable",
+                    "type": "binary",
+                    "key": "awb_config_CropEnable"
+                },
+                {
+                    "title": "AWB.Crop.X",
+                    "type": "spinner",
+                    "key": "awb_config_CropX",
+                    "param": {
+                        "min": 0,
+                        "max": 4096
+                    }
+                },
+                {
+                    "title": "AWB.Crop.Y",
+                    "type": "spinner",
+                    "key": "awb_config_CropY",
+                    "param": {
+                        "min": 0,
+                        "max": 4096
+                    }
+                },
+                {
+                    "title": "AWB.Crop.W",
+                    "type": "spinner",
+                    "key": "awb_config_CropW",
+                    "param": {
+                        "min": 0,
+                        "max": 4096
+                    }
+                },
+                {
+                    "title": "AWB.Crop.H",
+                    "type": "spinner",
+                    "key": "awb_config_CropH",
+                    "param": {
+                        "min": 0,
+                        "max": 4096
+                    }
+                }
+            ]
+        }
+    ]
+}

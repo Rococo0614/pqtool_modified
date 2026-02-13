@@ -1,0 +1,83 @@
+{
+    "page_name": "DRC",
+    "ready" : false,
+    "groups": [
+        {
+            "group_name": "DRC",
+            "content": [
+                {
+                    "title": "Enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "WhiteLevel",
+                    "type": "spinner"
+                },
+                {
+                    "title": "BlackLevel",
+                    "type": "spinner"
+                },
+                {
+                    "title": "UserTmEnable",
+                    "type": "binary"
+                },
+                {
+                    "title": "Asymmetry",
+                    "type": "spinner"
+                },
+                {
+                    "title": "BrightEnhance",
+                    "type": "spinner"
+                },
+                {
+                    "title": "FilterMux",
+                    "type": "combobox"
+                },
+                {
+                    "title": "SlopeMax",
+                    "type": "spinner"
+                },
+                {
+                    "title": "SlopeMin",
+                    "type": "spinner"
+                },
+                {
+                    "title": "VarianceSpace",
+                    "type": "spinner"
+                },
+                {
+                    "title": "VarianceIntensity",
+                    "type": "spinner"
+                },
+                {
+                    "title": "Contrast",
+                    "type": "spinner"
+                },
+                {
+                    "title": "BrightPr",
+                    "type": "spinner"
+                },
+                {
+                    "title": "Svariance",
+                    "type": "spinner"
+                },
+                {
+                    "title": "DarkEnhance",
+                    "type": "spinner"
+                },
+                {
+                    "title": "OpType",
+                    "type": "combobox"
+                },
+                {
+                    "title": "AutoStrength",
+                    "type": "spinner"
+                },
+                {
+                    "title": "ManualStrength",
+                    "type": "spinner"
+                }
+            ]
+        }
+    ]
+}

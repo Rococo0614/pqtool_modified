@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/">
+        <file>languages/isp_tool.en.ts</file>
+        <file>languages/isp_tool.zh_TW.ts</file>
+        <file>languages/isp_tool.en.qm</file>
+        <file>languages/isp_tool.zh_TW.qm</file>
+        <file>languages/isp_tool.zh_CN.ts</file>
+        <file>languages/isp_tool.zh_CN.qm</file>
+        <file>icons/arrow_up.png</file>
+        <file>icons/arrow_down.png</file>
+        <file>icons/arrow_left.png</file>
+        <file>icons/arrow_right.png</file>
+        <file>icons/control_arrow_up.png</file>
+        <file>icons/control_arrow_down.png</file>
+        <file>icons/control_arrow_left.png</file>
+        <file>icons/control_arrow_right.png</file>
+        <file>icons/zoom_in.png</file>
+        <file>icons/zoom_out.png</file>
+        <file>icons/search.png</file>
+        <file>icons/list.png</file>
+        <file>icons/ro.png</file>
+        <file>icons/rw.png</file>
+        <file>qml/switch.qml</file>
+        <file>jsons/registers.json</file>
+        <file>jsons/iso/iso_matrix.json</file>
+        <file>icons/online.png</file>
+    </qresource>
+</RCC>

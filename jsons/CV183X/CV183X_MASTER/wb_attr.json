@@ -1,0 +1,1107 @@
+{
+    "page_name": "WB Attr",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "White Balance",
+            "section": "White Balance",
+            "content": [
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "ByPass",
+					"key": "bByPass",
+                    "type": "binary"
+                },
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "OpType",
+					"key": "enOpType",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "AlgType",
+					"key": "WB_AlgType",
+                    "type": "combobox",
+                    "param": [
+                        {
+                            "label": "ALG_AWB",
+                            "value": "0"
+                        },
+                        {
+                            "label": "ALG_AWB_SPEC",
+                            "value": "1"
+                        }
+                    ]
+                },
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "AWBRunInterval",
+					"key": "u8AWBRunInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "Debug Mode",
+                    "key": "u8DebugMode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "MWBAttr",
+                    "type": "header"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "Rgain",
+					"key": "u16Rgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 16383
+                    }
+                },
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "Ggain",
+                    "key": "u16Ggain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 16383
+                    }
+                },
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "Bgain",
+					"key": "u16Bgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 16383
+                    }
+                },
+                {
+                    "title": "AWB Calibration Data",
+                    "type": "header"
+                },
+                {
+                    "structure": "ISP_AWB_Calibration_Gain_S",
+                    "title": "ColorTemp[0]",
+                    "key": "u16ColorTemp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    }
+                },
+                {
+                    "structure": "ISP_AWB_Calibration_Gain_S",
+                    "title": "AvgRgain[0]",
+					"key": "u16AvgRgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+				{
+                    "structure": "ISP_AWB_Calibration_Gain_S",
+                    "title": "AvgBgain[0]",
+                    "key": "u16AvgBgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_AWB_Calibration_Gain_S",
+                    "title": "ColorTemp[1]",
+                    "key": "u16ColorTemp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    }
+                },
+                {
+                    "structure": "ISP_AWB_Calibration_Gain_S",
+                    "title": "AvgRgain[1]",
+					"key": "u16AvgRgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+				{
+                    "structure": "ISP_AWB_Calibration_Gain_S",
+                    "title": "AvgBgain[1]",
+                    "key": "u16AvgBgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_AWB_Calibration_Gain_S",
+                    "title": "ColorTemp[2]",
+                    "key": "u16ColorTemp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    }
+                },
+                {
+                    "structure": "ISP_AWB_Calibration_Gain_S",
+                    "title": "AvgRgain[2]",
+					"key": "u16AvgRgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+				{
+                    "structure": "ISP_AWB_Calibration_Gain_S",
+                    "title": "AvgBgain[2]",
+                    "key": "u16AvgBgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                }
+            ]
+        },
+		{
+			"group_name": "AWBAttr",
+            "section": "AWBAttr",
+            "content": [
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "Enable",
+					"key": "bWBEnable",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "RefColorTemp",
+					"key": "u16RefColorTemp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+					"title": "StaticWB",
+                    "key": "au16StaticWB",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["1", "2", "3", "4"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+					"title": "CurvePara",
+                    "key": "as32CurvePara",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["1", "2", "3", "4", "5", "6"],
+						"row": ["1"],
+						"min": -2147483648,
+                        "max": 2147483647
+                    }
+				},
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "AWB.AlgType",
+					"key": "WB_AWBAttr_AlgType",
+                    "type": "combobox",
+                    "param": [
+                        {
+                            "label": "AWB_ALG_LOWCOST",
+                            "value": "0"
+                        },
+                        {
+                            "label": "AWB_ALG_ADVANCE",
+                            "value": "1"
+                        }
+                    ]
+                },
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "RGStrength",
+					"key": "u8RGStrength",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "BGStrength",
+					"key": "u8BGStrength",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "Speed",
+					"key": "u16Speed",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "ZoneSel",
+					"key": "WB_ZoneSel",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "HighColorTemp",
+					"key": "u16HighColorTemp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "LowColorTemp",
+					"key": "u16LowColorTemp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "CTLimit.Enable",
+					"key": "WB_CTLimit.Enable",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "CTLimit.OpType",
+					"key": "WB_CTLimit.OpType",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "CTLimit.HighRgLimit",
+					"key": "WB_CTLimit.HighRgLimit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "CTLimit.HighBgLimit",
+					"key": "WB_CTLimit.HighBgLimit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "CTLimit.LowRgLimit",
+					"key": "WB_CTLimit.LowRgLimit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "CTLimit.LowBgLimit",
+					"key": "WB_CTLimit.LowBgLimit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "ShiftLimitEn",
+					"key": "WB_ShiftLimitEn",
+                    "type": "binary"
+                },
+				{
+                    "structure": "ISP_WB_ATTR_S",
+					"title": "ShiftLimit",
+                    "key": "u16ShiftLimit",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["Low_Down", "Low_Up", "Mid1_Down", "Mid1_Up", "Mid2_Down", "Mid2_Up ", "High_Down", "High_Up"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 1023
+					}
+				},
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "GainNormEn",
+					"key": "WB_GainNormEn",
+                    "type": "binary"
+                },
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "NaturalCastEn",
+                    "key": "bNaturalCastEn",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "CbCrTrack.Enable",
+                    "key": "WB_CbCrTrack.Enable",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "CbCrTrack.CrMax",
+                    "type": "iso_matrix",
+                    "key": "WB_CbCrTrack.CrMax",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "CbCrTrack.CrMin",
+                    "type": "iso_matrix",
+                    "key": "WB_CbCrTrack.CrMin",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "CbCrTrack.CbMax",
+                    "type": "iso_matrix",
+                    "key": "WB_CbCrTrack.CbMax",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "CbCrTrack.CbMin",
+                    "type": "iso_matrix",
+                    "key": "WB_CbCrTrack.CbMin",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "LumaHist.Enable",
+                    "key": "WB_LumaHist.Enable",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "LumaHist.OpType",
+					"key": "WB_LumaHist.OpType",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+					"title": "LumaHist.HistThresh",
+                    "key": "WB_LumaHist.HistThresh",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["1", "2", "3", "4", "5", "6 "],
+						"row": ["1"],
+						"min": 0,
+                        "max": 255
+					}
+				},
+				{
+                    "structure": "ISP_WB_ATTR_S",
+					"title": "LumaHist.HistWt",
+                    "key": "WB_LumaHist.HistWt",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["1", "2", "3", "4", "5", "6 "],
+						"row": ["1"],
+						"min": 0,
+                        "max": 512
+					}
+				},
+				{
+                    "structure": "ISP_WB_ATTR_S",
+                    "title": "AWBZoneWtEn",
+                    "key": "WB_AWBZoneWtEn",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_S",
+					"title": "ZoneWt",
+                    "key": ["WB_ZoneWt1","WB_ZoneWt2","WB_ZoneWt3","WB_ZoneWt4","WB_ZoneWt5","WB_ZoneWt6","WB_ZoneWt7","WB_ZoneWt8",
+                    		"WB_ZoneWt9","WB_ZoneWt10","WB_ZoneWt11","WB_ZoneWt12","WB_ZoneWt13","WB_ZoneWt14","WB_ZoneWt15","WB_ZoneWt16",
+                    		"WB_ZoneWt17","WB_ZoneWt18","WB_ZoneWt19","WB_ZoneWt20","WB_ZoneWt21","WB_ZoneWt22","WB_ZoneWt23","WB_ZoneWt24",
+                    		"WB_ZoneWt25","WB_ZoneWt26","WB_ZoneWt27","WB_ZoneWt28","WB_ZoneWt29","WB_ZoneWt30","WB_ZoneWt31","WB_ZoneWt32"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+					"param":
+					{
+						"col": ["1", "2", "3", "4", "5", "6 ", "7", "8","9", "10", "11", "12", "13", "14 ", "15", "16",
+								"17", "18", "19", "20", "21", "22 ", "23", "24","25", "26", "27", "28", "29", "30 ", "31", "32"],
+						"row": ["1", "2", "3", "4", "5", "6 ", "7", "8","9", "10", "11", "12", "13", "14 ", "15", "16",
+								"17", "18", "19", "20", "21", "22 ", "23", "24","25", "26", "27", "28", "29", "30 ", "31", "32"],
+						"min": 0,
+                        "max": 255
+					}
+				}
+			]
+		},
+		{
+			"group_name": "AWBAttrEx",
+            "section": "AWBAttrEx",
+            "content": [
+				{
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "Tolerance",
+					"key": "AWBAttrEx_Tolerance",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "ZoneRadius",
+					"key": "AWBAttrEx_ZoneRadius",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "CurveLLimit",
+					"key": "AWBAttrEx_CurveLLimit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1024
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "CurveRLimit",
+					"key": "AWBAttrEx_CurveRLimit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 512,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "ExtraLightEn",
+					"key": "AWBAttrEx_ExtraLightEn",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[0].WhiteRgain",
+					"key": "AWBAttrEx_LightInfo[0].WhiteRgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[0].WhiteBgain",
+					"key": "AWBAttrEx_LightInfo[0].WhiteBgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[0].ExpQuant",
+					"key": "AWBAttrEx_LightInfo[0].ExpQuant",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[0].LightStatus",
+					"key": "AWBAttrEx_LightInfo[0].LightStatus",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[0].Radius",
+					"key": "AWBAttrEx_LightInfo[0].Radius",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[1].WhiteRgain",
+					"key": "AWBAttrEx_LightInfo[1].WhiteRgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[1].WhiteBgain",
+					"key": "AWBAttrEx_LightInfo[1].WhiteBgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[1].ExpQuant",
+					"key": "AWBAttrEx_LightInfo[1].ExpQuant",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[1].LightStatus",
+					"key": "AWBAttrEx_LightInfo[1].LightStatus",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[1].Radius",
+					"key": "AWBAttrEx_LightInfo[1].Radius",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[2].WhiteRgain",
+					"key": "AWBAttrEx_LightInfo[2].WhiteRgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[2].WhiteBgain",
+					"key": "AWBAttrEx_LightInfo[2].WhiteBgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[2].ExpQuant",
+					"key": "AWBAttrEx_LightInfo[2].ExpQuant",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[2].LightStatus",
+					"key": "AWBAttrEx_LightInfo[2].LightStatus",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[2].Radius",
+					"key": "AWBAttrEx_LightInfo[2].Radius",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[3].WhiteRgain",
+					"key": "AWBAttrEx_LightInfo[3].WhiteRgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[3].WhiteBgain",
+					"key": "AWBAttrEx_LightInfo[3].WhiteBgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[3].ExpQuant",
+					"key": "AWBAttrEx_LightInfo[3].ExpQuant",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[3].LightStatus",
+					"key": "AWBAttrEx_LightInfo[3].LightStatus",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "LightInfo[3].Radius",
+					"key": "AWBAttrEx_LightInfo[3].Radius",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    }
+                }
+            ]
+        },
+		{
+			"group_name": "AWBAttrEx",
+            "section": "AWBAttrEx",
+            "content": [
+				{
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "InOrOut.Enable",
+					"key": "AWBAttrEx_InOrOut.Enable",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "InOrOut.OpType",
+					"key": "AWBAttrEx_InOrOut.OpType",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "InOrOut.OutdoorStatus",
+                    "type": "combobox",
+                    "key": "AWBAttrEx_InOrOut.OutdoorStatus",
+                    "param": [
+                        {
+                            "label": "AWB_INDOOR_MODE",
+                            "value": 0
+                        },
+                        {
+                            "label": "AWB_OUTDOOR_MODE",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "InOrOut.OutThresh",
+					"key": "AWBAttrEx_InOrOut.OutThresh",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 20
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "InOrOut.LowStart",
+					"key": "AWBAttrEx_InOrOut.LowStart",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "InOrOut.LowStop",
+					"key": "AWBAttrEx_InOrOut.LowStop",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "InOrOut.HighStart",
+					"key": "AWBAttrEx_InOrOut.HighStart",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "InOrOut.HighStop",
+					"key": "AWBAttrEx_InOrOut.HighStop",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "InOrOut.bGreenEnhanceEn",
+					"key": "AWBAttrEx_InOrOut.bGreenEnhanceEn",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "InOrOut.OutShiftLimit",
+					"key": "AWBAttrEx_InOrOut.OutShiftLimit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "MultiLightSourceEn",
+					"key": "WB_MultiLightSourceEn",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "MultiLSType",
+					"key": "WB_MultiLSType",
+                    "type": "combobox",
+                    "param": [
+                        {
+                            "label": "AWB_MULTI_LS_SAT",
+                            "value": "0"
+                        },
+                        {
+                            "label": "AWB_MULTI_LS_CCM",
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "MultiLSScaler",
+					"key": "WB_MultiLSScaler",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    }
+                },
+				{
+                    "structure": "ISP_WB_ATTR_EX_S",
+					"title": "MultiCTBin",
+                    "key": "WB_MultiCTBin",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["1", "2", "3", "4", "5", "6 ", "7", "8"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 65535
+					}
+				},
+				{
+                    "structure": "ISP_WB_ATTR_EX_S",
+					"title": "MultiCTWt",
+                    "key": "WB_MultiCTWt",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["1", "2", "3", "4", "5", "6 ", "7", "8"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 1024
+					}
+				},
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "FineTunEn",
+					"key": "WB_FineTunEn",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "FineTunStrength",
+					"key": "WB_FineTunStrength",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "CT_LvEn",
+                    "key": "WB_CT_LvEn",
+                    "type": "binary"
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "CT_LvBin",
+                    "key": "WB_CT_LvBin",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param":
+                    {
+                        "col": ["1", "2", "3", "4", "5", "6 ", "7", "8"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "CT_LvThr",
+                    "key": "WB_CT_LvThr",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param":
+                    {
+                        "col": ["Thr1", "Thr2", "Thr3", "Thr4"],
+                        "row": ["LV"],
+                        "min": 0,
+                        "max": 20
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "CT_LvBinWt",
+                    "key": ["WB_CT_LvBinWt1","WB_CT_LvBinWt2","WB_CT_LvBinWt3","WB_CT_LvBinWt4"],
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array_2d",
+                    "param":
+                    {
+                        "col": ["1", "2", "3", "4", "5", "6 ", "7", "8"],
+                        "row": ["Thr1", "Thr2", "Thr3", "Thr4"],
+                        "min": 0,
+                        "max": 1024
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "SkinMode",
+                    "key": "WB_SkinMode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "SkinRadius",
+                    "key": "WB_SkinRadius",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 64
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "SkinDiff",
+                    "key": "WB_SkinDiff",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param":
+                    {
+                        "col": ["Rgain", "Bgain"],
+                        "row": ["Diff"],
+                        "min": 0,
+                        "max": 20
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "SkyMode",
+                    "key": "WB_SkyMode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "SkyThrLv",
+                    "key": "WB_SkyThrLv",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 20
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "SkyRadius",
+                    "key": "WB_SkyRadius",
+                    "type": "spinner",
+                        "param": {
+                        "min": 0,
+                        "max": 64
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "SkyGain",
+                    "key": "WB_SkyGain",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param":
+                    {
+                        "col": ["Rgain", "Bgain", "MapRgain", "MapBgain"],
+                        "row": ["Gain"],
+                        "min": 0,
+                        "max": 20
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "ShiftLvLow",
+                    "key": "WB_ShiftLvLow",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param":
+                    {
+                        "col": ["mode", "CT[0]", "CT[1]", "LvThr[0]", "LvThr[1]", "Ratio[0]", "Ratio[1]"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 1000
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "ShiftLvHigh",
+                    "key": "WB_ShiftLvHigh",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param":
+                    {
+                        "col": ["mode", "CT[0]", "CT[1]", "LvThr[0]", "LvThr[1]", "Ratio[0]", "Ratio[1]"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 1000
+                    }
+                },
+                {
+                    "structure": "ISP_WB_ATTR_EX_S",
+                    "title": "Region",
+                    "key": "WB_Region",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param":
+                    {
+                        "col": ["region1", "region2", "region3"],
+                        "row": ["colorTemp"],
+                        "min": 1,
+                        "max": 65535
+                    }
+                }
+            ]
+        }
+    ]
+}

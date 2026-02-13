@@ -1,0 +1,107 @@
+{
+    "page_name": "WB Info",
+    "ro_page": true,
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "WBInfo",
+            "section": "WBInfo",
+            "content": [
+                {
+                    "title": "Rgain",
+                    "key": "Rgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "Ggain",
+                    "key": "Grgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "Bgain",
+                    "key": "Bgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "Saturation",
+                    "key": "Saturation",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "ColorTemp",
+                    "key": "ColorTemp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "CCM",
+                    "key": "ccm_array",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 65535
+                    },
+                    "chmod": "ReadOnly",
+                    "level": 1
+                },
+                {
+                    "title": "FirstStableTime",
+                    "key": "u32FirstStableTime",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4294967295
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "InOutStatus",
+                    "key": "bInOutStatus",
+                    "type": "binary",
+					"param": {
+                        "text_enable": "Outdoor",
+                        "text_disable": "Indoor"
+                    },
+                    "chmod": "ReadOnly"
+                },
+                {
+                    "title": "Bv",
+                    "key": "Bv",
+                    "type": "spinner",
+                    "param": {
+                        "min": -32768,
+                        "max": 32767
+                    },
+                    "chmod": "ReadOnly"
+                }
+            ]
+        }
+    ]
+}

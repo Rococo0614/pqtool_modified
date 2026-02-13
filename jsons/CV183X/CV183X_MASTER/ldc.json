@@ -1,0 +1,146 @@
+{
+    "page_name": "LDC",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "VI LDC",
+            "section": "VI LDC",
+            "content": [
+                {
+                    "title": "VI.Enable",
+                    "key": "LDC_VI_Enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "VI.Aspect",
+                    "key": "LDC_VI_Aspect",
+                    "type": "binary"
+                },
+                {
+                    "title": "VI.XRatio",
+                    "key": "LDC_VI_XRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "VI.YRatio",
+                    "key": "LDC_VI_YRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "VI.XYRatio",
+                    "key": "LDC_VI_XYRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "VI.CenterXOffset",
+                    "key": "LDC_VI_CenterXOffset",
+                    "type": "spinner",
+                    "param": {
+                        "min": -511,
+                        "max": 511
+                    }
+                },
+                {
+                    "title": "VI.CenterYOffset",
+                    "key": "LDC_VI_CenterYOffset",
+                    "type": "spinner",
+                    "param": {
+                        "min": -511,
+                        "max": 511
+                    }
+                },
+                {
+                    "title": "VI.DistortionRatio",
+                    "key": "LDC_VI_DistortionRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": -300,
+                        "max": 500
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "VPSS LDC",
+            "section": "VPSS LDC",
+            "content": [
+                {
+                    "title": "VPSS.Enable",
+                    "key": "LDC_VPSS_Enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "VPSS.Aspect",
+                    "key": "LDC_VPSS_Aspect",
+                    "type": "binary"
+                },
+                {
+                    "title": "VPSS.XRatio",
+                    "key": "LDC_VPSS_XRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "VPSS.YRatio",
+                    "key": "LDC_VPSS_YRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "VPSS.XYRatio",
+                    "key": "LDC_VPSS_XYRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "VPSS.CenterXOffset",
+                    "key": "LDC_VPSS_CenterXOffset",
+                    "type": "spinner",
+                    "param": {
+                        "min": -511,
+                        "max": 511
+                    }
+                },
+                {
+                    "title": "VPSS.CenterYOffset",
+                    "key": "LDC_VPSS_CenterYOffset",
+                    "type": "spinner",
+                    "param": {
+                        "min": -511,
+                        "max": 511
+                    }
+                },
+                {
+                    "title": "VPSS.DistortionRatio",
+                    "key": "LDC_VPSS_DistortionRatio",
+                    "type": "spinner",
+                    "param": {
+                        "min": -300,
+                        "max": 500
+                    }
+                }
+            ]
+        }
+    ]
+}

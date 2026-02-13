@@ -1,0 +1,407 @@
+{
+    "page_name": "FSWDR",
+    "ready": true,
+    "groups": [
+        {
+            "group_name": "FSWDR",
+            "section": "FSWDR",
+            "title_width": 240,
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_fs_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "key": "enOptype",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "fswdr_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "TuningMode",
+                    "key": "reg_fs_out_sel",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 10
+                    }
+                },
+                {
+                    "title": "MtMode",
+                    "key": "fswdr_MtMode",
+                    "type": "binary",
+                    "param": {
+                        "text_enable": "Motion History",
+                        "text_disable": "Motion IIR"
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "MotionCompEnable",
+                    "key": "reg_fs_mc_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "WDRMotioinFusionMode",
+                    "key": "fswdr_WDRMotioinFusionMode_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 3
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRMotioinFusionMode",
+                    "key": "fswdr_WDRMotioinFusionMode_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 3,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "MergeModeAlpha",
+                    "key": "reg_mmap_mrg_alph",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MergeModeAlpha",
+                    "key": "reg_mmap_mrg_alph",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "WDRCombineLongThr",
+                    "key": "FSWDR_WDRCombineLongThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRCombineShortThr",
+                    "key": "FSWDR_WDRCombineShortThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRCombineMaxWeight",
+                    "key": "FSWDR_WDRCombineMaxWeight",
+                    "type": "spinner",
+                    "param": {
+                        "min": 256,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRCombineMinWeight",
+                    "key": "FSWDR_WDRCombineMinWeight",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRCombineCurve",
+                    "type": "iso_curve",
+                    "key": ["WDRCombineLongThr_iso", "WDRCombineShortThr_iso", "WDRCombineMaxWeight_iso", "WDRCombineMinWeight_iso"],
+                    "optype": "Auto",
+                    "param": {
+                        "min": [0, 0, 256, 0],
+                        "max": [4095, 4095, 256, 256],
+                        "interop_num": 2,
+                        "label": [["WDRCombineLongThr", "WDRCombineShortThr"], ["WDRCombineMaxWeight", "WDRCombineMinWeight"]],
+                        "header_type": "LV"
+                    }
+                },
+                {
+                    "title": "WDRDitherEnable",
+                    "key": "FSWDR_WDRDitherEnable",
+                    "type": "binary",
+                    "level": 1
+                },
+                {
+                    "title": "WDRDitherBit",
+                    "key": "FSWDR_WDRDitherBit",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "WDRDitherRange",
+                    "key": "FSWDR_WDRDitherRange",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "group_name": "FSWDR",
+            "section": "FSWDR",
+            "title_width": 320,
+            "content": [
+                {
+					"title": "WDRMtIn",
+                    "key": "FSWDR_WDRMtIn_Manual",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["1", "2", "3", "4"],
+						"row": ["WDRMtIn[4]"],
+						"min": 0,
+                        "max": 255
+					},
+					"optype": "Manual"
+				},
+                {
+                    "title": "WDRMtIn",
+                    "key": ["FSWDR_WDRMtIn1", "FSWDR_WDRMtIn2", "FSWDR_WDRMtIn3", "FSWDR_WDRMtIn4"],
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255,
+                        "row": ["1", "2", "3", "4"],
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+					"title": "WDRMtOut",
+                    "key": "FSWDR_WDRMtOut_Manual",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+					"param":
+					{
+						"col": ["1", "2", "3", "4"],
+						"row": ["WDRMtOut[4]"],
+						"min": 0,
+                        "max": 256
+					},
+					"optype": "Manual"
+				},
+                {
+                    "title": "WDRMtOut",
+                    "key": ["FSWDR_WDRMtOut1", "FSWDR_WDRMtOut2", "FSWDR_WDRMtOut3", "FSWDR_WDRMtOut4"],
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 256,
+                        "row": ["1", "2", "3", "4"],
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "WDRType",
+					"key": "FSWDR_WDRType",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2
+                    }
+                },
+                {
+                    "title": "WDRLongWgt",
+                    "key": "FSWDR_WDRLongWgt_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRLongWgt",
+                    "key": "FSWDR_WDRLongWgt_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 256,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "WDRLumaMode",
+                    "key": "FSWDR_WDRLumaMode_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRLumaMode",
+                    "key": "FSWDR_WDRLumaMode_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 1,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "FSWDR",
+            "section": "FSWDR",
+            "title_width": 320,
+            "content": [
+                {
+                    "title": "WDRCombineSNRAwareEn",
+                    "key": "fswdr_WDRCombineSNRAwareEn",
+                    "type": "binary",
+                    "level": 2
+                },
+                {
+                    "title": "WDRCombineSNRAwareLowThr",
+                    "key": "fswdr_WDRCombineSNRAwareLowThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    },
+                    "level": 2
+                },
+                {
+                    "title": "WDRCombineSNRAwareHighThr",
+                    "key": "fswdr_WDRCombineSNRAwareHighThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    },
+                    "level": 2
+                },
+                {
+                    "title": "WDRCombineSNRAwareToleranceLevel",
+                    "key": "fswdr_WDRCombineSNRAwareToleranceLevel_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "WDRCombineSNRAwareToleranceLevel",
+                    "key": "fswdr_WDRCombineSNRAwareToleranceLevel_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "WDRCombineSNRAwareSmoothLevel",
+                    "key": "fswdr_WDRCombineSNRAwareSmoothLevel",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 3000
+                    },
+                    "level": 2
+                },
+                {
+                    "title": "WDRMotionCombineLongThr",
+                    "key": "FSWDR_WDRMotionCombineLongThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRMotionCombineShortThr",
+                    "key": "FSWDR_WDRMotionCombineShortThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRMotionCombineMaxWeight",
+                    "key": "FSWDR_WDRMotionCombineMaxWeight",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRMotionCombineMinWeight",
+                    "key": "FSWDR_WDRMotionCombineMinWeight",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WDRMotionCombineCurve",
+                    "type": "iso_curve",
+                    "key": ["WDRMotionCombineLongThr_iso", "WDRMotionCombineShortThr_iso", "WDRMotionCombineMaxWeight_iso", "WDRMotionCombineMinWeight_iso"],
+                    "optype": "Auto",
+                    "param": {
+                        "min": [0, 0, 0, 0],
+                        "max": [4095, 4095, 256, 256],
+                        "interop_num": 2,
+                        "label": [["WDRMotionCombineLongThr", "WDRMotionCombineShortThr"], ["WDRMotionCombineMaxWeight", "WDRMotionCombineMinWeight"]],
+                        "header_type": "LV"
+                    }
+                }
+            ]
+        }
+    ]
+}

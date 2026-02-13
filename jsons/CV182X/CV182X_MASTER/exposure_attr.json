@@ -1,0 +1,690 @@
+{
+    "page_name": "Exposure attr",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Exposure",
+            "section": "Exposure",
+            "content": [
+                {
+                    "title": "Bypass",
+                    "key": "bByPass",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "enOpType"
+                },
+                {
+                    "title": "AERunInterval",
+                    "key": "u8AERunInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "HistStatAdjust",
+                    "key": "exp_attr_HistStatAdjust",
+                    "type": "binary"
+                },
+                {
+                    "title": "AERouteExValid",
+                    "key": "bAERouteExValid",
+                    "type": "binary"
+                },
+				{
+                    "title": "AEGainSepCfg",
+                    "key": "bAEGainSepCfg",
+                    "type": "binary"
+                },
+                {
+                    "title": "Meter Mode",
+                    "type": "combobox",
+                    "key": "u8MeterMode",
+                    "param": [
+                        {
+                            "label": "AE_METER_MULTI",
+                            "value": 0
+                        },
+                        {
+                            "label": "AE_METER_AVERAGE",
+                            "value": 1
+                        },
+                        {
+                            "label": "AE_METER_HIGHLIGHT_PRIORITY",
+                            "value": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "title": "Debug Mode",
+                    "key": "u8DebugMode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "Exposure Manual",
+                    "type": "header"
+                },
+                {
+                    "title": "ExpTimeOpType",
+                    "type": "combobox",
+                    "key": "enExpTimeOpType",
+                    "param": [
+                        {
+                            "label": "OP_TYPE_AUTO",
+                            "value": 0
+                        },
+                        {
+                            "label": "OP_TYPE_MANUAL",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "title": "GainType",
+                    "type": "combobox",
+                    "key": "reg_GainType_manual",
+                    "param": [
+                        {
+                            "label": "AE_TYPE_GAIN",
+                            "value": 0
+                        },
+                        {
+                            "label": "AE_TYPE_ISO",
+                            "value": 1
+                        }
+                    ],
+                    "optype": "Manual"
+                },
+                {
+                    "title": "ISONumOpType",
+                    "type": "combobox",
+                    "key": "enISOOpType",
+                    "param": [
+                        {
+                            "label": "OP_TYPE_AUTO",
+                            "value": 0
+                        },
+                        {
+                            "label": "OP_TYPE_MANUAL",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "title": "AGainOpType",
+                    "type": "combobox",
+                    "key": "enAGainOpType",
+                    "param": [
+                        {
+                            "label": "OP_TYPE_AUTO",
+                            "value": 0
+                        },
+                        {
+                            "label": "OP_TYPE_MANUAL",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "title": "DGainOpType",
+                    "type": "combobox",
+                    "key": "enDGainOpType",
+                    "param": [
+                        {
+                            "label": "OP_TYPE_AUTO",
+                            "value": 0
+                        },
+                        {
+                            "label": "OP_TYPE_MANUAL",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "title": "ISPDGainOpType",
+                    "type": "combobox",
+                    "key": "enISPDGainOpType",
+                    "param": [
+                        {
+                            "label": "OP_TYPE_AUTO",
+                            "value": 0
+                        },
+                        {
+                            "label": "OP_TYPE_MANUAL",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "title": "ExpTime",
+                    "key": "u32ExpTime",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "ISONum",
+                    "key": "u32ISO",
+                    "type": "uint_spinner",
+                    "param": {
+                        "min": 100,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "AGain",
+                    "key": "u32AGain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "DGain",
+                    "key": "u32DGain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "ISPDGain",
+                    "key": "u32ISPDGain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 262144
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "Exposure Auto",
+            "section": "Exposure Auto",
+            "content": [
+                {
+                    "title": "ExpTimeRange.Max",
+                    "key": "stExpTimeRange.u32Max",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "ExpTimeRange.Min",
+                    "key": "stExpTimeRange.u32Min",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "GainType",
+                    "type": "combobox",
+                    "key": "reg_GainType_auto",
+                    "param": [
+                        {
+                            "label": "AE_TYPE_GAIN",
+                            "value": 0
+                        },
+                        {
+                            "label": "AE_TYPE_ISO",
+                            "value": 1
+                        }
+                    ],
+                    "optype": "Auto"
+                },
+                {
+                    "title": "ISORange.Max",
+                    "key": "stISORange.u32Max",
+                    "type": "spinner",
+                    "param": {
+                        "min": 100,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "ISORange.Min",
+                    "key": "stISORange.u32Min",
+                    "type": "spinner",
+                    "param": {
+                        "min": 100,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "AGainRange.Max",
+                    "key": "stAGainRange.u32Max",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "AGainRange.Min",
+                    "key": "stAGainRange.u32Min",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "DGainRange.Max",
+                    "key": "stDGainRange.u32Max",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "DGainRange.Min",
+                    "key": "stDGainRange.u32Min",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "ISPDGainRange.Max",
+                    "key": "stISPDGainRange.u32Max",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 262144
+                    }
+                },
+                {
+                    "title": "ISPDGainRange.Min",
+                    "key": "stISPDGainRange.u32Min",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 262144
+                    }
+                },
+                {
+                    "title": "SysGainRange.Max",
+                    "key": "stSysGainRange.u32Max",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "SysGainRange.Min",
+                    "key": "stSysGainRange.u32Min",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "GainThreshold",
+                    "key": "Exposure_GainThreshold",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1024,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "GridBvWeight",
+                    "key": "Exposure_GridBvWeight",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "Reserve",
+                    "key": "Exposure_Reserve",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param":
+                    {
+                        "col": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 2147483647
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "HighLightLumaThr",
+                    "key": "Exposure_HighLightLumaThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "HighLightBufLumaThr",
+                    "key": "Exposure_HighLightBufLumaThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "LowLightLumaThr",
+                    "key": "Exposure_LowLightLumaThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "LowLightBufLumaThr",
+                    "key": "Exposure_LowLightBufLumaThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "HistogramAssist",
+                    "key": "Exposure_HistogramAssist",
+                    "type": "binary"
+                }
+            ]
+        },
+        {
+            "group_name": "Exposure Auto",
+            "section": "Exposure Auto",
+            "content": [
+                {
+                    "title": "Speed",
+                    "key": "u8Speed",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "BlackSpeedBias",
+                    "key": "u16BlackSpeedBias",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "Tolerance",
+                    "key": "u8Tolerance",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "Compensation",
+                    "key": "u8Compensation",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "EvBias",
+                    "key": "u16EVBias",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "AEStrategyMode",
+                    "type": "combobox",
+                    "key": "enAEStrategyMode",
+                    "param": [
+                        {
+                            "label": "AE_EXP_HIGHLIGHT_PRIOR",
+                            "value": 0
+                        },
+                        {
+                            "label": "AE_EXP_LOWLIGHT_PRIOR",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "title": "HistRatioSlope",
+                    "key": "u16HistRatioSlope",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "MaxHistOffset",
+                    "key": "u8MaxHistOffset",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "AEMode",
+                    "type": "combobox",
+                    "key": "Exposure_AEMode",
+                    "param": [
+                        {
+                            "label": "AE_MODE_SLOW_SHUTTER",
+                            "value": 0
+                        },
+                        {
+                            "label": "AE_MODE_FIX_FRAME_RATE",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "title": "Antiflicker.Enable",
+                    "key": "stAntiflicker.bEnable",
+                    "type": "binary"
+                },
+                {
+                    "title": "Antiflicker.Frequency",
+                    "key": "stAntiflicker.u8Frequency",
+                    "type": "binary",
+                    "param": {
+                        "text_enable": "50 Hz",
+                        "text_disable": "60 Hz"
+                    }
+                },
+                {
+                    "title": "Antiflicker.Mode",
+                    "type": "combobox",
+                    "key": "AntiflickerenMode",
+                    "param": [
+                        {
+                            "label": "ISP_ANTIFLICKER_NORMAL_MODE",
+                            "value": 0
+                        },
+                        {
+                            "label": "ISP_ANTIFLICKER_AUTO_MODE",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "title": "Subflicker.Enable",
+                    "key": "SubflickerEnable",
+                    "type": "binary"
+                },
+                {
+                    "title": "Subflicker.LumaDiff",
+                    "key": "SubflickerLumaDiff",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                {
+                    "title": "AEDelayAttr.BlackDelayFrame",
+                    "key": "BlackDelayFrame",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "AEDelayAttr.WhiteDelayFrame",
+                    "key": "WhiteDelayFrame",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "ManualExpValue",
+                    "key": "bManualExpValue",
+                    "type": "binary"
+                },
+                {
+                    "title": "ExpValue",
+                    "key": "u32ExpValue",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2147483647
+                    }
+                },
+                {
+                    "title": "FSWDRMode",
+                    "type": "combobox",
+                    "key": "FSWDRMode",
+                    "param": [
+                        {
+                            "label": "ISP_FSWDR_NORMAL_MODE",
+                            "value": 0
+                        },
+                        {
+                            "label": "ISP_FSWDR_LONG_FRAME_MODE",
+                            "value": 1
+                        },
+                        {
+							"label": "ISP_FSWDR_AUTO_LONG_FRAME_MODE",
+							"value": 2
+                        }
+                    ]
+                },
+                {
+                    "title": "WDRQuick",
+                    "key": "WDRQuickEnable",
+                    "type": "binary"
+                },
+                {
+                    "title": "ISOCalCoef",
+                    "key": "ISOCalCoef",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                },
+                {
+                    "title": "AdjustTargetMin",
+                    "key": "u8AdjustTargetMin",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["LV-5", "LV-4", "LV-3", "LV-2", "LV-1", "LV0", "LV1", "LV2", "LV3", "LV4", "LV5", "LV6", "LV7", "LV8", "LV9", "LV10", "LV11", "LV12", "LV13", "LV14", "LV15"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "AdjustTargetMax",
+                    "key": "u8AdjustTargetMax",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param": {
+                        "col": ["LV-5", "LV-4", "LV-3", "LV-2", "LV-1", "LV0", "LV1", "LV2", "LV3", "LV4", "LV5", "LV6", "LV7", "LV8", "LV9", "LV10", "LV11", "LV12", "LV13", "LV14", "LV15"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "LowBinThr",
+                    "key": "LowBinThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    }
+                },
+                {
+                    "title": "HighBinThr",
+                    "key": "HighBinThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    }
+                },
+                {
+                    "title": "FaceAE",
+                    "key": "Exposure_FaceAE",
+                    "type": "binary"
+                },
+                {
+                    "title": "FaceTargetLuma",
+                    "key": "Exposure_FaceTargetLuma",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "FaceWeight",
+                    "key": "Exposure_FaceWeight",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    }
+                }
+            ]
+        }
+    ]
+}

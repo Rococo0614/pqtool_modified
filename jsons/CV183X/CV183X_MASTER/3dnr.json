@@ -1,0 +1,998 @@
+{
+    "page_name": "3DNR",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Common",
+            "section": "isp_3dnr",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_manr_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "key": "bOptype",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "3dnr_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "MtDetectUnit",
+                    "key": "3dnr_MtDetectUnit_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 6
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MtDetectUnit",
+                    "key": "3dnr_MtDetectUnit_auto",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 6
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "TuningMode",
+                    "key": "reg_manr_out_sel",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "DeflickerMode",
+                    "key": "3dnr_DeflickerMode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "DeflickerToleranceLevel",
+                    "key": "3dnr_DeflickerToleranceLevel",
+                    "type": "spinner",
+                    "param": {
+                        "min": 64,
+                        "max": 16383
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "RNoiseLevel0",
+                    "key": "reg_mmap_0_ns_slope_r",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "GNoiseLevel0",
+                    "key": "reg_mmap_0_ns_slope_g",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BNoiseLevel0",
+                    "key": "reg_mmap_0_ns_slope_b",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "RNoiseLevel1",
+                    "key": "reg_mmap_1_ns_slope_r",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "GNoiseLevel1",
+                    "key": "reg_mmap_1_ns_slope_g",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BNoiseLevel1",
+                    "key": "reg_mmap_1_ns_slope_b",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "RNoiseLevel0",
+                    "key": "reg_mmap_0_ns_slope_r",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "GNoiseLevel0",
+                    "key": "reg_mmap_0_ns_slope_g",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "BNoiseLevel0",
+                    "key": "reg_mmap_0_ns_slope_b",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "RNoiseLevel1",
+                    "key": "reg_mmap_1_ns_slope_r",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "GNoiseLevel1",
+                    "key": "reg_mmap_1_ns_slope_g",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "BNoiseLevel1",
+                    "key": "reg_mmap_1_ns_slope_b",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "RNoiseHiLevel0",
+                    "key": "3dnr_RNoiseHiLevel0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "GNoiseHiLevel0",
+                    "key": "3dnr_GNoiseHiLevel0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BNoiseHiLevel0",
+                    "key": "3dnr_BNoiseHiLevel0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "RNoiseHiLevel1",
+                    "key": "3dnr_RNoiseHiLevel1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "GNoiseHiLevel1",
+                    "key": "3dnr_GNoiseHiLevel1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BNoiseHiLevel1",
+                    "key": "3dnr_BNoiseHiLevel1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "RNoiseHiLevel0",
+                    "key": "3dnr_RNoiseHiLevel0",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "GNoiseHiLevel0",
+                    "key": "3dnr_GNoiseHiLevel0",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "BNoiseHiLevel0",
+                    "key": "3dnr_BNoiseHiLevel0",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "RNoiseHiLevel1",
+                    "key": "3dnr_RNoiseHiLevel1",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "GNoiseHiLevel1",
+                    "key": "3dnr_GNoiseHiLevel1",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "BNoiseHiLevel1",
+                    "key": "3dnr_BNoiseHiLevel1",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "TNR LE",
+            "section": "isp_3dnr",
+            "content": [
+                {
+                    "title": "TnrStrength0",
+                    "key": "reg_mmap_0_map_gain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "TnrStrength0",
+                    "key": "reg_mmap_0_map_gain",
+                    "type": "iso_matrix",
+                    "optype": "Auto",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    }
+                },
+                {
+                    "title": "MapThdLow0",
+                    "key": "reg_mmap_0_map_thd_l",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MapThdHigh0",
+                    "key": "reg_mmap_0_map_thd_h",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MapThdLow0",
+                    "key": "reg_mmap_0_map_thd_l",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "MapThdHigh0",
+                    "key": "reg_mmap_0_map_thd_h",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "L2mIn00",
+                    "key": "reg_mmap_0_luma_adapt_lut_in_0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mIn01",
+                    "key": "reg_mmap_0_luma_adapt_lut_in_1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mIn02",
+                    "key": "reg_mmap_0_luma_adapt_lut_in_2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mIn03",
+                    "key": "reg_mmap_0_luma_adapt_lut_in_3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mOut00",
+                    "key": "reg_mmap_0_luma_adapt_lut_out_0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mOut01",
+                    "key": "reg_mmap_0_luma_adapt_lut_out_1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mOut02",
+                    "key": "reg_mmap_0_luma_adapt_lut_out_2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mOut03",
+                    "key": "reg_mmap_0_luma_adapt_lut_out_3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mCurve0",
+                    "key": ["reg_mmap_0_luma_adapt_lut_in_0", "reg_mmap_0_luma_adapt_lut_in_1", "reg_mmap_0_luma_adapt_lut_in_2", "reg_mmap_0_luma_adapt_lut_in_3", "reg_mmap_0_luma_adapt_lut_out_0", "reg_mmap_0_luma_adapt_lut_out_1", "reg_mmap_0_luma_adapt_lut_out_2", "reg_mmap_0_luma_adapt_lut_out_3"],
+                    "type": "iso_curve",
+                    "param": {
+                        "min": [0, 0, 0, 0, 0, 0, 0, 0],
+                        "max": [4095, 4095, 4095, 4095, 63, 63, 63, 63],
+                        "interop_num": 4,
+                        "label": [["L2mIn00", "L2mIn01", "L2mIn02", "L2mIn03"], ["L2mOut00", "L2mOut01", "L2mOut02", "L2mOut03"]]
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "PrvMotion00",
+                    "key": "reg_mmap_0_iir_prtct_lut_in_0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrvMotion01",
+                    "key": "reg_mmap_0_iir_prtct_lut_in_1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrvMotion02",
+                    "key": "reg_mmap_0_iir_prtct_lut_in_2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrvMotion03",
+                    "key": "reg_mmap_0_iir_prtct_lut_in_3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrtctWgt00",
+                    "key": "reg_mmap_0_iir_prtct_lut_out_0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrtctWgt01",
+                    "key": "reg_mmap_0_iir_prtct_lut_out_1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrtctWgt02",
+                    "key": "reg_mmap_0_iir_prtct_lut_out_2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrtctWgt03",
+                    "key": "reg_mmap_0_iir_prtct_lut_out_3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrtctCurve0",
+                    "key": ["reg_mmap_0_iir_prtct_lut_in_0", "reg_mmap_0_iir_prtct_lut_in_1", "reg_mmap_0_iir_prtct_lut_in_2", "reg_mmap_0_iir_prtct_lut_in_3", "reg_mmap_0_iir_prtct_lut_out_0", "reg_mmap_0_iir_prtct_lut_out_1", "reg_mmap_0_iir_prtct_lut_out_2", "reg_mmap_0_iir_prtct_lut_out_3"],
+                    "type": "iso_curve",
+                    "param": {
+                        "min": [0, 0, 0, 0, 0, 0, 0, 0],
+                        "max": [255, 255, 255, 255, 15, 15, 15, 15],
+                        "interop_num": 4,
+                        "label": [["PrvMotion00", "PrvMotion01", "PrvMotion02", "PrvMotion03"], ["PrtctWgt00", "PrtctWgt01", "PrtctWgt02", "PrtctWgt03"]]
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "BrightnessNoiseLevelLE",
+                    "key": "3dnr_BrightnessNoiseLevelLE_manual",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 1,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BrightnessNoiseLevelLE",
+                    "key": "3dnr_BrightnessNoiseLevelLE_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 1,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "TNR SE",
+            "section": "isp_3dnr",
+            "content": [
+                {
+                    "title": "TnrStrength1",
+                    "key": "reg_mmap_1_map_gain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "TnrStrength1",
+                    "key": "reg_mmap_1_map_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "type": "iso_matrix",
+                    "optype": "Auto"
+                },
+                {
+                    "title": "MapThdLow1",
+                    "key": "reg_mmap_1_map_thd_l",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MapThdHigh1",
+                    "key": "reg_mmap_1_map_thd_h",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MapThdLow1",
+                    "key": "reg_mmap_1_map_thd_l",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "MapThdHigh1",
+                    "key": "reg_mmap_1_map_thd_h",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "L2mIn10",
+                    "key": "reg_mmap_1_luma_adapt_lut_in_0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mIn11",
+                    "key": "reg_mmap_1_luma_adapt_lut_in_1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mIn12",
+                    "key": "reg_mmap_1_luma_adapt_lut_in_2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mIn13",
+                    "key": "reg_mmap_1_luma_adapt_lut_in_3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mOut10",
+                    "key": "reg_mmap_1_luma_adapt_lut_out_0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mOut11",
+                    "key": "reg_mmap_1_luma_adapt_lut_out_1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mOut12",
+                    "key": "reg_mmap_1_luma_adapt_lut_out_2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mOut13",
+                    "key": "reg_mmap_1_luma_adapt_lut_out_3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 63
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "L2mCurve1",
+                    "key": ["reg_mmap_1_luma_adapt_lut_in_0", "reg_mmap_1_luma_adapt_lut_in_1", "reg_mmap_1_luma_adapt_lut_in_2", "reg_mmap_1_luma_adapt_lut_in_3", "reg_mmap_1_luma_adapt_lut_out_0", "reg_mmap_1_luma_adapt_lut_out_1", "reg_mmap_1_luma_adapt_lut_out_2", "reg_mmap_1_luma_adapt_lut_out_3"],
+                    "type": "iso_curve",
+                    "param": {
+                        "min": [0, 0, 0, 0, 0, 0, 0, 0],
+                        "max": [4095, 4095, 4095, 4095, 63, 63, 63, 63],
+                        "interop_num": 4,
+                        "label": [["L2mIn10", "L2mIn11", "L2mIn12", "L2mIn13"], ["L2mOut10", "L2mOut11", "L2mOut12", "L2mOut13"]]
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "PrvMotion10",
+                    "key": "reg_mmap_1_iir_prtct_lut_in_0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrvMotion11",
+                    "key": "reg_mmap_1_iir_prtct_lut_in_1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrvMotion12",
+                    "key": "reg_mmap_1_iir_prtct_lut_in_2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrvMotion13",
+                    "key": "reg_mmap_1_iir_prtct_lut_in_3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrtctWgt10",
+                    "key": "reg_mmap_1_iir_prtct_lut_out_0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrtctWgt11",
+                    "key": "reg_mmap_1_iir_prtct_lut_out_1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrtctWgt12",
+                    "key": "reg_mmap_1_iir_prtct_lut_out_2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrtctWgt13",
+                    "key": "reg_mmap_1_iir_prtct_lut_out_3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "PrtctCurve1",
+                    "key": ["reg_mmap_1_iir_prtct_lut_in_0", "reg_mmap_1_iir_prtct_lut_in_1", "reg_mmap_1_iir_prtct_lut_in_2", "reg_mmap_1_iir_prtct_lut_in_3", "reg_mmap_1_iir_prtct_lut_out_0", "reg_mmap_1_iir_prtct_lut_out_1", "reg_mmap_1_iir_prtct_lut_out_2", "reg_mmap_1_iir_prtct_lut_out_3"],
+                    "type": "iso_curve",
+                    "param": {
+                        "min": [0, 0, 0, 0, 0, 0, 0, 0],
+                        "max": [255, 255, 255, 255, 15, 15, 15, 15],
+                        "interop_num": 4,
+                        "label": [["PrvMotion10", "PrvMotion11", "PrvMotion12", "PrvMotion13"], ["PrtctWgt10", "PrtctWgt11", "PrtctWgt12", "PrtctWgt13"]]
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "BrightnessNoiseLevelSE",
+                    "key": "3dnr_BrightnessNoiseLevelSE_manual",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 1,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BrightnessNoiseLevelSE",
+                    "key": "3dnr_BrightnessNoiseLevelSE_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 1,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "TNR",
+            "section": "isp_3dnr",
+            "content": [
+                {
+                    "title": "LowMtPrtEn",
+                    "key": "reg_motion_sel",
+                    "type": "binary"
+                },
+                {
+                    "title": "LowMtPrtLevel",
+                    "key": "reg_3dnr_beta_max",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LowMtPrtLevel",
+                    "key": "reg_3dnr_beta_max",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LowMtPrtIn0",
+                    "key": "reg_3dnr_lut_in_0",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LowMtPrtIn1",
+                    "key": "reg_3dnr_lut_in_1",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LowMtPrtIn2",
+                    "key": "reg_3dnr_lut_in_2",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LowMtPrtIn3",
+                    "key": "reg_3dnr_lut_in_3",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LowMtPrtOut0",
+                    "key": "reg_3dnr_lut_out_0",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LowMtPrtOut1",
+                    "key": "reg_3dnr_lut_out_1",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LowMtPrtOut2",
+                    "key": "reg_3dnr_lut_out_2",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LowMtPrtOut3",
+                    "key": "reg_3dnr_lut_out_3",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LowMtPrtCurve",
+                    "key": ["reg_3dnr_lut_in_0", "reg_3dnr_lut_in_1", "reg_3dnr_lut_in_2", "reg_3dnr_lut_in_3", "reg_3dnr_lut_out_0", "reg_3dnr_lut_out_1", "reg_3dnr_lut_out_2", "reg_3dnr_lut_out_3"],
+                    "type": "iso_curve",
+                    "param": {
+                        "min": 0,
+                        "max": 255,
+                        "interop_num": 4,
+                        "label": [["LowMtPrtIn0", "LowMtPrtIn1", "LowMtPrtIn2", "LowMtPrtIn3"], ["LowMtPrtOut0", "LowMtPrtOut1", "LowMtPrtOut2", "LowMtPrtOut3"]]
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

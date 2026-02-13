@@ -1,0 +1,672 @@
+{
+    "page_name": "2DNR",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "BNR",
+            "section": "isp_bnr",
+            "content": [
+                {
+                    "title": "Enable",
+                    "type": "binary",
+                    "key": "reg_bnr_enable",
+                    "desp": "BNR Enable"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "bnr_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "CoringParamEnable",
+                    "type": "binary",
+                    "key": "bnr_CoringParamEnable",
+                    "desp": ""
+                },
+                {
+                    "title": "WindowType",
+                    "type": "iso_matrix",
+                    "key": "bnr_WindowType_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 11
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DetailSmoothMode",
+                    "type": "iso_matrix",
+                    "key": "reg_bnr_flag_neighbor_max_weight",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NoiseSuppressStr",
+                    "type": "iso_matrix",
+                    "key": "reg_bnr_ns_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FilterType",
+                    "type": "iso_matrix",
+                    "key": "bnr_FilterType_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NoiseSuppressStrMode",
+                    "type": "iso_matrix",
+                    "key": "reg_bnr_strength_mode",
+                    "desp": "Coarse strength mode of noise reudction",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "WindowType",
+                    "type": "spinner",
+                    "key": "bnr_FilterType_manual",
+                    "desp": "Filter type for noise reudction",
+                    "param": {
+                        "min": 0,
+                        "max": 11
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailSmoothMode",
+                    "type": "combobox",
+                    "key": "reg_bnr_flag_neighbor_max_weight",
+                    "desp": "Detail smooth mode",
+                    "param": [
+                        {
+                            "label": "Mode 0",
+                            "value": 0
+                        },
+                        {
+                            "label": "Mode 1",
+                            "value": 1
+                        }
+                    ],
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NoiseSuppressStr",
+                    "type": "spinner",
+                    "key": "reg_bnr_ns_gain",
+                    "desp": "Strength of luma noise reduction",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FilterType",
+                    "type": "spinner",
+                    "key": "bnr_FilterType_manual",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NoiseSuppressStrMode",
+                    "type": "spinner",
+                    "key": "reg_bnr_strength_mode",
+                    "desp": "Coarse strength mode of noise reudction",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "TuningMode",
+                    "type": "combobox",
+                    "key": "bnr_TuningMode",
+                    "desp": "Tuning mode",
+                    "param": [
+                        {
+                            "label": "RESULT",
+                            "value": 8
+                        },
+                        {
+                            "label": "EDGE_SMOOTH_REGION",
+                            "value": 11
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "group_name": "Filter",
+            "section": "isp_bnr",
+            "content": [
+                {
+                    "title": "VarThr",
+                    "type": "iso_matrix",
+                    "key": "reg_bnr_var_th",
+                    "desp": "Threshold for edge detection",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CoringWgtLF",
+                    "type": "iso_matrix",
+                    "key": "reg_bnr_res_ratio_k_smooth",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CoringWgtHF",
+                    "type": "iso_matrix",
+                    "key": "reg_bnr_res_ratio_k_texture",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NonDirFiltStr",
+                    "type": "iso_matrix",
+                    "key": "reg_bnr_weight_smooth",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "VhDirFiltStr",
+                    "type": "iso_matrix",
+                    "key": "bnr_VhDirFiltStr_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "AaDirFiltStr",
+                    "type": "iso_matrix",
+                    "key": "bnr_AaDirFiltStr_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaStr",
+                    "type": "iso_matrix",
+                    "key": ["reg_bnr_intensity_sel_0", "reg_bnr_intensity_sel_1", "reg_bnr_intensity_sel_2", "reg_bnr_intensity_sel_3", "reg_bnr_intensity_sel_4", "reg_bnr_intensity_sel_5", "reg_bnr_intensity_sel_6", "reg_bnr_intensity_sel_7"],
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "VarThr",
+                    "type": "spinner",
+                    "key": "reg_bnr_var_th",
+                    "desp": "Threshold for edge detection",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "CoringWgtLF",
+                    "type": "spinner",
+                    "key": "reg_bnr_res_ratio_k_smooth",
+                    "desp": "Strength of reserving random noise for low-frequency region",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "CoringWgtHF",
+                    "type": "spinner",
+                    "key": "reg_bnr_res_ratio_k_texture",
+                    "desp": "Strength of reserving random noise for high-frequency region",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NonDirFiltStr",
+                    "type": "spinner",
+                    "key": "reg_bnr_weight_smooth",
+                    "desp": "Strength of low-frequency noise reduction",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "VhDirFiltStr",
+                    "type": "spinner",
+                    "key": "bnr_VhDirFiltStr_manual",
+                    "desp": "Strength of vertical/horizontal spatial frequency noise reduction",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "AaDirFiltStr",
+                    "type": "spinner",
+                    "key": "bnr_AaDirFiltStr_manual",
+                    "desp": "Strength of 45/135-degree diagonal spatial frequency noise reduction",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaStr",
+                    "type": "matrix",
+                    "key": ["reg_bnr_intensity_sel_0", "reg_bnr_intensity_sel_1", "reg_bnr_intensity_sel_2", "reg_bnr_intensity_sel_3", "reg_bnr_intensity_sel_4", "reg_bnr_intensity_sel_5", "reg_bnr_intensity_sel_6", "reg_bnr_intensity_sel_7"],
+                    "desp": "Strength of noise reduction for luma node 0",
+                    "param": {
+                        "col": ["1", "2", "3", "4", "5", "6", "7", "8"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "group_name": "Filter",
+            "section": "isp_bnr",
+            "content": [
+                {
+                    "title": "NpSlopeR",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpSlopeR",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpSlopeGr",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpSlopeGr",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpSlopeGb",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpSlopeGb",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpSlopeB",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpSlopeB",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpLumaThrR",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpLumaThrR",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpLumaThrGr",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpLumaThrGr",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpLumaThrGb",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpLumaThrGb",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpLumaThrB",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpLumaThrB",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpLowOffsetR",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpLowOffsetR",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpLowOffsetGr",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpLowOffsetGr",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpLowOffsetGb",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpLowOffsetGb",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpLowOffsetB",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpLowOffsetB",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpHighOffsetR",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpHighOffsetR",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpHighOffsetGr",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpHighOffsetGr",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpHighOffsetGb",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpHighOffsetGb",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpHighOffsetB",
+                    "type": "iso_matrix",
+                    "key": "bnr_NpHighOffsetB",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NpSlopeR",
+                    "type": "spinner",
+                    "key": "bnr_NpSlopeR",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpSlopeGr",
+                    "type": "spinner",
+                    "key": "bnr_NpSlopeGr",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpSlopeGb",
+                    "type": "spinner",
+                    "key": "bnr_NpSlopeGb",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpSlopeB",
+                    "type": "spinner",
+                    "key": "bnr_NpSlopeB",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpLumaThrR",
+                    "type": "spinner",
+                    "key": "bnr_NpLumaThrR",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpLumaThrGr",
+                    "type": "spinner",
+                    "key": "bnr_NpLumaThrGr",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpLumaThrGb",
+                    "type": "spinner",
+                    "key": "bnr_NpLumaThrGb",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpLumaThrB",
+                    "type": "spinner",
+                    "key": "bnr_NpLumaThrB",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpLowOffsetR",
+                    "type": "spinner",
+                    "key": "bnr_NpLowOffsetR",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpLowOffsetGr",
+                    "type": "spinner",
+                    "key": "bnr_NpLowOffsetGr",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpLowOffsetGb",
+                    "type": "spinner",
+                    "key": "bnr_NpLowOffsetGb",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpLowOffsetB",
+                    "type": "spinner",
+                    "key": "bnr_NpLowOffsetB",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpHighOffsetR",
+                    "type": "spinner",
+                    "key": "bnr_NpHighOffsetR",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpHighOffsetGr",
+                    "type": "spinner",
+                    "key": "bnr_NpHighOffsetGr",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpHighOffsetGb",
+                    "type": "spinner",
+                    "key": "bnr_NpHighOffsetGb",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NpHighOffsetB",
+                    "type": "spinner",
+                    "key": "bnr_NpHighOffsetB",
+                    "desp": "",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                }
+            ]
+        }
+    ]
+}

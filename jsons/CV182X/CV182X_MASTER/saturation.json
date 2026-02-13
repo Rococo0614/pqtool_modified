@@ -1,0 +1,37 @@
+{
+    "page_name": "Saturation",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Saturation",
+            "section": "Saturation",
+            "content": [
+                {
+                    "title": "OpType",
+                    "key": "bOpType",
+                    "type": "op_type_combobox"
+                },
+				{
+					"title": "Saturation",
+					"key": "reg_saturation",
+					"type": "spinner",
+					"param": {
+						"min": 0,
+						"max": 255
+					},
+					"optype": "Manual"
+				},
+				{
+                    "title": "Saturation",
+					"key": "reg_sat",
+					"type": "iso_matrix",
+					"param": {
+						"min": 0,
+						"max": 255
+					},
+					"optype": "Auto"
+				}
+            ]
+        }
+    ]
+}

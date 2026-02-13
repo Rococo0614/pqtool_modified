@@ -1,0 +1,786 @@
+{
+    "page_name": "DRC",
+    "ready": true,
+    "groups": [
+        {
+            "group_name": "DRC",
+            "section": "DRC",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": ["reg_ltm_enable", "reg_lmap_enable", "reg_ltm_dark_enh_en", "reg_ltm_brit_enh_en"],
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "key": "enOptype",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "drc_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "TuningMode",
+                    "key": "reg_ltm_dbg_enable",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4
+                    }
+                },
+                {
+                    "title": "LocalToneEn",
+                    "key": "drc_LocalToneEn",
+                    "type": "binary"
+                },
+                {
+                    "title": "ToneCurveSelect",
+                    "key": "reg_ToneCurveSelect",
+                    "type": "binary",
+                    "param": {
+                        "text_enable": "Adaptive",
+                        "text_disable": "User Define"
+                    },
+                    "desp": "1 for Asymmetry, 0 for user define"
+                },
+                {
+                    "title": "ToneCurveSmooth",
+                    "key": "drc_ToneCurveSmooth",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 500
+                    }
+                },
+                {
+                    "title": "CoarseFltScale",
+                    "key": "drc_CoarseFltScale",
+                    "type": "spinner",
+                    "param": {
+                        "min": 3,
+                        "max": 6
+                    }
+                },
+                {
+                    "title": "CurveUserDefine",
+                    "key": "reg_CurveUserDefine",
+                    "type": "userdefine_curve",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "WDR/SDR Histogram",
+                    "key": "reg_wdr_histogram",
+                    "type": "wdr_hist"
+                },
+                {
+                    "title": "ContrastDarkCurve",
+                    "type": "manual_curve",
+                    "key": ["reg_ltm_dar_in_thd_l", "reg_ltm_dar_in_thd_h", "reg_ltm_dar_out_thd_l", "reg_ltm_dar_out_thd_h"],
+                    "optype": "Manual",
+                    "param": {
+                        "min": [0, 0, 0, 0],
+                        "max": [1023, 1023, 255, 255],
+                        "interop_num": 2,
+                        "label": [["ContrastDarkMinThrd", "ContrastDarkMaxThrd"], ["ContrastDarkMinWeight", "ContrastDarkMaxWeight"]]
+                    }
+                },
+                {
+                    "title": "ContrastDarkCurve",
+                    "type": "iso_curve",
+                    "key": ["reg_fs_luma_thd_l_iso", "reg_fs_luma_thd_h_iso", "reg_fs_wgt_max_iso", "reg_fs_wgt_min_iso"],
+                    "optype": "Auto",
+                    "param": {
+                        "min": [0, 0, 0, 0],
+                        "max": [1023, 1023, 255, 255],
+                        "interop_num": 2,
+                        "label": [["ContrastDarkMinThrd", "ContrastDarkMaxThrd"], ["ContrastDarkMinWeight", "ContrastDarkMaxWeight"]],
+                        "header_type": "LV"
+                    }
+                },
+                {
+                    "title": "ContrastBrightCurve",
+                    "type": "manual_curve",
+                    "key": ["reg_ltm_bri_in_thd_l", "reg_ltm_bri_in_thd_h", "reg_ltm_bri_out_thd_l", "reg_ltm_bri_out_thd_h"],
+                    "optype": "Manual",
+                    "param": {
+                        "min": [0, 0, 0, 0],
+                        "max": [1023, 1023, 255, 255],
+                        "interop_num": 2,
+                        "label": [["ContrastBrightMinThrd", "ContrastBrightMaxThrd"], ["ContrastBrightMinWeight", "ContrastBrightMaxWeight"]]
+                    }
+                },
+                {
+                    "title": "ContrastBrightCurve",
+                    "type": "iso_curve",
+                    "key": ["reg_ltm_bri_in_thd_l_iso", "reg_ltm_bri_in_thd_h_iso", "reg_ltm_bri_out_thd_l_iso", "reg_ltm_bri_out_thd_h_iso"],
+                    "optype": "Auto",
+                    "param": {
+                        "min": [0, 0, 0, 0],
+                        "max": [1023, 1023, 255, 255],
+                        "interop_num": 2,
+                        "label": [["ContrastBrightMinThrd", "ContrastBrightMaxThrd"], ["ContrastBrightMinWeight", "ContrastBrightMaxWeight"]],
+                        "header_type": "LV"
+                    }
+                },
+                {
+                    "title": "DRCMu",
+                    "key": "DRCMu",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "param":
+                    {
+                        "col": ["1", "2", "3", "4", "5", "6", "7", "8","9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24","25", "26", "27", "28", "29", "30", "31", "32"],
+                        "row": ["1"],
+                        "min": 0,
+                        "max": 2147483647
+                    },
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "group_name": "DRC",
+            "section": "DRC",
+            "content": [
+                {
+                    "title": "Global Tone",
+                    "type": "header"
+                },
+                {
+                    "title": "TargetYScale",
+                    "key": "drc_TargetYScale_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2048
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "TargetYScale",
+                    "key": "drc_TargetYScale_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 2048,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "HdrStrength",
+                    "key": "drc_HdrStrength_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "HdrStrength",
+                    "key": "drc_HdrStrength_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 256,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LinearStart",
+                    "key": "drc_LinearStart",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LinearEnd",
+                    "key": "drc_LinearEnd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "ContrastGain",
+                    "key": "drc_ContrastGain_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "ContrastGain",
+                    "key": "drc_ContrastGain_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 256,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Dark Tone",
+                    "type": "header"
+                },
+                {
+                    "title": "DEAdaptMode",
+                    "key": "drc_DEAdaptMode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "DEAdaptPercentile",
+                    "key": "drc_DEAdaptPercentile_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 25
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DEAdaptPercentile",
+                    "key": "drc_DEAdaptPercentile_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 25,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DEAdaptTargetGain",
+                    "key": "drc_DEAdaptTargetGain_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 64
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DEAdaptTargetGain",
+                    "key": "drc_DEAdaptTargetGain_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 1,
+                        "max": 64,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DEAdaptGainUB",
+                    "key": "drc_DEAdaptGainUB_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DEAdaptGainUB",
+                    "key": "drc_DEAdaptGainUB_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 1,
+                        "max": 255,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DEAdaptGainLB",
+                    "key": "drc_DEAdaptGainLB_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DEAdaptGainLB",
+                    "key": "drc_DEAdaptGainLB_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 1,
+                        "max": 255,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DEAdaptEn",
+                    "key": "drc_DEAdaptEn",
+                    "type": "binary",
+                    "level": 1
+                },
+                {
+                    "title": "LETargetYScale",
+                    "key": "drc_manual_LETargetYLowBound",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2048
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "LETargetYScale",
+                    "key": "drc_manual_LETargetYLowBound",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 2048,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "DarkOffset",
+                    "key": "drc_DarkOffset",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "DarkOffset",
+                    "key": "drc_DarkOffset_LV",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 256,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "DarkToneRange",
+                    "key": "drc_DarkToneRange",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "DarkToneRange",
+                    "key": "drc_DarkToneRange_LV",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 256,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "Bright Tone",
+                    "type": "header"
+                },
+                {
+                    "title": "BritMapStr",
+                    "key": "drc_BritMapStr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 128
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "BritInflectPtLuma",
+                    "key": "drc_BritInflectPtLuma_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BritInflectPtLuma",
+                    "key": "drc_BritInflectPtLuma_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 100,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "BritContrastLow",
+                    "key": "drc_BritContrastLow_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BritContrastLow",
+                    "key": "drc_BritContrastLow_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 100,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "BritContrastHigh",
+                    "key": "drc_BritContrastHigh_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "BritContrastHigh",
+                    "key": "drc_BritContrastHigh_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 100,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "SDR DRC",
+            "section": "SDR DRC",
+            "content": [
+                {
+                    "title": "SdrToneCurveSelect",
+                    "key": "drc_SdrToneCurveSelect",
+                    "type": "combobox",
+                    "param": [
+                        {
+                            "label": "Bypass",
+                            "value": 0
+                        },
+                        {
+                            "label": "SdrDarkEnhance(SdrDE)",
+                            "value": 4
+                        }
+                    ]
+                },
+                {
+                    "title": "Global Tone",
+                    "type": "header"
+                },
+                {
+                    "title": "SdrTargetYGainMode",
+                    "key": "drc_SdrTargetYGainMode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "SdrTargetY",
+                    "key": "drc_SdrTargetY_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SdrTargetY",
+                    "key": "drc_SdrTargetY_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 255,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SdrTargetYGain",
+                    "key": "drc_SdrTargetYGain_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 32,
+                        "max": 128
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SdrTargetYGain",
+                    "key": "drc_SdrTargetYGain_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 32,
+                        "max": 128,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SdrGlobalToneStr",
+                    "key": "drc_SdrGlobalToneStr_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SdrGlobalToneStr",
+                    "key": "drc_SdrGlobalToneStr_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 256,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Dark Tone",
+                    "type": "header"
+                },
+                {
+                    "title": "SdrDEAdaptMode",
+                    "key": "drc_SdrDEAdaptMode",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                },
+                {
+                    "title": "SdrDEAdaptPercentile",
+                    "key": "drc_SdrDEAdaptPercentile_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 25
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SdrDEAdaptPercentile",
+                    "key": "drc_SdrDEAdaptPercentile_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 25,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SdrDEAdaptTargetGain",
+                    "key": "drc_SdrDEAdaptTargetGain_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 64
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SdrDEAdaptTargetGain",
+                    "key": "drc_SdrDEAdaptTargetGain_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 1,
+                        "max": 64,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SdrDEAdaptGainUB",
+                    "key": "drc_SdrDEAdaptGainUB_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SdrDEAdaptGainUB",
+                    "key": "drc_SdrDEAdaptGainUB_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 1,
+                        "max": 255,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SdrDEAdaptGainLB",
+                    "key": "drc_SdrDEAdaptGainLB_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SdrDEAdaptGainLB",
+                    "key": "drc_SdrDEAdaptGainLB_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 1,
+                        "max": 255,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Bright Tone",
+                    "type": "header"
+                },
+                {
+                    "title": "SdrBritMapStr",
+                    "key": "drc_SdrBritMapStr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 128
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "SdrBritInflectPtLuma",
+                    "key": "drc_SdrBritInflectPtLuma_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SdrBritInflectPtLuma",
+                    "key": "drc_SdrBritInflectPtLuma_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 100,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SdrBritContrastLow",
+                    "key": "drc_SdrBritContrastLow_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SdrBritContrastLow",
+                    "key": "drc_SdrBritContrastLow_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 100,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "SdrBritContrastHigh",
+                    "key": "drc_SdrBritContrastHigh_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SdrBritContrastHigh",
+                    "key": "drc_SdrBritContrastHigh_auto",
+                    "type": "iso_matrix",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 100,
+                        "header_type": "LV"
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

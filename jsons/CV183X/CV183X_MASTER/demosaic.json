@@ -1,0 +1,472 @@
+{
+    "page_name": "Demosaic",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Demosaic",
+            "section": "isp_demosaic",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_cfa_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "demosaic_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "CoarseEdgeThr",
+                    "key": "reg_cfa_edgee_thd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "CoarseStr",
+                    "key": "reg_cfa_edge_tol",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "CoarseEdgeThr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_edgee_thd",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CoarseStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_edge_tol",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FineEdgeThr",
+                    "key": "reg_cfa_sige_thd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FineStr",
+                    "key": "demosaic_FineStr_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FineEdgeThr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_sige_thd",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FineStr",
+                    "type": "iso_matrix",
+                    "key": "demosaic_FineStr_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "TuningMode",
+                    "key": "reg_cfa_out_sel",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "Edge Enhance",
+            "section": "isp_demosaic",
+            "content": [
+                {
+                    "title": "EdgeEnhanceEnable",
+                    "key": "reg_rgbee_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OverShtGain",
+                    "key": "reg_rgbee_osgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "UnderShtGain",
+                    "key": "reg_rgbee_usgain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "OverShtGain",
+                    "type": "iso_matrix",
+                    "key": "reg_rgbee_osgain",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "UnderShtGain",
+                    "type": "iso_matrix",
+                    "key": "reg_rgbee_usgain",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "GainTable",
+                    "type": "matrix",
+                    "key": ["reg_rgbee_edge_lut00", "reg_rgbee_edge_lut01", "reg_rgbee_edge_lut02", "reg_rgbee_edge_lut03", "reg_rgbee_edge_lut04", "reg_rgbee_edge_lut05", "reg_rgbee_edge_lut06", "reg_rgbee_edge_lut07", "reg_rgbee_edge_lut08", "reg_rgbee_edge_lut09", "reg_rgbee_edge_lut10", "reg_rgbee_edge_lut11", "reg_rgbee_edge_lut12", "reg_rgbee_edge_lut13", "reg_rgbee_edge_lut14", "reg_rgbee_edge_lut15", "reg_rgbee_edge_lut16", "reg_rgbee_edge_lut17", "reg_rgbee_edge_lut18", "reg_rgbee_edge_lut19", "reg_rgbee_edge_lut20", "reg_rgbee_edge_lut21", "reg_rgbee_edge_lut22", "reg_rgbee_edge_lut23", "reg_rgbee_edge_lut24", "reg_rgbee_edge_lut25", "reg_rgbee_edge_lut26", "reg_rgbee_edge_lut27", "reg_rgbee_edge_lut28", "reg_rgbee_edge_lut29", "reg_rgbee_edge_lut30", "reg_rgbee_edge_lut31", "reg_rgbee_edge_lut32"],
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "HFGainTable",
+                    "type": "matrix",
+                    "key": ["reg_rgbee_ac_lut00", "reg_rgbee_ac_lut01", "reg_rgbee_ac_lut02", "reg_rgbee_ac_lut03", "reg_rgbee_ac_lut04", "reg_rgbee_ac_lut05", "reg_rgbee_ac_lut06", "reg_rgbee_ac_lut07", "reg_rgbee_ac_lut08", "reg_rgbee_ac_lut09", "reg_rgbee_ac_lut10", "reg_rgbee_ac_lut11", "reg_rgbee_ac_lut12", "reg_rgbee_ac_lut13", "reg_rgbee_ac_lut14", "reg_rgbee_ac_lut15", "reg_rgbee_ac_lut16", "reg_rgbee_ac_lut17", "reg_rgbee_ac_lut18", "reg_rgbee_ac_lut19", "reg_rgbee_ac_lut20", "reg_rgbee_ac_lut21", "reg_rgbee_ac_lut22", "reg_rgbee_ac_lut23", "reg_rgbee_ac_lut24", "reg_rgbee_ac_lut25", "reg_rgbee_ac_lut26", "reg_rgbee_ac_lut27", "reg_rgbee_ac_lut28", "reg_rgbee_ac_lut29", "reg_rgbee_ac_lut30", "reg_rgbee_ac_lut31", "reg_rgbee_ac_lut32"],
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "GainTable",
+                    "type": "iso_matrix",
+                    "key": ["reg_rgbee_edge_lut00", "reg_rgbee_edge_lut01", "reg_rgbee_edge_lut02", "reg_rgbee_edge_lut03", "reg_rgbee_edge_lut04", "reg_rgbee_edge_lut05", "reg_rgbee_edge_lut06", "reg_rgbee_edge_lut07", "reg_rgbee_edge_lut08", "reg_rgbee_edge_lut09", "reg_rgbee_edge_lut10", "reg_rgbee_edge_lut11", "reg_rgbee_edge_lut12", "reg_rgbee_edge_lut13", "reg_rgbee_edge_lut14", "reg_rgbee_edge_lut15", "reg_rgbee_edge_lut16", "reg_rgbee_edge_lut17", "reg_rgbee_edge_lut18", "reg_rgbee_edge_lut19", "reg_rgbee_edge_lut20", "reg_rgbee_edge_lut21", "reg_rgbee_edge_lut22", "reg_rgbee_edge_lut23", "reg_rgbee_edge_lut24", "reg_rgbee_edge_lut25", "reg_rgbee_edge_lut26", "reg_rgbee_edge_lut27", "reg_rgbee_edge_lut28", "reg_rgbee_edge_lut29", "reg_rgbee_edge_lut30", "reg_rgbee_edge_lut31", "reg_rgbee_edge_lut32"],
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "HFGainTable",
+                    "type": "iso_matrix",
+                    "key": ["reg_rgbee_ac_lut00", "reg_rgbee_ac_lut01", "reg_rgbee_ac_lut02", "reg_rgbee_ac_lut03", "reg_rgbee_ac_lut04", "reg_rgbee_ac_lut05", "reg_rgbee_ac_lut06", "reg_rgbee_ac_lut07", "reg_rgbee_ac_lut08", "reg_rgbee_ac_lut09", "reg_rgbee_ac_lut10", "reg_rgbee_ac_lut11", "reg_rgbee_ac_lut12", "reg_rgbee_ac_lut13", "reg_rgbee_ac_lut14", "reg_rgbee_ac_lut15", "reg_rgbee_ac_lut16", "reg_rgbee_ac_lut17", "reg_rgbee_ac_lut18", "reg_rgbee_ac_lut19", "reg_rgbee_ac_lut20", "reg_rgbee_ac_lut21", "reg_rgbee_ac_lut22", "reg_rgbee_ac_lut23", "reg_rgbee_ac_lut24", "reg_rgbee_ac_lut25", "reg_rgbee_ac_lut26", "reg_rgbee_ac_lut27", "reg_rgbee_ac_lut28", "reg_rgbee_ac_lut29", "reg_rgbee_ac_lut30", "reg_rgbee_ac_lut31", "reg_rgbee_ac_lut32"],
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "LumaTunedCoringEn",
+                    "key": "demosaic_LumaTunedCoringEn",
+                    "type": "binary"
+                },
+                {
+                    "title": "LumaTunedCoring",
+                    "type": "matrix",
+                    "key": ["demosaic_LumaTunedCoring00", "demosaic_LumaTunedCoring01", "demosaic_LumaTunedCoring02", "demosaic_LumaTunedCoring03", "demosaic_LumaTunedCoring04", "demosaic_LumaTunedCoring05", "demosaic_LumaTunedCoring06", "demosaic_LumaTunedCoring07", "demosaic_LumaTunedCoring08", "demosaic_LumaTunedCoring09", "demosaic_LumaTunedCoring10", "demosaic_LumaTunedCoring11", "demosaic_LumaTunedCoring12", "demosaic_LumaTunedCoring13", "demosaic_LumaTunedCoring14", "demosaic_LumaTunedCoring15", "demosaic_LumaTunedCoring16", "demosaic_LumaTunedCoring17", "demosaic_LumaTunedCoring18", "demosaic_LumaTunedCoring19", "demosaic_LumaTunedCoring20", "demosaic_LumaTunedCoring21", "demosaic_LumaTunedCoring22", "demosaic_LumaTunedCoring23", "demosaic_LumaTunedCoring24", "demosaic_LumaTunedCoring25", "demosaic_LumaTunedCoring26", "demosaic_LumaTunedCoring27", "demosaic_LumaTunedCoring28", "demosaic_LumaTunedCoring29", "demosaic_LumaTunedCoring30", "demosaic_LumaTunedCoring31", "demosaic_LumaTunedCoring32"],
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaTunedCoring",
+                    "type": "iso_matrix",
+                    "key": ["demosaic_LumaTunedCoring00", "demosaic_LumaTunedCoring01", "demosaic_LumaTunedCoring02", "demosaic_LumaTunedCoring03", "demosaic_LumaTunedCoring04", "demosaic_LumaTunedCoring05", "demosaic_LumaTunedCoring06", "demosaic_LumaTunedCoring07", "demosaic_LumaTunedCoring08", "demosaic_LumaTunedCoring09", "demosaic_LumaTunedCoring10", "demosaic_LumaTunedCoring11", "demosaic_LumaTunedCoring12", "demosaic_LumaTunedCoring13", "demosaic_LumaTunedCoring14", "demosaic_LumaTunedCoring15", "demosaic_LumaTunedCoring16", "demosaic_LumaTunedCoring17", "demosaic_LumaTunedCoring18", "demosaic_LumaTunedCoring19", "demosaic_LumaTunedCoring20", "demosaic_LumaTunedCoring21", "demosaic_LumaTunedCoring22", "demosaic_LumaTunedCoring23", "demosaic_LumaTunedCoring24", "demosaic_LumaTunedCoring25", "demosaic_LumaTunedCoring26", "demosaic_LumaTunedCoring27", "demosaic_LumaTunedCoring28", "demosaic_LumaTunedCoring29", "demosaic_LumaTunedCoring30", "demosaic_LumaTunedCoring31", "demosaic_LumaTunedCoring32"],
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NoiseSuppressStr",
+                    "key": "reg_rgbee_np_lut00",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NoiseSuppressStr",
+                    "key": "reg_rgbee_np_lut00",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "type": "iso_matrix",
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "Detail Smooth",
+            "section": "isp_demosaic",
+            "content": [
+                {
+                    "title": "DetailSmoothEnable",
+                    "key": "reg_cfa_moire_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "DetailSmoothStr",
+                    "key": "reg_cfa_moire_strth",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailSmoothStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_strth",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "EdgeWgtStr",
+                    "key": "reg_cfa_moire_wght_gain",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "EdgeWgtStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_wght_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "DetailWgtThr",
+                    "key": "demosaic_DetailWgtThr_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailWgtSlope",
+                    "key": "demosaic_DetailWgtSlope_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailWgtMin",
+                    "key": "demosaic_DetailWgtMin_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailWgtMax",
+                    "key": "demosaic_DetailWgtMax_manual",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailWgtThr",
+                    "type": "iso_matrix",
+                    "key": "demosaic_DetailWgtThr_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DetailWgtSlope",
+                    "type": "iso_matrix",
+                    "key": "demosaic_DetailWgtSlope_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DetailWgtMin",
+                    "type": "iso_matrix",
+                    "key": "demosaic_DetailWgtMin_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DetailWgtMax",
+                    "type": "iso_matrix",
+                    "key": "demosaic_DetailWgtMax_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaWgtThr",
+                    "key": "reg_cfa_moire_lumathd_min",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaWgtSlope",
+                    "key": "reg_cfa_moire_lumathd_slope",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaWgtMin",
+                    "key": "reg_cfa_moire_lumaw_low",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaWgtMax",
+                    "key": "reg_cfa_moire_lumaw_high",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaWgtThr",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_lumathd_min",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaWgtSlope",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_lumathd_slope",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaWgtMin",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_lumaw_low",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaWgtMax",
+                    "type": "iso_matrix",
+                    "key": "reg_cfa_moire_lumaw_high",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

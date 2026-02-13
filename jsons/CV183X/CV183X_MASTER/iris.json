@@ -1,0 +1,125 @@
+{
+    "page_name": "IRIS",
+    "ready": true,
+    "groups": [
+        {
+            "group_name": "IrisAttr",
+            "section": "IrisAttr",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "IRIS_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "key": "bOptype",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "IrisType",
+                    "key": "IRIS_IrisType",
+                    "type": "combobox",
+                    "param": [
+                        {
+                            "label": "DC-IRIS",
+                            "value": "0"
+                        },
+                        {
+                            "label": "P-IRIS",
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "title": "IrisStatus",
+                    "key": "IRIS_IrisStatus",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 2
+                    }
+                },
+                {
+                    "title": "HoldValue",
+                    "key": "IRIS_HoldValue",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1000
+                    }
+                },
+                {
+                    "title": "IrisFNO",
+                    "key": "IRIS_IrisFNO",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 10
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "Dciris Attr",
+            "section": "Dciris Attr",
+            "content": [
+                {
+                    "title": "Kp",
+                    "key": "IRIS_Kp",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100000
+                    }
+                },
+                {
+                    "title": "Ki",
+                    "key": "IRIS_Ki",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1000
+                    }
+                },
+                {
+                    "title": "Kd",
+                    "key": "IRIS_Kd",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100000
+                    }
+                },
+                {
+                    "title": "MinPwmDuty",
+                    "key": "IRIS_MinPwmDuty",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1000
+                    }
+                },
+                {
+                    "title": "MaxPwmDuty",
+                    "key": "IRIS_MaxPwmDuty",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1000
+                    }
+                },
+                {
+                    "title": "OpenPwmDuty",
+                    "key": "IRIS_OpenPwmDuty",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1000
+                    }
+                }
+            ]
+        }
+    ]
+}
+

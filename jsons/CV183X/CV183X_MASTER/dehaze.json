@@ -1,0 +1,70 @@
+{
+    "page_name": "Dehaze",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "Dehaze",
+            "section": "isp_dhz",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_dehaze_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "dehaze_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "Strength",
+                    "type": "iso_matrix",
+                    "key": "reg_dehaze_w",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "Strength",
+                    "key": "reg_dehaze_w",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "CumulativeThr",
+                    "key": "reg_dehaze_cum_th",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                },
+                {
+                    "title": "MinTransMapValue",
+                    "key": "reg_dehaze_tmap_min",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 8191
+                    }
+                }
+            ]
+        }
+    ]
+}

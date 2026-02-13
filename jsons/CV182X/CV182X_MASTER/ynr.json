@@ -1,0 +1,562 @@
+{
+    "page_name": "YNR",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "YNR",
+            "section": "isp_ynr",
+            "content": [
+                {
+                    "title": "Enable",
+                    "type": "binary",
+                    "key": "reg_ynr_enable"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "ynr_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "WindowType",
+                    "type": "spinner",
+                    "key": "ynr_WindowType_manual",
+                    "param": {
+                        "min": 0,
+                        "max": 11
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "WindowType",
+                    "type": "iso_matrix",
+                    "key": "ynr_WindowType_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 11
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DetailSmoothMode",
+                    "type": "combobox",
+                    "key": "reg_ynr_flag_neighbor_max_weight",
+                    "param": [
+                        {
+                            "label": "Mode 0",
+                            "value": 0
+                        },
+                        {
+                            "label": "Mode 1",
+                            "value": 1
+                        }
+                    ],
+                    "optype": "Manual"
+                },
+                {
+                    "title": "DetailSmoothMode",
+                    "type": "iso_matrix",
+                    "key": "reg_ynr_flag_neighbor_max_weight",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NoiseSuppressStr",
+                    "type": "spinner",
+                    "key": "reg_ynr_ns_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NoiseSuppressStr",
+                    "type": "iso_matrix",
+                    "key": "reg_ynr_ns_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FilterType",
+                    "type": "spinner",
+                    "key": "ynr_FilterType_manual",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FilterType",
+                    "type": "iso_matrix",
+                    "key": "ynr_FilterType_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CoringParamEnable",
+                    "type": "binary",
+                    "key": "ynr_coring_param_enable"
+                },
+                {
+                    "title": "NoiseCoringBase",
+                    "type": "spinner",
+                    "key": "ynr_noise_coring_base_manual",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NoiseCoringBase",
+                    "type": "iso_matrix",
+                    "key": "ynr_noise_coring_base_auto",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NoiseCoringAdv",
+                    "type": "spinner",
+                    "key": "ynr_noise_coring_adv_manual",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NoiseCoringAdv",
+                    "type": "iso_matrix",
+                    "key": "ynr_noise_coring_adv_auto",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FiltModeEnable",
+                    "type": "binary",
+                    "key": "ynr_FiltModeEnable",
+                    "level": 2
+                },
+                {
+                    "title": "FiltMode",
+                    "type": "spinner",
+                    "key": "ynr_FiltMode",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "level": 2
+                },
+                {
+                    "title": "NoiseCoringMax",
+                    "type": "spinner",
+                    "key": "ynr_NoiseCoringMax",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "NoiseCoringMax",
+                    "type": "iso_matrix",
+                    "key": "ynr_NoiseCoringMax",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "TuningMode",
+                    "type": "combobox",
+                    "key": "ynr_TuningMode",
+                    "param": [
+                        {
+                            "label": "RESULT",
+                            "value": 8
+                        },
+                        {
+                            "label": "EDGE_SMOOTH_REGION",
+                            "value": 11
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "group_name": "Motion NR",
+            "section": "isp_ynr",
+            "content": [
+                {
+                    "title": "MotionThr",
+                    "type": "spinner",
+                    "key": "reg_ynr_motion_ns_th",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "MotionThr",
+                    "type": "iso_matrix",
+                    "key": "reg_ynr_motion_ns_th",
+                    "param": {
+                        "min": 0,
+                        "max": 15
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "MotionNrPosGain",
+                    "type": "spinner",
+                    "key": "reg_ynr_motion_pos_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 64
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "MotionNrPosGain",
+                    "type": "iso_matrix",
+                    "key": "reg_ynr_motion_pos_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 64
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "MotionNrNegGain",
+                    "type": "spinner",
+                    "key": "reg_ynr_motion_neg_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 64
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "MotionNrNegGain",
+                    "type": "iso_matrix",
+                    "key": "reg_ynr_motion_neg_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 64
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "MotionCoringWgt",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "key": "ynr_MotionCoringWgt_manual",
+                    "param":
+					{
+						"col": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+						"row": ["1"],
+						"min": 0,
+                        "max": 256
+					},
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionCoringWgt",
+                    "key": ["ynr_MotionCoringWgt1_auto", "ynr_MotionCoringWgt2_auto", "ynr_MotionCoringWgt3_auto", "ynr_MotionCoringWgt4_auto",
+                    		"ynr_MotionCoringWgt5_auto", "ynr_MotionCoringWgt6_auto", "ynr_MotionCoringWgt7_auto", "ynr_MotionCoringWgt8_auto",
+                    		"ynr_MotionCoringWgt9_auto", "ynr_MotionCoringWgt10_auto", "ynr_MotionCoringWgt11_auto", "ynr_MotionCoringWgt12_auto",
+                    		"ynr_MotionCoringWgt13_auto", "ynr_MotionCoringWgt14_auto", "ynr_MotionCoringWgt15_auto", "ynr_MotionCoringWgt16_auto"],
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 256,
+                        "row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"]
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "MotionCoringWgtMax",
+                    "type": "spinner",
+                    "key": "ynr_MotionCoringWgtMax",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionCoringWgtMax",
+                    "type": "iso_matrix",
+                    "key": "ynr_MotionCoringWgtMax",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "MotionYnrLut",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "key": "ynr_MotionYnrLut_manual",
+                    "param":
+                {
+						"col": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+						"row": ["1"],
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MotionYnrLut",
+                    "key": ["ynr_MotionYnrLut1_auto", "ynr_MotionYnrLut2_auto", "ynr_MotionYnrLut3_auto", "ynr_MotionYnrLut4_auto",
+                    		"ynr_MotionYnrLut5_auto", "ynr_MotionYnrLut6_auto", "ynr_MotionYnrLut7_auto", "ynr_MotionYnrLut8_auto",
+                    		"ynr_MotionYnrLut9_auto", "ynr_MotionYnrLut10_auto", "ynr_MotionYnrLut11_auto", "ynr_MotionYnrLut12_auto",
+                    		"ynr_MotionYnrLut13_auto", "ynr_MotionYnrLut14_auto", "ynr_MotionYnrLut15_auto", "ynr_MotionYnrLut16_auto"],
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 255,
+                        "row": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"]
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "Filter",
+            "section": "isp_ynr",
+            "content": [
+                {
+                    "title": "VarThr",
+                    "type": "spinner",
+                    "key": "reg_ynr_var_th",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "VarThr",
+                    "type": "iso_matrix",
+                    "key": "reg_ynr_var_th",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CoringWgtLF",
+                    "type": "spinner",
+                    "key": "reg_ynr_res_ratio_k_smooth",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "CoringWgtLF",
+                    "type": "iso_matrix",
+                    "key": "reg_ynr_res_ratio_k_smooth",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "CoringWgtHF",
+                    "type": "spinner",
+                    "key": "reg_ynr_res_ratio_k_texture",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "CoringWgtHF",
+                    "type": "iso_matrix",
+                    "key": "reg_ynr_res_ratio_k_texture",
+                    "param": {
+                        "min": 0,
+                        "max": 256
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "CoringWgtMax",
+                    "type": "spinner",
+                    "key": "ynr_CoringWgtMax",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual",
+                    "level": 2
+                },
+                {
+                    "title": "CoringWgtMax",
+                    "type": "iso_matrix",
+                    "key": "ynr_CoringWgtMax",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto",
+                    "level": 2
+                },
+                {
+                    "title": "NonDirFiltStr",
+                    "type": "spinner",
+                    "key": "reg_ynr_weight_smooth",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NonDirFiltStr",
+                    "type": "iso_matrix",
+                    "key": "reg_ynr_weight_smooth",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "VhDirFiltStr",
+                    "type": "spinner",
+                    "key": "ynr_VhDirFiltStr_manual",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "VhDirFiltStr",
+                    "type": "iso_matrix",
+                    "key": "ynr_VhDirFiltStr_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "AaDirFiltStr",
+                    "type": "spinner",
+                    "key": "ynr_AaDirFiltStr_manual",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "AaDirFiltStr",
+                    "type": "iso_matrix",
+                    "key": "ynr_AaDirFiltStr_iso",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaStr",
+                    "type": "matrix",
+                    "key": ["reg_ynr_intensity_sel_0", "reg_ynr_intensity_sel_1", "reg_ynr_intensity_sel_2", "reg_ynr_intensity_sel_3", "reg_ynr_intensity_sel_4", "reg_ynr_intensity_sel_5", "reg_ynr_intensity_sel_6", "reg_ynr_intensity_sel_7"],
+                    "desp": "Strength of noise reduction for luma node 0",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "level": 1,
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaStr",
+                    "type": "iso_matrix",
+                    "key": ["reg_ynr_intensity_sel_0", "reg_ynr_intensity_sel_1", "reg_ynr_intensity_sel_2", "reg_ynr_intensity_sel_3", "reg_ynr_intensity_sel_4", "reg_ynr_intensity_sel_5", "reg_ynr_intensity_sel_6", "reg_ynr_intensity_sel_7"],
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "desp": "Strength of noise reduction for luma node 0",
+                    "level": 1,
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FilterMode",
+                    "type": "spinner",
+                    "key": "reg_ynr_alpha_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "FilterMode",
+                    "type": "iso_matrix",
+                    "key": "reg_ynr_alpha_gain",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                }
+            ]
+        }
+    ]
+}

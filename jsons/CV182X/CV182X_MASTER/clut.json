@@ -1,0 +1,177 @@
+{
+    "page_name": "CLUT",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "CLUT",
+            "section": "CLUT",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "clut_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "clut_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "ClutR",
+                    "type": "matrix",
+                    "key": "clut_ClutR",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                },
+                {
+                    "title": "ClutG",
+                    "type": "matrix",
+                    "key": "clut_ClutG",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                },
+                {
+                    "title": "ClutB",
+                    "type": "matrix",
+                    "key": "clut_ClutB",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 1023
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "Saturation by Saturation",
+            "section": "CLUT Saturation",
+            "content": [
+                {
+                    "title": "SbyS.Enable",
+                    "key": "clut_SbyS.Enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "SbyS.OpType",
+                    "key": "clut_SbyS.Optype",
+                    "type": "op_type_combobox"
+                },
+                {
+                    "title": "SatIn0",
+                    "key": "clut_SatIn0_manual",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 8192
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SatIn1",
+                    "key": "clut_SatIn1_manual",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 8192
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SatIn2",
+                    "key": "clut_SatIn2_manual",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 8192
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SatIn3",
+                    "key": "clut_SatIn3_manual",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 8192
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SatOut0",
+                    "key": "clut_SatOut0_manual",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 8192
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SatOut1",
+                    "key": "clut_SatOut1_manual",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 8192
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SatOut2",
+                    "key": "clut_SatOut2_manual",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 8192
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SatOut3",
+                    "key": "clut_SatOut3_manual",
+                    "type": "spinner",
+                    "param":
+                    {
+                        "min": 0,
+                        "max": 8192
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "SatCurve",
+                    "key": ["clut_SatIn0_auto", "clut_SatIn1_auto", "clut_SatIn2_auto", "clut_SatIn3_auto", "clut_SatOut0_auto", "clut_SatOut1_auto", "clut_SatOut2_auto", "clut_SatOut3_auto"],
+                    "type": "iso_curve",
+                    "param": {
+                        "min": [0, 0, 0, 0, 0, 0, 0, 0],
+                        "max": [8192, 8192, 8192, 8192, 8192, 8192, 8192, 8192],
+                        "interop_num": 4,
+                        "label": [["SatIn0", "SatIn1", "SatIn2", "SatIn3"], ["SatOut0", "SatOut1", "SatOut2", "SatOut3"]],
+                        "curve_type": 1
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        }
+    ]
+}

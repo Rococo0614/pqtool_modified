@@ -1,0 +1,367 @@
+{
+    "page_name": "LSC",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "LSC",
+            "section": "isp_lsc0&isp_lsc1&isp_lsc2&isp_lsc3&isp_lsc4",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_lsc_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "lsc_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "MeshStr",
+                    "key": "reg_lsc_strength",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "MeshStr",
+                    "key": "reg_lsc_strength",
+                    "type": "iso_matrix",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    },
+                    "optype": "Auto"
+                }
+            ]
+        },
+        {
+            "group_name": "Shading Lut Attr",
+            "section": "isp_lsc",
+            "content": [
+                {
+                    "title": "LscGainLut.Size",
+                    "key": "lsc_size",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 7
+                    }
+                },
+                {
+                    "title": "LscGainLut[0].ColorTemp",
+                    "key": "lsc_color_temp0",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    }
+                },
+                {
+                    "title": "LscGainLut[0].RGain",
+                    "key": "reg_lsc_rtbl0",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[0].GGain",
+                    "key": "reg_lsc_gtbl0",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[0].BGain",
+                    "key": "reg_lsc_btbl0",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[1].ColorTemp",
+                    "key": "lsc_color_temp1",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    }
+                },
+                {
+                    "title": "LscGainLut[1].RGain",
+                    "key": "reg_lsc_rtbl1",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[1].GGain",
+                    "key": "reg_lsc_gtbl1",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[1].BGain",
+                    "key": "reg_lsc_btbl1",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[2].ColorTemp",
+                    "key": "lsc_color_temp2",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    }
+                },
+                {
+                    "title": "LscGainLut[2].RGain",
+                    "key": "reg_lsc_rtbl2",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[2].GGain",
+                    "key": "reg_lsc_gtbl2",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[2].BGain",
+                    "key": "reg_lsc_btbl2",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "Shading Lut Attr",
+            "section": "isp_lsc",
+            "content": [
+                {
+                    "title": "LscGainLut[3].ColorTemp",
+                    "key": "lsc_color_temp3",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    }
+                },
+                {
+                    "title": "LscGainLut[3].RGain",
+                    "key": "reg_lsc_rtbl3",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[3].GGain",
+                    "key": "reg_lsc_gtbl3",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[3].BGain",
+                    "key": "reg_lsc_btbl3",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[4].ColorTemp",
+                    "key": "lsc_color_temp4",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    }
+                },
+                {
+                    "title": "LscGainLut[4].RGain",
+                    "key": "reg_lsc_rtbl4",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[4].GGain",
+                    "key": "reg_lsc_gtbl4",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[4].BGain",
+                    "key": "reg_lsc_btbl4",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[5].ColorTemp",
+                    "key": "lsc_color_temp5",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    }
+                },
+                {
+                    "title": "LscGainLut[5].RGain",
+                    "key": "reg_lsc_rtbl5",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[5].GGain",
+                    "key": "reg_lsc_gtbl5",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[5].BGain",
+                    "key": "reg_lsc_btbl5",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[6].ColorTemp",
+                    "key": "lsc_color_temp6",
+                    "type": "spinner",
+                    "param": {
+                        "min": 500,
+                        "max": 30000
+                    }
+                },
+                {
+                    "title": "LscGainLut[6].RGain",
+                    "key": "reg_lsc_rtbl6",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[6].GGain",
+                    "key": "reg_lsc_gtbl6",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                },
+                {
+                    "title": "LscGainLut[6].BGain",
+                    "key": "reg_lsc_btbl6",
+                    "type": "matrix",
+                    "reg_value_type": "array",
+                    "value_type": "array",
+                    "param": {
+                        "min": 0,
+                        "max": 4095
+                    }
+                }
+            ]
+        }
+    ]
+}

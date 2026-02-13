@@ -1,0 +1,98 @@
+{
+    "page_name": "Coding Param",
+    "ready" : false,
+    "groups": [
+        {
+            "group_name": "LostStrategy",
+            "section": "Coding Param",
+            "content": [
+                {
+                    "title": "FrmLostOpen",
+                    "key": "LostStrategy_FrmLostOpen",
+                    "type": "binary"
+                },
+                {
+                    "title": "LostMode",
+                    "type": "combobox",
+                    "key": "LostStrategy_LostMode",
+                    "param": [
+                        {
+                            "label": "FRMLOST_PSKIP",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "title": "FrmLostBpsThr",
+                    "key": "LostStrategy_FrmLostBpsThr",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 1073741823
+                    }
+                },
+                {
+                    "title": "EncFrmGaps",
+                    "key": "LostStrategy_EncFrmGaps",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 65535
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "CuPrediction",
+            "section": "Coding Param",
+            "content": [
+                {
+                    "title": "IntraCost",
+                    "key": "CuPrediction_IntraCost",
+                    "type": "spinner",
+                    "param": {
+                        "min": 0,
+                        "max": 16383
+                    }
+                }
+            ]
+        },
+        {
+            "group_name": "H264Trans",
+            "section": "Coding Param",
+            "content": [
+                {
+                    "title": "ChromaQpOffset",
+                    "key": "H264Trans_ChromaQpOffset",
+                    "type": "spinner",
+                    "param": {
+                        "min": -12,
+                        "max": 12
+                    }
+                },
+                {
+                    "title": "H265Trans",
+                    "type": "header"
+                },
+                {
+                    "title": "CbQpOffset",
+                    "key": "H265Trans_CbQpOffset",
+                    "type": "spinner",
+                    "param": {
+                        "min": -12,
+                        "max": 12
+                    }
+                },
+                {
+                    "title": "CrQpOffset",
+                    "key": "H265Trans_CrQpOffset",
+                    "type": "spinner",
+                    "param": {
+                        "min": -12,
+                        "max": 12
+                    }
+                }
+            ]
+        }
+    ]
+}

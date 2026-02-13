@@ -1,0 +1,172 @@
+{
+    "page_name": "CNR",
+    "ready" : true,
+    "groups": [
+        {
+            "group_name": "CNR",
+            "section": "isp_cnr",
+            "content": [
+                {
+                    "title": "Enable",
+                    "key": "reg_cnr_enable",
+                    "type": "binary"
+                },
+                {
+                    "title": "OpType",
+                    "type": "op_type_combobox",
+                    "key": "bOpType"
+                },
+                {
+                    "title": "UpdateInterval",
+                    "key": "cnr_UpdateInterval",
+                    "type": "spinner",
+                    "param": {
+                        "min": 1,
+                        "max": 255
+                    },
+                    "level": 1
+                },
+                {
+                    "title": "DetailSmoothMode",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_flag_neighbor_max_weight",
+                    "desp": "Detail smooth mode",
+                    "param": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "CnrStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_strength_mode",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NoiseSuppressStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_diff_shift_val",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "NoiseSuppressGain",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_diff_gain",
+                    "param": {
+                        "min": 1,
+                        "max": 8
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "FilterType",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_weight_lut_inter_block",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "LumaWgt",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_fusion_intensity_weight",
+                    "param": {
+                        "min": 0,
+                        "max": 8
+                    },
+                    "optype": "Auto",
+                    "level": 1
+                },
+                {
+                    "title": "MotionNrStr",
+                    "type": "iso_matrix",
+                    "key": "reg_cnr_ratio",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Auto"
+                },
+                {
+                    "title": "DetailSmoothMode",
+                    "type": "binary",
+                    "key": "reg_cnr_flag_neighbor_max_weight",
+                    "desp": "Detail smooth mode",
+                    "optype": "Manual"
+                },
+                {
+                    "title": "CnrStr",
+                    "type": "spinner",
+                    "key": "reg_cnr_strength_mode",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NoiseSuppressStr",
+                    "type": "spinner",
+                    "key": "reg_cnr_diff_shift_val",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "NoiseSuppressGain",
+                    "type": "spinner",
+                    "key": "reg_cnr_diff_gain",
+                    "param": {
+                        "min": 1,
+                        "max": 8
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "FilterType",
+                    "type": "spinner",
+                    "key": "reg_cnr_weight_lut_inter_block",
+                    "param": {
+                        "min": 0,
+                        "max": 31
+                    },
+                    "optype": "Manual"
+                },
+                {
+                    "title": "LumaWgt",
+                    "type": "spinner",
+                    "key": "reg_cnr_fusion_intensity_weight",
+                    "param": {
+                        "min": 0,
+                        "max": 8
+                    },
+                    "optype": "Manual",
+                    "level": 1
+                },
+                {
+                    "title": "MotionNrStr",
+                    "type": "spinner",
+                    "key": "reg_cnr_ratio",
+                    "param": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "optype": "Manual"
+                }
+            ]
+        }
+    ]
+}
