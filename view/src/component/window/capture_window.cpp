@@ -439,6 +439,35 @@ QGroupBox *CaptureWindow::createCaptureTimeGroupbox()
     });
     same_folder_layout->addWidget(use_same_folder_checkbox, 0);
     layout->addWidget(same_folder_widget);
+
+    // Filename mode: Timestamp / Append number / Custom overwrite
+    QWidget *fname_widget = new QWidget;
+    QHBoxLayout *fname_layout = new QHBoxLayout(fname_widget);
+    QLabel *fname_label = new QLabel(tr("Filename mode:"));
+    fname_label->setFixedSize(100, 24);
+    filename_mode_box = new QComboBox();
+    filename_mode_box->setFixedSize(140, 24);
+    filename_mode_box->addItems(QStringList{"Timestamp", "Append number", "Custom (overwrite)"});
+    int savedMode = GlobalData::getInstance()->getSettings(SETTINGS_SECTION, KEY_CAPTURE_FILENAME_MODE, 0).toInt();
+    if (savedMode >=0 && savedMode <=2) filename_mode_box->setCurrentIndex(savedMode);
+    custom_base_edit = new QLineEdit();
+    custom_base_edit->setFixedSize(140, 24);
+    QString savedBase = GlobalData::getInstance()->getSettings(SETTINGS_SECTION, KEY_CAPTURE_CUSTOM_BASE, "").toString();
+    custom_base_edit->setText(savedBase);
+    custom_base_edit->setEnabled(filename_mode_box->currentIndex() == 2);
+    connect(filename_mode_box, &QComboBox::currentIndexChanged, [=](int idx){
+        GlobalData::getInstance()->setSettings(SETTINGS_SECTION, KEY_CAPTURE_FILENAME_MODE, idx);
+        GlobalData::getInstance()->saveSettings();
+        custom_base_edit->setEnabled(idx == 2);
+    });
+    connect(custom_base_edit, &QLineEdit::textChanged, [=](const QString &txt){
+        GlobalData::getInstance()->setSettings(SETTINGS_SECTION, KEY_CAPTURE_CUSTOM_BASE, txt);
+        GlobalData::getInstance()->saveSettings();
+    });
+    fname_layout->addWidget(fname_label, 0);
+    fname_layout->addWidget(filename_mode_box, 0);
+    fname_layout->addWidget(custom_base_edit, 0);
+    layout->addWidget(fname_widget);
     groupbox->setLayout(layout);
 
     return groupbox;
@@ -506,13 +535,32 @@ void CaptureWindow::saveYuvFile(QByteArray &data, YUV_HEADER &header, int total_
             path = path + "NULL_";
         }
 
-        yuv_path = path + QString("-bits=8_-frame=%1_").arg(total_received_frame) + dateTime_str + ".yuv";
-        bmp_path = path + "-bits=8_-frame=1_" + dateTime_str + ".bmp";
+        // Determine filename suffix according to selected mode
+        int fnameMode = GlobalData::getInstance()->getSettings(SETTINGS_SECTION, KEY_CAPTURE_FILENAME_MODE, 0).toInt();
+        QString customBase = GlobalData::getInstance()->getSettings(SETTINGS_SECTION, KEY_CAPTURE_CUSTOM_BASE, "").toString();
+        QString usedDateTimeStr = periodic_mode_active ? QDateTime::currentDateTime().toString("yyyyMMddhhmmsszzz") : dateTime_str;
+        QString suffix;
+        if (fnameMode == 0) {
+            suffix = usedDateTimeStr;
+        } else if (fnameMode == 1) {
+            // append numeric sequence
+            QString seq = QString::number(periodic_file_seq).rightJustified(4, '0');
+            // include base time for readability
+            suffix = usedDateTimeStr + "_" + seq;
+        } else if (fnameMode == 2) {
+            // custom base - overwrite
+            suffix = customBase;
+        } else {
+            suffix = usedDateTimeStr;
+        }
+
+        yuv_path = path + QString("-bits=8_-frame=%1_") .arg(total_received_frame) + suffix + ".yuv";
+        bmp_path = path + "-bits=8_-frame=1_" + suffix + ".bmp";
         QString imgExt = "jpg";
         if (image_format_box) {
             imgExt = image_format_box->currentText().toLower();
         }
-        QString img_path = path + "-bits=8_-frame=1_" + dateTime_str + "." + imgExt;
+        QString img_path = path + "-bits=8_-frame=1_" + suffix + "." + imgExt;
 
         QFile fileMultiYuv(yuv_path);
         fileMultiYuv.open(QIODevice::WriteOnly);
@@ -568,6 +616,13 @@ void CaptureWindow::saveYuvFile(QByteArray &data, YUV_HEADER &header, int total_
         }
 
         fileMultiYuv.close();
+        // if using sequential filenames in periodic mode, increment sequence
+        if (periodic_mode_active) {
+            int fnameModeLocal = GlobalData::getInstance()->getSettings(SETTINGS_SECTION, KEY_CAPTURE_FILENAME_MODE, 0).toInt();
+            if (fnameModeLocal == 1) {
+                periodic_file_seq++;
+            }
+        }
     } else {
         QMessageBox::warning(this, tr("Error"), tr("Save directory path is empty!"), QMessageBox::Ok);
     }
@@ -601,11 +656,26 @@ void CaptureWindow::setRawFileName(RAW_HEADER &header, int frameNum)
         file_name_wdr_le += QString("-hdr=%1_ISO=%2_").arg(header.fusionFrame).arg(header.iso);
         file_name_wdr_se += QString("-hdr=%1_ISO=%2_").arg(header.fusionFrame).arg(header.iso);
 
-        // date, time --> 20210314122032
-        file_name_linear += dateTime_str;
-        file_name_wdr += dateTime_str;
-        file_name_wdr_le += dateTime_str;
-        file_name_wdr_se += dateTime_str;
+    // date, time --> 20210314122032
+    int fnameMode = GlobalData::getInstance()->getSettings(SETTINGS_SECTION, KEY_CAPTURE_FILENAME_MODE, 0).toInt();
+    QString customBase = GlobalData::getInstance()->getSettings(SETTINGS_SECTION, KEY_CAPTURE_CUSTOM_BASE, "").toString();
+    QString usedTimeStr = periodic_mode_active ? QDateTime::currentDateTime().toString("yyyyMMddhhmmsszzz") : dateTime_str;
+    QString suffix;
+    if (fnameMode == 0) {
+        suffix = usedTimeStr;
+    } else if (fnameMode == 1) {
+        QString seq = QString::number(periodic_file_seq).rightJustified(4, '0');
+        suffix = usedTimeStr + "_" + seq;
+    } else if (fnameMode == 2) {
+        suffix = customBase;
+    } else {
+        suffix = usedTimeStr;
+    }
+
+    file_name_linear += suffix;
+    file_name_wdr += suffix;
+    file_name_wdr_le += suffix;
+    file_name_wdr_se += suffix;
 
     } else {
         QMessageBox::warning(this, tr("Error"), tr("Save directory path is empty!"), QMessageBox::Ok);
@@ -734,6 +804,13 @@ void CaptureWindow::saveRawFile(QByteArray &data, RAW_HEADER &header, int raw_ty
         }
 
         check_file_validity();
+        // advance sequence for periodic sequential filename mode
+        if (periodic_mode_active) {
+            int fnameModeLocal = GlobalData::getInstance()->getSettings(SETTINGS_SECTION, KEY_CAPTURE_FILENAME_MODE, 0).toInt();
+            if (fnameModeLocal == 1) {
+                periodic_file_seq++;
+            }
+        }
     } else {
         QMessageBox::warning(this, tr("Error"), tr("Save directory path is empty!"), QMessageBox::Ok);
     }
@@ -1444,6 +1521,8 @@ void CaptureWindow::startTimingEvent()
         // create a generic periodic folder
         directory_str = file_path->text() + "/periodic_" + dateTime_str;
         QDir().mkdir(directory_str);
+        // reset sequence counter for this periodic session
+        periodic_file_seq = 1;
     } else {
         periodic_mode_active = false;
     }

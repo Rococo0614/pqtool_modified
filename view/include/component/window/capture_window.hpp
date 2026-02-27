@@ -119,6 +119,8 @@ private:
     QComboBox *type_cap_src_box;
     QComboBox *image_format_box;
     QCheckBox *use_same_folder_checkbox;
+    QComboBox *filename_mode_box;
+    QLineEdit *custom_base_edit;
     QTimer *start_timer;
 
     QCheckBox *wdr_raw_separately_checkbox;
@@ -158,6 +160,7 @@ private:
     bool busy_flag = false;
     bool dumpAllFlag = false;
     bool periodic_mode_active = false;
+    int periodic_file_seq = 1;
 };
 
 #endif // CAPTURE_WINDOW_HPP
