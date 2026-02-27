@@ -117,6 +117,7 @@ private:
     QLineEdit *interval_edit;
     QLineEdit *time_edit;
     QComboBox *type_cap_src_box;
+    QComboBox *image_format_box;
     QTimer *start_timer;
 
     QCheckBox *wdr_raw_separately_checkbox;

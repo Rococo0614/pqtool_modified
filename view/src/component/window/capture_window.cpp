@@ -203,6 +203,26 @@ QGroupBox *CaptureWindow::createYuvImageGroupbox()
     layout->addLayout(line1_layout);
     layout->addLayout(line2_layout);
 
+    // Image format selection (JPG / PNG)
+    QWidget *format_widget = new QWidget;
+    QHBoxLayout *format_layout = new QHBoxLayout(format_widget);
+    QLabel *format_label = new QLabel(tr("Image format:"));
+    format_label->setFixedSize(80, 24);
+    image_format_box = new QComboBox();
+    image_format_box->setFixedSize(80, 24);
+    image_format_box->addItems(QStringList{"JPG", "PNG"});
+    // load persisted setting if available
+    QString savedFmt = GlobalData::getInstance()->getSettings(SETTINGS_SECTION, KEY_CAPTURE_IMAGE_FORMAT, "JPG").toString();
+    int idx = image_format_box->findText(savedFmt, Qt::MatchFixedString);
+    if (idx >= 0) image_format_box->setCurrentIndex(idx);
+    connect(image_format_box, &QComboBox::currentTextChanged, [=](const QString &s){
+        GlobalData::getInstance()->setSettings(SETTINGS_SECTION, KEY_CAPTURE_IMAGE_FORMAT, s);
+        GlobalData::getInstance()->saveSettings();
+    });
+    format_layout->addWidget(format_label, 0);
+    format_layout->addWidget(image_format_box, 0);
+    layout->addWidget(format_widget);
+
     groupbox->setLayout(layout);
     return groupbox;
 }
@@ -476,7 +496,11 @@ void CaptureWindow::saveYuvFile(QByteArray &data, YUV_HEADER &header, int total_
 
         yuv_path = path + QString("-bits=8_-frame=%1_").arg(total_received_frame) + dateTime_str + ".yuv";
         bmp_path = path + "-bits=8_-frame=1_" + dateTime_str + ".bmp";
-        jpg_path = path + "-bits=8_-frame=1_" + dateTime_str + ".jpg";
+        QString imgExt = "jpg";
+        if (image_format_box) {
+            imgExt = image_format_box->currentText().toLower();
+        }
+        QString img_path = path + "-bits=8_-frame=1_" + dateTime_str + "." + imgExt;
 
         QFile fileMultiYuv(yuv_path);
         fileMultiYuv.open(QIODevice::WriteOnly);
@@ -485,7 +509,8 @@ void CaptureWindow::saveYuvFile(QByteArray &data, YUV_HEADER &header, int total_
         p.setPen(QPen(Qt::white));
         p.setFont(QFont("Times", 24, QFont::Bold));
         p.drawText(image.rect(), Qt::AlignLeft, "CVITEK " + dateTime_str);
-        image.save(jpg_path, "JPG");
+        // save using selected format (JPG or PNG)
+        image.save(img_path, image_format_box ? image_format_box->currentText().toUtf8().constData() : "JPG");
         if (save_bmp_file_checkbox->isChecked()) {
             image.save(bmp_path, "BMP");
         }
