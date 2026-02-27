@@ -118,6 +118,7 @@ private:
     QLineEdit *time_edit;
     QComboBox *type_cap_src_box;
     QComboBox *image_format_box;
+    QCheckBox *use_same_folder_checkbox;
     QTimer *start_timer;
 
     QCheckBox *wdr_raw_separately_checkbox;
@@ -156,6 +157,7 @@ private:
     DUMPALL_MODE dumpall_mode = DUMPALL_MODE::MODE_NORMAL;
     bool busy_flag = false;
     bool dumpAllFlag = false;
+    bool periodic_mode_active = false;
 };
 
 #endif // CAPTURE_WINDOW_HPP

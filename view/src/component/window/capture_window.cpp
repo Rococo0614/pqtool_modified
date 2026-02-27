@@ -427,6 +427,18 @@ QGroupBox *CaptureWindow::createCaptureTimeGroupbox()
     QVBoxLayout *layout = new QVBoxLayout;
     layout->addWidget(cap_type_widget);
     layout->addWidget(cap_time_widget);
+    // Option: save periodic captures to the same folder
+    QWidget *same_folder_widget = new QWidget;
+    QHBoxLayout *same_folder_layout = new QHBoxLayout(same_folder_widget);
+    use_same_folder_checkbox = new QCheckBox(tr("Use same folder for periodic captures"));
+    bool useSame = GlobalData::getInstance()->getSettings(SETTINGS_SECTION, KEY_CAPTURE_PERIODIC_SAME_FOLDER, false).toBool();
+    use_same_folder_checkbox->setChecked(useSame);
+    connect(use_same_folder_checkbox, &QCheckBox::clicked, [=](bool checked){
+        GlobalData::getInstance()->setSettings(SETTINGS_SECTION, KEY_CAPTURE_PERIODIC_SAME_FOLDER, checked);
+        GlobalData::getInstance()->saveSettings();
+    });
+    same_folder_layout->addWidget(use_same_folder_checkbox, 0);
+    layout->addWidget(same_folder_widget);
     groupbox->setLayout(layout);
 
     return groupbox;
@@ -763,7 +775,7 @@ void CaptureWindow::handleCaptureYuvImg()
 
     NetworkClientHelper::getInstance()->setCallerInfo(0, NULL);
 
-    if (!start_dump) {
+    if (!start_dump && !periodic_mode_active) {
         disableComponents();
         yuv_cancel_btn->setEnabled(true);
         dateTime_str = QDateTime::currentDateTime().toString("yyyyMMddhhmmss");
@@ -903,12 +915,18 @@ void CaptureWindow::slotGotYuvImg(QString cmd)
             img_viewer->setYUVImgData(receive_yuv_data, pstHeader);
             start_capture = false;
             receive_yuv_data.clear();
-            enableComponents();
             yuv_cancel_btn->setEnabled(false);
-            stopTimingEvent();
             capture_busy_state = false;
-            QMessageBox message(QMessageBox::NoIcon, "Notice", QString("Capture %1 yuv frames successfully!").arg(received_frames));
-            message.exec();
+            if (periodic_mode_active) {
+                // schedule next capture after configured interval (do not re-enable UI or show modal)
+                int interval_ms = time_edit->text().toInt() * 1000;
+                QTimer::singleShot(interval_ms, this, &CaptureWindow::startTimingCaptureEvent);
+            } else {
+                enableComponents();
+                stopTimingEvent();
+                QMessageBox message(QMessageBox::NoIcon, "Notice", QString("Capture %1 yuv frames successfully!").arg(received_frames));
+                message.exec();
+            }
         }
     }
     if (!dumpAllFlag){
@@ -957,7 +975,7 @@ void CaptureWindow::handleCaptureRawImg()
 
     NetworkClientHelper::getInstance()->setCallerInfo(0, NULL);
 
-    if (!start_dump) {
+    if (!start_dump && !periodic_mode_active) {
         disableComponents();
         raw_cancel_btn->setEnabled(true);
         dateTime_str = QDateTime::currentDateTime().toString("yyyyMMddhhmmss");
@@ -1322,12 +1340,20 @@ void CaptureWindow::slotGotRawImg(QString cmd)
                 emit sigCaptureRawEnd();
             }
         } else {
-            enableComponents();
-            raw_cancel_btn->setEnabled(false);
-            stopTimingEvent();
-            capture_busy_state = false;
-            QMessageBox message(QMessageBox::NoIcon, "Notice", QString("Capture %1 raw frames successfully!").arg(received_frames));
-            message.exec();
+            // For periodic mode reuse the same folder and schedule next capture
+            if (periodic_mode_active) {
+                raw_cancel_btn->setEnabled(false);
+                capture_busy_state = false;
+                int interval_ms = time_edit->text().toInt() * 1000;
+                QTimer::singleShot(interval_ms, this, &CaptureWindow::startTimingCaptureEvent);
+            } else {
+                enableComponents();
+                raw_cancel_btn->setEnabled(false);
+                stopTimingEvent();
+                capture_busy_state = false;
+                QMessageBox message(QMessageBox::NoIcon, "Notice", QString("Capture %1 raw frames successfully!").arg(received_frames));
+                message.exec();
+            }
         }
     }
     emit fetchCompleted();
@@ -1359,10 +1385,14 @@ void CaptureWindow::handleDumpAll(DUMPALL_MODE mode, QString dirPath, QString fi
     start_dump = true;
     disableComponents();
     dump_cancel_btn->setEnabled(true);
-    dateTime_str = QDateTime::currentDateTime().toString("yyyyMMddhhmmss");
     dumpall_mode = mode;
+    if (!periodic_mode_active) {
+        dateTime_str = QDateTime::currentDateTime().toString("yyyyMMddhhmmss");
+    }
     if (dumpall_mode != MODE_AE10RAW_BATCH) {
-        directory_str = file_path->text() + "/dump_" + dateTime_str;
+        if (!periodic_mode_active) {
+            directory_str = file_path->text() + "/dump_" + dateTime_str;
+        }
     } else {
         busy_flag = true;
         file_path->setText(dirPath);
@@ -1372,8 +1402,9 @@ void CaptureWindow::handleDumpAll(DUMPALL_MODE mode, QString dirPath, QString fi
         file_name_wdr_le = fileName;
         file_name_wdr_se = fileName;
     }
-
-    QDir().mkdir(directory_str);
+    if (!directory_str.isEmpty()) {
+        QDir().mkdir(directory_str);
+    }
     if (dumpall_mode != MODE_AE10RAW_BATCH) {
         // Todo: update saveRaramFromBoard to new param json
         // MainWindow::getInstance()->saveParamFromBoard(directory_str);
@@ -1406,6 +1437,17 @@ void CaptureWindow::startTimingEvent()
     disableComponents();
     stop_btn->setEnabled(true);
 
+    // If user wants to reuse the same folder for periodic captures, create it once here
+    if (use_same_folder_checkbox && use_same_folder_checkbox->isChecked()) {
+        periodic_mode_active = true;
+        dateTime_str = QDateTime::currentDateTime().toString("yyyyMMddhhmmss");
+        // create a generic periodic folder
+        directory_str = file_path->text() + "/periodic_" + dateTime_str;
+        QDir().mkdir(directory_str);
+    } else {
+        periodic_mode_active = false;
+    }
+
     start_timer->setInterval(time_edit->text().toInt() * 1000);
     start_timer->start();
 }
@@ -1418,6 +1460,8 @@ void CaptureWindow::stopTimingEvent()
     time_edit->setEnabled(true);
     start_btn->setEnabled(true);
     capture_busy_state = false;
+    // leave directory_str as-is; periodic mode stops
+    periodic_mode_active = false;
 }
 
 void CaptureWindow::startTimingCaptureEvent()

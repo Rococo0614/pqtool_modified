@@ -81,6 +81,7 @@ const QString KEY_AUTO_APPLY_JSON = "auto_apply_json";
 const QString KEY_AUTO_APPLY_JSON_PATH = "auto_apply_json_path";
 const QString KEY_AUTO_APPLY_INTERVAL_MS = "auto_apply_interval_ms";
 const QString KEY_CAPTURE_IMAGE_FORMAT = "capture_image_format";
+const QString KEY_CAPTURE_PERIODIC_SAME_FOLDER = "capture_periodic_same_folder";
 const QString CONNECT_TYPE_CMODEL = "Offline";
 const QString CONNECT_TYPE_NETWORK = "Network";
 const QString CONNECT_TYPE_UART = "Uart";
