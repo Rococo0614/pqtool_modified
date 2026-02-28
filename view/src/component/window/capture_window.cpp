@@ -455,7 +455,7 @@ QGroupBox *CaptureWindow::createCaptureTimeGroupbox()
     QString savedBase = GlobalData::getInstance()->getSettings(SETTINGS_SECTION, KEY_CAPTURE_CUSTOM_BASE, "").toString();
     custom_base_edit->setText(savedBase);
     custom_base_edit->setEnabled(filename_mode_box->currentIndex() == 2);
-    connect(filename_mode_box, &QComboBox::currentIndexChanged, [=](int idx){
+    connect(filename_mode_box, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [=](int idx){
         GlobalData::getInstance()->setSettings(SETTINGS_SECTION, KEY_CAPTURE_FILENAME_MODE, idx);
         GlobalData::getInstance()->saveSettings();
         custom_base_edit->setEnabled(idx == 2);
