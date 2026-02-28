@@ -104,7 +104,9 @@ CONFIG(debug, debug|release) {
     build_mode = "release"
 }
 
-QMAKE_POST_LINK += $$PWD/pack_portable.bat $$PWD $$[QT_INSTALL_PREFIX] $$[BRANCH] $$build_mode
+## Disable automatic portable packaging during build to avoid "sharing conflict" when files are locked by other processes.
+## To run packaging manually after a successful build, run: pack_portable.bat <repo_path> <qt_install_prefix> <branch> <build_mode>
+# QMAKE_POST_LINK += $$PWD/pack_portable.bat $$PWD $$[QT_INSTALL_PREFIX] $$[BRANCH] $$build_mode
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
